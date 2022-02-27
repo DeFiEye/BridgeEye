@@ -9,7 +9,7 @@ if SENTRY_DSN:
         traces_sample_rate=0.1
     )
 
-import sys
+import sys, os
 sys.path.append("..")
 sys.path.append("../crosschain")
 import glob, csv
@@ -18,6 +18,7 @@ from flask_cors import CORS
 from base import *
 from runsql import *
 from functools import lru_cache
+import subprocess
 app = Flask(__name__)
 CORS(app)
 @app.route("/")
@@ -97,7 +98,7 @@ for srcchain in ["Ethereum", "xDAI", "Polygon", "Arbitrum", "Optimism"]:
     for dstchain in ["Ethereum", "xDAI", "Polygon", "Arbitrum", "Optimism"]:
         if srcchain == dstchain:
             continue
-        for token in ["USDC", "USDT", "DAI", "MATIC"]:
+        for token in ["ETH", "USDC", "USDT", "DAI", "MATIC"]:
             if token=="MATIC" and (srcchain in ["Arbitrum", "Optimism"] or dstchain in ["Arbitrum", "Optimism"]):
                 continue
             hop_all.append(["hop", srcchain, token, dstchain, token, "LOAD", [], "0", "0", "", ""])
@@ -242,18 +243,39 @@ def view_crosschain_estimateFee_cbridge():
     return jsonify([{title[idx]: item[idx] for idx in range(len(item))} for item in res])
 
 def chain2hopchain(c):
-    return c.lower()
+    c = c.lower()
+    return {"xdai":"gnosis"}.get(c, c)
 
 class HopException(Exception):
     def __init__(self, data):
         self.data = data
 
+HOP_DECIMALS = {
+    "Ethereum": {"USDC": 6, "USDT": 6, "MATIC": 18, "DAI": 18, "ETH": 18, "WBTC": 8}, 
+    "xDAI": {"USDC": 6, "USDT": 6, "MATIC": 18, "DAI": 18, "ETH": 18, "WBTC": 8}, 
+    "Polygon": {"USDC": 6, "USDT": 6, "MATIC": 18, "DAI": 18, "ETH": 18, "WBTC": 8}, 
+    "Optimism": {"USDC": 6, "USDT": 6, "DAI": 18, "ETH": 18, "WBTC": 8}, 
+    "Arbitrum": {"USDC": 6, "USDT": 6, "DAI": 18, "ETH": 18, "WBTC": 8}
+}
 @lru_cache(256)
-def cached_hop_query(url, ts):
+def cached_hop_query_old(token, srcchain, dstchain, amount, ts):
+    url = f"{CHROME_SERVER}/hop?token={token}&srcchain={chain2hopchain(srcchain)}&dstchain={chain2hopchain(dstchain)}&amount={amount}"
     x = sess.get(url).json()
     if x["error"]:
         raise HopException(x)
     return x
+
+@lru_cache(256)
+def cached_hop_query(token, srcchain, dstchain, amount, ts):
+    amt = str(int(amount*10**HOP_DECIMALS[srcchain][token]))
+    data = json.loads(subprocess.check_output(["node", "../crosschain/hopjs/gethop.js", token, amt, chain2hopchain(srcchain), chain2hopchain(dstchain)]))
+    D = HOP_DECIMALS[dstchain][token]
+    received = float(data["estimatedReceived"])/10**D
+    amountOut = float(data["amountOut"])/10**D
+    slippage_fee = amount-amountOut
+    bonder_fee = float(data["adjustedBonderFee"])/10**D
+    tx_fee = float(data["adjustedDestinationTxFee"])/10**D
+    return {"received":"%.4f"%received, "slippage_fee":"%.4f"%(slippage_fee), "bonder_fee":"%.4f"%bonder_fee, "tx_fee":"%.4f"%tx_fee, "error":""}
 
 @app.route("/api/v1/crosschain/estimateFee/hop")
 def view_crosschain_estimateFee_hop():
@@ -261,14 +283,13 @@ def view_crosschain_estimateFee_hop():
     srcchain, dstchain, token = request.args["srcchain"], request.args["dstchain"], request.args["token"]
     assert srcchain in ["Ethereum", "xDAI", "Polygon", "Arbitrum", "Optimism"]
     assert dstchain in ["Ethereum", "xDAI", "Polygon", "Arbitrum", "Optimism"]
-    assert token in ["USDC", "USDT", "DAI", "MATIC"]
+    assert token in ["ETH", "USDC", "USDT", "DAI", "MATIC"]
     if token == "MATIC":
         assert srcchain not in ["Arbitrum", "Optimism"]
         assert dstchain not in ["Arbitrum", "Optimism"]
     amount = float(request.args["amount"])
-    url = f"{CHROME_SERVER}/hop?token={token}&srcchain={chain2hopchain(srcchain)}&dstchain={chain2hopchain(dstchain)}&amount={amount}"
     try:
-        x = cached_hop_query(url, int(time.time()/60))
+        x = cached_hop_query(token, srcchain, dstchain, amount, int(time.time()/60))
     except HopException as ex:
         x = ex.data
     except:
@@ -306,6 +327,7 @@ def view_crosschain_basicInfo():
         "terrabridge":{"url":"https://bridge.terra.money/", "note":"Mapping based", "display_name":"Terra Bridge"},
         "relay":{"url":"https://app.relaychain.com/#/cross-chain-bridge-transfer", "note":"Mapping based", "display_name":"Relay"},
         "acrossto":{"url":"https://across.to/", "note":"Pool based", "display_name":"Across.to"},
+        "orbiter":{"url":"https://www.orbiter.finance/", "note":"Pool based", "display_name":"Orbiter"},
         #cex
         "huobi":{"url":"https://www.huobi.com/", "note":"Huobi Exchange", "display_name":"Huobi (CEX)"},
         "binance":{"url":"https://www.binance.com/", "note":"Binance Exchange", "display_name":"Binance (CEX)"},
