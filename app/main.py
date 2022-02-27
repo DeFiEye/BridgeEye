@@ -331,13 +331,14 @@ def view_crosschain_basicInfo():
         #cex
         "huobi":{"url":"https://www.huobi.com/", "note":"Huobi Exchange", "display_name":"Huobi (CEX)"},
         "binance":{"url":"https://www.binance.com/", "note":"Binance Exchange", "display_name":"Binance (CEX)"},
-        "okex":{"url":"https://www.okex.com/", "note":"OKEx Exchange", "display_name":"OKEx (CEX)"},
+        "okx":{"url":"https://www.okx.com/", "note":"OKX Exchange", "display_name":"OKX (CEX)"},
         "ftx":{"url":"https://ftx.com/", "note":"FTX Exchange", "display_name":"FTX (CEX)"},
         "kucoin":{"url":"https://www.kucoin.com/", "note":"KuCoin Exchange", "display_name":"KuCoin (CEX)"},
         "mxc":{"url":"https://www.mexc.com/", "note":"MEXC Exchange", "display_name":"MXC (CEX)"},
         "hotbit":{"url":"https://www.hotbit.io/", "note":"Hotbit Exchange", "display_name":"Hotbit (CEX)"},
         "gateio":{"url":"https://www.gate.io/", "note":"Gate.io Exchange", "display_name":"Gate.io (CEX)"},
         "ascendex":{"url":"https://ascendex.com/", "note":"AscendEx Exchange", "display_name":"AscendEx (CEX)"},
+        "bybit":{"url":"https://www.bybit.com/", "note":"Bybit Exchange", "display_name":"Bybit (CEX)"},
     })
 
 if __name__ == "__main__":
