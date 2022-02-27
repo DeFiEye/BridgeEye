@@ -40,9 +40,12 @@ for chainid, tmp in alltoken_info.items(): # liquidity query
                 datalist.append([undercontract, "balanceOf(address)", toarg(holder)])
                 res2idx.append((undercontract, holder))
         for d in mkslice(datalist, 20):
-            for idx, liquidity in enumerate(x.batch_callfunction_decode(datalist, ["uint256"])):
-                #print(idx, res2idx[idx], liquidity)
-                tmp[res2idx[idx]][-1] = liquidity/10**tmp[res2idx[idx]][1]
+            try:
+                for idx, liquidity in enumerate(x.batch_callfunction_decode(datalist, ["uint256"])):
+                    #print(idx, res2idx[idx], liquidity)
+                    tmp[res2idx[idx]][-1] = liquidity/10**tmp[res2idx[idx]][1]
+            except:
+                pass
     #print(tmp)
 
 res=[HEADER]#["bridge","srcchain","srctoken","dstchain","dsttoken","srctoken_contract","dsttoken_contract","srcholder","dstholder","isopen","fee_fixed","fee_percent","fee_minfee","fee_maxfee","minamount", "liquidity"]

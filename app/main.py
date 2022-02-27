@@ -64,8 +64,13 @@ def bridge_fee(amt, bridge,srcchain,srctoken,dstchain,dsttoken,srctoken_contract
         infos.append(["Fee (srcChain native)", "{:.5f} {}".format(*extra["nativeFee"])])
     return "ok", infos, amt-fee, 0, "", ""
 
+CHAINLIST = {i["chainId"]:i for i in sess.get("https://chainid.network/chains.json").json()}
+
 def normalize_chainname(name):
-    return {"SOL": "Solana", "AVAX":"Avalanche", "AVAXC":"Avalanche", "MOVR":"Moonriver", "BNB":"BEP2", "IOTX":"IoTeX",}.get(name, name)
+    name = {"SOL": "Solana", "AVAX":"Avalanche", "AVAXC":"Avalanche", "MOVR":"Moonriver", "BNB":"BEP2", "IOTX":"IoTeX",}.get(name, name)
+    if name.isdigit() and int(name) in CHAINLIST:
+        name = CHAINLIST[int(name)]['chain']
+    return name
 
 def crosschain_filter(bridge=None):
     alldata = []

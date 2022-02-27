@@ -33,6 +33,6 @@ for (cex,token), chain1s in data_from.items():
             c2 = normalize_chainname(chain2)
             if not c1 or not c2:
                 continue
-            #bridge,srcchain,srctoken,dstchain,dsttoken,srctoken_contract,dsttoken_contract,srcholder,dstholder,isopen,fee_fixed,fee_percent,fee_minfee,fee_maxfee,minamount,liquidity
+            #bridge,srcchain,srctoken,dstchain,dsttoken,srctoken_contract,dsttoken_contract,srcholder,dstholder,isopen,fee_fixed,fee_percent,fee_minfee,fee_maxfee,minamount,liquidity,extra
             res.append([cex.split()[0], c1, token, c2, token, "", "", "", "", True, withdraw_fee, 0, 0, 0, withdraw_min, 0, ""])
 writecsv("cex.txt", res)
