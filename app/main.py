@@ -322,8 +322,8 @@ def view_crosschain_basicInfo():
     return jsonify({
         "anyswapv2":{"url": "https://anyswap.exchange/bridge#/bridge", "note":"Mapping based", "display_name":"Anyswap Bridge"},
         "anyswapv3":{"url":"https://anyswap.exchange/bridge#/router", "note":"Pool based", "display_name":"Anyswap Router"},
-        "xpollinatev1": {"url":"https://v1.xpollinate.io/", "note":"Pool based, CONNEXT", "display_name":"xpollinate v1"},
-        "xpollinatev2": {"url":"https://www.xpollinate.io/", "note":"Pool based", "display_name":"xpollinate"},
+        #"xpollinatev1": {"url":"https://v1.xpollinate.io/", "note":"Pool based, CONNEXT", "display_name":"xpollinate v1"},
+        "xpollinatev2": {"url":"https://bridge.connext.network/", "note":"Pool based", "display_name":"xpollinate"},
         "renbridge": {"url":"https://bridge.renproject.io/mint", "note":"Mapping based, only support non-EVM tokens", "display_name":"RenBridge"},
         "cbridge": {"url":"https://cbridge.celer.network/#/transfer", "note":"Pool based", "display_name":"cBridge"},
         "binancebridge": {"url":"https://www.binance.org/en/bridge", "note":"CEX based, equal to Binance; free into BSC", "display_name":"Binance Bridge"},
