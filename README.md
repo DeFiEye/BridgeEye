@@ -15,12 +15,12 @@ Sorted by alphabetical order.
 - [Anyswap Bridge](https://anyswap.exchange/bridge#/bridge)
 - [Anyswap Router](https://anyswap.exchange/bridge#/router)
 - [cBridge](https://cbridge.celer.network/#/transfer)
+- [Connext Bridge](https://bridge.connext.network/)
 - [Hop Exchange](https://app.hop.exchange/send?token=USDC)
 - [Orbiter](https://www.orbiter.finance/)
 - [Relay](https://app.relaychain.com/#/cross-chain-bridge-transfer)
 - [RenBridge](https://bridge.renproject.io/mint)
 - [Terra Bridge](https://bridge.terra.money/)
-- [xpollinate](https://www.xpollinate.io/)
 
 Besides, we also supported many CEXes, including:
 
