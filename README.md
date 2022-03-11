@@ -1,5 +1,7 @@
 # BridgeEye - DeFiEye Cross-Chain Bridge Tool
 
+### We are live in Gitcoin Grants Round 13. We'd be so grateful if you make donations [here](https://gitcoin.co/grants/4655/defieye-cross-bridge-tool).
+
 ### [https://tools.defieye.io/bridge/](https://tools.defieye.io/bridge/)
 
 Finding lowest fee bridge to cross your asset!
