@@ -1,0 +1,135 @@
+[
+    {
+        "network": "Ethereum",
+        "chainId": 1,
+        "router": "0x8731d54E9D02c286767d56ac03e8037C07e01e98",
+        "tokens": [
+            {
+                "symbol": "USDC",
+                "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "poolId": 1,
+                "decimal": 6,
+                "poolAddress": "0xdf0770dF86a8034b3EFEf0A1Bb3c889B8332FF56"
+            },
+            {
+                "symbol": "USDT",
+                "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                "poolId": 2,
+                "decimal": 6,
+                "poolAddress": "0x38EA452219524Bb87e18dE1C24D3bB59510BD783"
+            }
+        ]
+    },
+    {
+        "network": "BSC",
+        "chainId": 2,
+        "router": "0x4a364f8c717cAAD9A442737Eb7b8A55cc6cf18D8",
+        "tokens": [
+            {
+                "symbol": "USDT",
+                "address": "0x55d398326f99059fF775485246999027B3197955",
+                "poolId": 2,
+                "decimal": 18,
+                "poolAddress": "0x9aA83081AA06AF7208Dcc7A4cB72C94d057D2cda"
+            },
+            {
+                "symbol": "BUSD",
+                "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+                "poolId": 5,
+                "decimal": 18,
+                "poolAddress": "0x98a5737749490856b401DB5Dc27F522fC314A4e1"
+            }
+        ]
+    },
+    {
+        "network": "Avalanche",
+        "chainId": 6,
+        "router": "0x45A01E4e04F14f7A4a6702c74187c5F6222033cd",
+        "tokens": [
+            {
+                "symbol": "USDC",
+                "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+                "poolId": 1,
+                "decimal": 6,
+                "poolAddress": "0x1205f31718499dBf1fCa446663B532Ef87481fe1"
+            },
+            {
+                "symbol": "USDT",
+                "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+                "poolId": 2,
+                "decimal": 6,
+                "poolAddress": "0x29e38769f23701A2e4A8Ef0492e19dA4604Be62c"
+            }
+        ]
+    },
+    {
+        "network": "Polygon",
+        "chainId": 9,
+        "router": "0x45A01E4e04F14f7A4a6702c74187c5F6222033cd",
+        "tokens": [
+            {
+                "symbol": "USDC",
+                "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+                "poolId": 1,
+                "decimal": 6,
+                "poolAddress": "0x1205f31718499dBf1fCa446663B532Ef87481fe1"
+            },
+            {
+                "symbol": "USDT",
+                "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+                "poolId": 2,
+                "decimal": 6,
+                "poolAddress": "0x29e38769f23701A2e4A8Ef0492e19dA4604Be62c"
+            }
+        ]
+    },
+    {
+        "network": "Arbitrum",
+        "chainId": 10,
+        "router": "0x53Bf833A5d6c4ddA888F69c22C88C9f356a41614",
+        "tokens": [
+            {
+                "symbol": "USDC",
+                "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+                "poolId": 1,
+                "decimal": 6,
+                "poolAddress": "0x892785f33CdeE22A30AEF750F285E18c18040c3e"
+            },
+            {
+                "symbol": "USDT",
+                "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+                "poolId": 2,
+                "decimal": 6,
+                "poolAddress": "0xB6CfcF89a7B22988bfC96632aC2A9D6daB60d641"
+            }
+        ]
+    },
+    {
+        "network": "Optimism",
+        "chainId": 11,
+        "router": "0xB0D502E938ed5f4df2E681fE6E419ff29631d62b",
+        "tokens": [
+            {
+                "symbol": "USDC",
+                "address": "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
+                "poolId": 1,
+                "decimal": 6,
+                "poolAddress": "0xDecC0c09c3B5f6e92EF4184125D5648a66E35298"
+            }
+        ]
+    },
+    {
+        "network": "Fantom",
+        "chainId": 12,
+        "router": "0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6",
+        "tokens": [
+            {
+                "symbol": "USDC",
+                "address": "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75",
+                "poolId": 1,
+                "decimal": 6,
+                "poolAddress": "0x12edeA9cd262006cC3C4E77c90d2CD2DD4b1eb97"
+            }
+        ]
+    }
+]
