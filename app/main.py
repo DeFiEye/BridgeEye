@@ -108,15 +108,35 @@ for srcchain in ["Ethereum", "xDAI", "Polygon", "Arbitrum", "Optimism"]:
                 continue
             hop_all.append(["hop", srcchain, token, dstchain, token, "LOAD", [], "0", "0", "", ""])
 
-def hop_hook(amt, srcchain, dstchain, token):
-    h = hop_all
-    if srcchain:
-        h = list(filter(lambda i:i[1]==srcchain, h))
-    if dstchain:
-        h = list(filter(lambda i:i[3]==dstchain, h))
-    if token:
-        h = list(filter(lambda i:i[2] == token or i[4] == token, h))
-    return h
+def hook_from_tokenlist(alltokens):
+    def f_hook(amt, srcchain, dstchain, token):
+        h = alltokens
+        if srcchain:
+            h = list(filter(lambda i:i[1]==srcchain, h))
+        if dstchain:
+            h = list(filter(lambda i:i[3]==dstchain, h))
+        if token:
+            h = list(filter(lambda i:i[2] == token or i[4] == token, h))
+        print(h)
+        return h
+    return f_hook
+
+hop_hook = hook_from_tokenlist(hop_all)
+
+synapse_all = []
+synapse_seen = set()
+synapse_available = []
+try:
+    synapse_available = json.load(open("../crosschain/synapsejs/synapse_options.json"))
+    for srcchain,srctoken,dstchain,dsttoken in synapse_available:
+        for token in [srctoken, dsttoken]:
+            if (srcchain, token, dstchain) in synapse_seen:
+                continue
+            synapse_seen.add((srcchain, token, dstchain))
+            synapse_all.append(["synapse", srcchain, token, dstchain, token, "LOAD", [], "0", "0", "", ""])
+except:
+    traceback.print_exc()
+synapse_hook = hook_from_tokenlist(synapse_all)
 
 def ratiochange2feepercent(ratio1, ratio2, feerate):
     bar, r0, r1, r2 = feerate
@@ -181,7 +201,45 @@ def view_crosschain_estimateFee_acrossto():
         res = [["acrossto", srcchain, token, dstchain, token, f"amount not enough, gas fee ({gastoken:.4f} {token}) too high", [], 0, 0, "", ""]]
     return jsonify([{title[idx]: item[idx] for idx in range(len(item))} for item in res])
 
-HOOK_FUNCS = [hop_hook, acrossto_hook]
+@app.route("/api/v1/crosschain/estimateFee/synapse")
+def view_crosschain_estimateFee_synapse():
+    amt = float(request.args["amount"])
+    srcchain, dstchain, token = request.args.get("srcchain", None), request.args.get("dstchain", None), request.args.get("token", None)
+    if (srcchain, token, dstchain) not in synapse_seen:
+        return abort(400)
+    candidates = []
+    for _srcchain,_srctoken,_dstchain,_dsttoken in synapse_available:
+        if (srcchain, dstchain) != (_srcchain, _dstchain):
+            continue
+        if _srctoken==token and _dsttoken==token:
+            candidates = [[_srcchain,_srctoken,_dstchain,_dsttoken]]
+            break
+        elif _srctoken==token or _dsttoken==token:
+            candidates.append([_srcchain,_srctoken,_dstchain,_dsttoken])
+    #if len(candidates)>1:
+    #    print("warning: multiple candidates:", candidates)
+    title = ["bridge", "srcchain","srctoken","dstchain","dsttoken", "fee_status", "fee_info", "received", "fee_gasvalue", "stat_info", "time_info"]
+    res = []
+    for srcchain,srctoken,dstchain,dsttoken in candidates:
+        print({"srcchainid": chainname2id(srcchain), "srctoken":srctoken, "dstchainid":chainname2id(dstchain), "dsttoken":dsttoken, "amount":str(amt)})
+        x=sess.post("http://127.0.0.1:3000", {"srcchainid": chainname2id(srcchain), "srctoken":srctoken, "dstchainid":chainname2id(dstchain), "dsttoken":dsttoken, "amount":str(amt)})
+        if x.status_code == 200:
+            received, bridgefee = x.json()
+            received, bridgefee = float(received), float(bridgefee)
+            lp_fee = (amt-bridgefee-received)
+            lp_ratio = 100*lp_fee/amt
+            if received>0:
+                res.append(["synapse", srcchain, srctoken, dstchain, dsttoken, "ok", [
+                    ["Bridge Fee", f"{bridgefee:.4f} {srctoken}"], 
+                    ["LP Fee", f"{lp_fee:.4f} {srctoken} ({lp_ratio:.1f}%)"]
+                ], received, 0, "", ""])
+            else:
+                res.append(["synapse", srcchain, srctoken, dstchain, dsttoken, f"amount not enough, bridge fee ({bridgefee:.4f} {srctoken}) too high", [], 0, 0, "", ""])
+        else:
+            res.append(["synapse", srcchain, srctoken, dstchain, dsttoken, f"internal error, please query later", [], 0, 0, "", ""])
+    return jsonify([{title[idx]: item[idx] for idx in range(len(item))} for item in res])
+
+HOOK_FUNCS = [hop_hook, acrossto_hook, synapse_hook]
 @app.route("/api/v1/crosschain/estimateFee")
 def view_crosschain_estimateFee():
     title, alldata = crosschain_filter()
@@ -198,7 +256,8 @@ def view_crosschain_estimateFee():
                 fee_info[0] = "LOAD"
         res.append([bridge,srcchain,srctoken,dstchain,dsttoken]+fee_info)
     for hook_func in HOOK_FUNCS:
-        res.extend(hook_func(amt, request.args.get("srcchain", None), request.args.get("dstchain", None), request.args.get("token", None)))
+        if all([request.args.get("srcchain", None), request.args.get("dstchain", None), request.args.get("token", None)]):
+            res.extend(hook_func(amt, request.args.get("srcchain", None), request.args.get("dstchain", None), request.args.get("token", None)))
     return jsonify([{title[idx]: item[idx] for idx in range(len(item))} for item in res])
     
 _chain2id = {i.split(":")[1]:i.split(":")[0] for i in CHAINID2NAME_DICT.strip().split("\n")}
@@ -323,7 +382,7 @@ def view_crosschain_basicInfo():
         "anyswapv2":{"url": "https://anyswap.exchange/bridge#/bridge", "note":"Mapping based", "display_name":"Anyswap Bridge"},
         "anyswapv3":{"url":"https://anyswap.exchange/bridge#/router", "note":"Pool based", "display_name":"Anyswap Router"},
         #"xpollinatev1": {"url":"https://v1.xpollinate.io/", "note":"Pool based, CONNEXT", "display_name":"xpollinate v1"},
-        "xpollinatev2": {"url":"https://bridge.connext.network/", "note":"Pool based", "display_name":"xpollinate"},
+        "xpollinatev2": {"url":"https://bridge.connext.network/", "note":"Pool based", "display_name":"Connext Bridge"},
         "renbridge": {"url":"https://bridge.renproject.io/mint", "note":"Mapping based, only support non-EVM tokens", "display_name":"RenBridge"},
         "cbridge": {"url":"https://cbridge.celer.network/#/transfer", "note":"Pool based", "display_name":"cBridge"},
         "binancebridge": {"url":"https://www.binance.org/en/bridge", "note":"CEX based, equal to Binance; free into BSC", "display_name":"Binance Bridge"},
@@ -333,6 +392,8 @@ def view_crosschain_basicInfo():
         "relay":{"url":"https://app.relaychain.com/#/cross-chain-bridge-transfer", "note":"Mapping based", "display_name":"Relay"},
         "acrossto":{"url":"https://across.to/", "note":"Pool based", "display_name":"Across.to"},
         "orbiter":{"url":"https://www.orbiter.finance/", "note":"Pool based", "display_name":"Orbiter"},
+        "synapse":{"url":"https://synapseprotocol.com/", "note":"Pool based", "display_name":"Synapse Bridge"},
+        "stargate":{"url":"https://stargate.finance/transfer", "note":"", "display_name":"stargate"},
         #cex
         "huobi":{"url":"https://www.huobi.com/", "note":"Huobi Exchange", "display_name":"Huobi (CEX)"},
         "binance":{"url":"https://www.binance.com/", "note":"Binance Exchange", "display_name":"Binance (CEX)"},

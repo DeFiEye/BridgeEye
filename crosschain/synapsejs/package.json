@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@synapseprotocol/sdk": "^0.94.1",
+    "express": "^4.17.3",
+    "lexical-scope": "^1.2.0"
+  }
+}
