@@ -37,7 +37,7 @@ allTokens = chain2tokens.values()
 def generate_path(src_tokens, dst_tokens):
     for src_token in src_tokens:
         for dst_token in dst_tokens:
-            res.append(["stargate", src_token["network"], src_token["symbol"], dst_token["network"], dst_token["symbol"], src_token["address"], dst_token["address"], src_token["poolAddress"], dst_token["poolAddress"], True, 0, 0.06, 0, 0, 0, dst_token["liquidity"]])
+            res.append(["stargate", src_token["network"], src_token["symbol"], dst_token["network"], dst_token["symbol"], src_token["address"], dst_token["address"], src_token["poolAddress"], dst_token["poolAddress"], True, 0, 0.06, 0, 0, 0, dst_token["liquidity"], ""])
 
 for src_tokens in allTokens:
     for dst_tokens in allTokens:
