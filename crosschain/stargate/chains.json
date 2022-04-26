@@ -1,0 +1,49 @@
+{
+    "Ethereum": {
+        "chainId": 1,
+        "rpc": "https://rpc.ankr.com/eth",
+        "feePool": "0x701a95707A0290AC8B90b3719e8EE5b210360883",
+        "USDC": 1,
+        "USDT": 2
+    },
+    "BSC": {
+        "chainId": 2,
+        "rpc": "https://bsc-dataseed1.binance.org",
+        "feePool": "0x55bDb4164D28FBaF0898e0eF14a589ac09Ac9970",
+        "USDT": 2,
+        "BUSD": 5
+    },
+    "Avalanche": {
+        "chainId": 6,
+        "rpc": "https://api.avax.network/ext/bc/C/rpc",
+        "feePool": "0x693604E757AC7e2c4A8263594A18d69c35562341",
+        "USDC": 1,
+        "USDT": 2
+    },
+    "Polygon": {
+        "chainId": 9,
+        "rpc": "https://polygon-rpc.com",
+        "feePool": "0x693604E757AC7e2c4A8263594A18d69c35562341",
+        "USDC": 1,
+        "USDT": 2
+    },
+    "Arbitrum": {
+        "chainId": 10,
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "feePool": "0xC53e6d7018e2D10EbEd643302567f8dE752804fB",
+        "USDC": 1,
+        "USDT": 2
+    },
+    "Optimism": {
+        "chainId": 11,
+        "rpc": "https://mainnet.optimism.io",
+        "feePool": "0x5c1a97C144A97E9b370F833a06c70Ca8F2f30DE5",
+        "USDC": 1
+    },
+    "Fantom": {
+        "chainId": 12,
+        "rpc": "https://rpcapi.fantom.network",
+        "feePool": "0x06D538690AF257Da524f25D0CD52fD85b1c2173E",
+        "USDC": 1
+    }
+}
