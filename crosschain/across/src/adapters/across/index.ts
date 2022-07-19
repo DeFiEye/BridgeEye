@@ -90,6 +90,18 @@ export async function estimateFee(
   return fees;
 }
 
+export async function estimateFeeAPI(
+  fromChain: string,
+  toChainName: string,
+  token: string,
+  amount: number
+) {
+  const toChain = availableChains.find((_) => _.name === toChainName)
+    ?.chainId as number;
+  const fees = await calculateBridgeFee(amount, token, toChain);
+  return fees;
+}
+
 export async function estimateFeeAsCsv(
   fromChainName: string,
   toChainName: string,
@@ -122,6 +134,7 @@ export async function estimateFeeAsCsv(
 export async function generateCSV() {
   const supportedChains = await getSupportedChains();
   const allPathFeeRows: any[] = [];
+  const startTime = Date.now();
   for (let index = 0; index < supportedChains.length; index++) {
     const fromChain = supportedChains[index];
     const availableToChains = await getAvailableToChains(fromChain.name);
@@ -131,9 +144,30 @@ export async function generateCSV() {
         fromChain.name,
         toChain.name
       );
+      // const allFeeRows = await availableTokens.map((availableToken) => {
+      //   return estimateFeeAsCsv(
+      //     fromChain.name,
+      //     toChain.name,
+      //     availableToken.symbol,
+      //     1000
+      //   );
+      // });
+
+      // console.log(
+      //   "estimateFeeAsCsv Done",
+      //   fromChain.name,
+      //   toChain.name,
+      //   availableTokens.length,
+      //   availableTokens.map((_) => _.symbol)
+      // );
+
+      // allFeeRows.forEach((_) => {
+      //   allPathFeeRows.push(_);
+      // });
       for (let index = 0; index < availableTokens.length; index++) {
         const availableToken = availableTokens[index];
         try {
+          const startTime = Date.now();
           console.log(
             "estimateFeeAsCsv",
             fromChain.name,
@@ -146,6 +180,14 @@ export async function generateCSV() {
             availableToken.symbol,
             1000
           );
+           console.log(
+             "estimateFeeAsCsv",
+             fromChain.name,
+             toChain.name,
+             availableToken.symbol,
+             "spend",
+             Date.now() - startTime
+           );
           allPathFeeRows.push(feesInCsv);
         } catch (e) {
           console.log("estimateFeeAsCsv.error", e);
@@ -154,7 +196,12 @@ export async function generateCSV() {
     }
   }
 
-  console.log("allPathFeeRows", allPathFeeRows.length);
+  console.log(
+    "allPathFeeRows",
+    allPathFeeRows.length,
+    "spend",
+    Date.now() - startTime
+  );
   const csvWriter = createCsvWriter({
     path: "../acrossto.txt",
     header: CSV_HEADER,
@@ -177,9 +224,9 @@ async function test() {
   const fees = await estimateFee("Ethereum", "Arbitrum", "USDC", 1000);
   console.log("fees", fees);
 
-  const feesInCsv = await estimateFee("Ethereum", "Arbitrum", "USDC", 1000);
-  console.log("feesInCsv", feesInCsv);
-  await generateCSV();
+  // const feesInCsv = await estimateFee("Ethereum", "Arbitrum", "USDC", 1000);
+  // console.log("feesInCsv", feesInCsv);
+  // await generateCSV();
 }
 
 // test();

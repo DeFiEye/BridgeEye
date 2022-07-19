@@ -211,24 +211,32 @@ async function calculateBridgeFee(inputAmount, inputSymbol, toChainId) {
     const totalFeePct = fees.relayerFee.pct.add(fees.lpFee.pct);
     const destinationGasFee = fees.relayerGasFee.total;
     const acrossBridgeFee = fees.lpFee.total.add(fees.relayerCapitalFee.total);
+    const breakdown = [
+        {
+            name: "Across BridgeFee",
+            total: (0, format_1.formatUnits)(acrossBridgeFee, tokenDetail.decimals),
+            percent: parseFloat((0, format_1.formatEtherRaw)(fees.lpFee.pct.add(fees.relayerCapitalFee.pct).toString())).toFixed(5),
+            display: ""
+        },
+        {
+            name: "Destination GasFee",
+            total: (0, format_1.formatUnits)(destinationGasFee, tokenDetail.decimals),
+            percent: parseFloat((0, format_1.formatEtherRaw)(fees.relayerGasFee.pct.toString())).toFixed(5),
+            display: ""
+        },
+    ];
     const result = {
         token: tokenDetail,
-        input: ethers_1.ethers.utils.formatUnits(amount, tokenDetail.decimals),
-        output: ethers_1.ethers.utils.formatUnits(amount.sub(fees.relayerFee.total).sub(fees.lpFee.total), tokenDetail.decimals),
-        breakdown: [
-            {
-                name: "Across BridgeFee",
-                total: acrossBridgeFee.toString(),
-                percent: fees.lpFee.pct.add(fees.relayerCapitalFee.pct).toString(),
-            },
-            {
-                name: "Destination GasFee",
-                total: destinationGasFee.toString(),
-                percent: fees.relayerGasFee.pct.toString(),
-            },
-        ],
+        input: (0, format_1.formatUnits)(amount, tokenDetail.decimals),
+        output: (0, format_1.formatUnits)(amount.sub(fees.relayerFee.total).sub(fees.lpFee.total), tokenDetail.decimals),
+        breakdown: breakdown.map((_) => {
+            _.display = `${_.total} ${tokenDetail.symbol}`;
+            return _;
+        }),
         totalFeeRaw: totalFeePct.toString(),
-        totalFee: (0, format_1.formatEtherRaw)(totalFeePct),
+        fee: (0, format_1.formatUnits)(fees.relayerFee.total.add(fees.lpFee.total), tokenDetail.decimals),
+        feeDisplay: (0, format_1.formatUnits)(fees.relayerFee.total.add(fees.lpFee.total), tokenDetail.decimals) + ' ' + tokenDetail.symbol,
+        totalFee: parseFloat((0, format_1.formatEtherRaw)(totalFeePct)).toFixed(5),
     };
     // console.log(result);
     return result;

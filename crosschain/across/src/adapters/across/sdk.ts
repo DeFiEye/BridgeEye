@@ -383,27 +383,48 @@ export async function calculateBridgeFee(
   const destinationGasFee = fees.relayerGasFee.total;
   const acrossBridgeFee = fees.lpFee.total.add(fees.relayerCapitalFee.total);
 
+  const breakdown = [
+    {
+      name: "Across BridgeFee",
+      total: formatUnits(acrossBridgeFee, tokenDetail.decimals),
+      percent: parseFloat(
+        formatEtherRaw(
+          fees.lpFee.pct.add(fees.relayerCapitalFee.pct).toString()
+        )
+      ).toFixed(5),
+      display: ""
+    },
+    {
+      name: "Destination GasFee",
+      total: formatUnits(destinationGasFee, tokenDetail.decimals),
+      percent: parseFloat(
+        formatEtherRaw(fees.relayerGasFee.pct.toString())
+      ).toFixed(5),
+      display: ""
+    },
+  ];
+
   const result = {
     token: tokenDetail,
-    input: ethers.utils.formatUnits(amount, tokenDetail.decimals),
-    output: ethers.utils.formatUnits(
+    input: formatUnits(amount, tokenDetail.decimals),
+    output: formatUnits(
       amount.sub(fees.relayerFee.total).sub(fees.lpFee.total),
       tokenDetail.decimals
     ),
-    breakdown: [
-      {
-        name: "Across BridgeFee",
-        total: acrossBridgeFee.toString(),
-        percent: fees.lpFee.pct.add(fees.relayerCapitalFee.pct).toString(),
-      },
-      {
-        name: "Destination GasFee",
-        total: destinationGasFee.toString(),
-        percent: fees.relayerGasFee.pct.toString(),
-      },
-    ],
+    breakdown: breakdown.map((_) => {
+      _.display = `${_.total} ${tokenDetail.symbol}`;
+      return _;
+    }),
     totalFeeRaw: totalFeePct.toString(),
-    totalFee: formatEtherRaw(totalFeePct),
+    fee: formatUnits(
+      fees.relayerFee.total.add(fees.lpFee.total),
+      tokenDetail.decimals
+    ),
+    feeDisplay: formatUnits(
+      fees.relayerFee.total.add(fees.lpFee.total),
+      tokenDetail.decimals
+    ) + ' '+tokenDetail.symbol,
+    totalFee: parseFloat(formatEtherRaw(totalFeePct)).toFixed(5),
   };
   // console.log(result);
   return result;

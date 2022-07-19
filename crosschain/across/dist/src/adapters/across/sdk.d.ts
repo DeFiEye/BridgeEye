@@ -89,8 +89,11 @@ export declare function calculateBridgeFee(inputAmount: number, inputSymbol: str
         name: string;
         total: string;
         percent: string;
+        display: string;
     }[];
     totalFeeRaw: string;
+    fee: string;
+    feeDisplay: string;
     totalFee: string;
 }>;
 export {};
