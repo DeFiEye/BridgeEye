@@ -122,7 +122,7 @@ async function generateCSV() {
     }
     console.log("allPathFeeRows", allPathFeeRows.length);
     const csvWriter = (0, csv_writer_1.createArrayCsvWriter)({
-        path: "./acrossto.txt",
+        path: "../acrossto.txt",
         header: CSV_HEADER,
     });
     await csvWriter.writeRecords(allPathFeeRows);

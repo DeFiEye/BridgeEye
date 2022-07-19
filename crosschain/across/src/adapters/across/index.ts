@@ -156,7 +156,7 @@ export async function generateCSV() {
 
   console.log("allPathFeeRows", allPathFeeRows.length);
   const csvWriter = createCsvWriter({
-    path: "./acrossto.txt",
+    path: "../acrossto.txt",
     header: CSV_HEADER,
   });
   await csvWriter.writeRecords(allPathFeeRows);
