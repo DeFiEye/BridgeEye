@@ -26,8 +26,26 @@ export declare function estimateFee(fromChain: string, toChainName: string, toke
         name: string;
         total: string;
         percent: string;
+        display: string;
     }[];
     totalFeeRaw: string;
+    fee: string;
+    feeDisplay: string;
+    totalFee: string;
+}>;
+export declare function estimateFeeAPI(fromChain: string, toChainName: string, token: string, amount: number): Promise<{
+    token: import("./constants").TokenInfo;
+    input: string;
+    output: string;
+    breakdown: {
+        name: string;
+        total: string;
+        percent: string;
+        display: string;
+    }[];
+    totalFeeRaw: string;
+    fee: string;
+    feeDisplay: string;
     totalFee: string;
 }>;
 export declare function estimateFeeAsCsv(fromChainName: string, toChainName: string, token: string, amount: number): Promise<(string | number | boolean | undefined)[]>;
