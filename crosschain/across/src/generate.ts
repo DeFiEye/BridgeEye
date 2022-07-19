@@ -53,3 +53,5 @@ app.get("/v1/crosschain/estimateFee/across", async (req, res) => {
 });
 
 app.listen(8587);
+
+// v1/crosschain/estimateFee/cbridge
