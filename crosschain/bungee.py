@@ -1,13 +1,13 @@
 from common import *
 import requests
 import json
+import os
 
 # Docs: https://docs.socket.tech/socket-api/v2
 # Swagger: https://api.socket.tech/v2/swagger
 
-res = [
-    HEADER]  # ["bridge","srcchain","srctoken","dstchain","dsttoken","srctoken_contract","dsttoken_contract","srcholder","dstholder","isopen","fee_fixed","fee_percent","fee_minfee","fee_maxfee","minamount", "liquidity", "extra"]
-api_key = "Defieye 牛逼"
+res = [HEADER]  # ["bridge","srcchain","srctoken","dstchain","dsttoken","srctoken_contract","dsttoken_contract","srcholder","dstholder","isopen","fee_fixed","fee_percent","fee_minfee","fee_maxfee","minamount", "liquidity", "extra"]
+api_key = os.getenv("api_key")
 headers = {"API-KEY": api_key}
 sample_address = "0x3e8cB4bd04d81498aB4b94a392c334F5328b237b"
 
