@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateCSV = exports.estimateFeeAsCsv = exports.estimateFee = exports.getAvailableTokens = exports.getAvailableToChains = exports.availableChains = void 0;
+exports.generateCSV = exports.estimateFeeAsCsv = exports.estimateFeeAPI = exports.estimateFee = exports.getAvailableTokens = exports.getAvailableToChains = exports.availableChains = void 0;
 const sdk_1 = require("./sdk");
 const constants_1 = require("./constants");
 const config_1 = require("./config");
@@ -74,6 +74,13 @@ async function estimateFee(fromChain, toChainName, token, amount) {
     return fees;
 }
 exports.estimateFee = estimateFee;
+async function estimateFeeAPI(fromChain, toChainName, token, amount) {
+    var _a;
+    const toChain = (_a = exports.availableChains.find((_) => _.name === toChainName)) === null || _a === void 0 ? void 0 : _a.chainId;
+    const fees = await (0, sdk_1.calculateBridgeFee)(amount, token, toChain);
+    return fees;
+}
+exports.estimateFeeAPI = estimateFeeAPI;
 async function estimateFeeAsCsv(fromChainName, toChainName, token, amount) {
     const fees = await estimateFee(fromChainName, toChainName, token, amount);
     const tokenDetail = fees.token;
@@ -101,17 +108,38 @@ exports.estimateFeeAsCsv = estimateFeeAsCsv;
 async function generateCSV() {
     const supportedChains = await getSupportedChains();
     const allPathFeeRows = [];
+    const startTime = Date.now();
     for (let index = 0; index < supportedChains.length; index++) {
         const fromChain = supportedChains[index];
         const availableToChains = await getAvailableToChains(fromChain.name);
         for (let index = 0; index < availableToChains.length; index++) {
             const toChain = availableToChains[index];
             const availableTokens = await getAvailableTokens(fromChain.name, toChain.name);
+            // const allFeeRows = await availableTokens.map((availableToken) => {
+            //   return estimateFeeAsCsv(
+            //     fromChain.name,
+            //     toChain.name,
+            //     availableToken.symbol,
+            //     1000
+            //   );
+            // });
+            // console.log(
+            //   "estimateFeeAsCsv Done",
+            //   fromChain.name,
+            //   toChain.name,
+            //   availableTokens.length,
+            //   availableTokens.map((_) => _.symbol)
+            // );
+            // allFeeRows.forEach((_) => {
+            //   allPathFeeRows.push(_);
+            // });
             for (let index = 0; index < availableTokens.length; index++) {
                 const availableToken = availableTokens[index];
                 try {
+                    const startTime = Date.now();
                     console.log("estimateFeeAsCsv", fromChain.name, toChain.name, availableToken.symbol);
                     const feesInCsv = await estimateFeeAsCsv(fromChain.name, toChain.name, availableToken.symbol, 1000);
+                    console.log("estimateFeeAsCsv", fromChain.name, toChain.name, availableToken.symbol, "spend", Date.now() - startTime);
                     allPathFeeRows.push(feesInCsv);
                 }
                 catch (e) {
@@ -120,7 +148,7 @@ async function generateCSV() {
             }
         }
     }
-    console.log("allPathFeeRows", allPathFeeRows.length);
+    console.log("allPathFeeRows", allPathFeeRows.length, "spend", Date.now() - startTime);
     const csvWriter = (0, csv_writer_1.createArrayCsvWriter)({
         path: "../acrossto.txt",
         header: CSV_HEADER,
@@ -142,9 +170,9 @@ async function test() {
     console.log("availableToChains", availableToChains);
     const fees = await estimateFee("Ethereum", "Arbitrum", "USDC", 1000);
     console.log("fees", fees);
-    const feesInCsv = await estimateFee("Ethereum", "Arbitrum", "USDC", 1000);
-    console.log("feesInCsv", feesInCsv);
-    await generateCSV();
+    // const feesInCsv = await estimateFee("Ethereum", "Arbitrum", "USDC", 1000);
+    // console.log("feesInCsv", feesInCsv);
+    // await generateCSV();
 }
 // test();
 //# sourceMappingURL=index.js.map

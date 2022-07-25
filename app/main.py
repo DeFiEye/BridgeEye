@@ -183,23 +183,25 @@ def acrossto_hook(amt, srcchain, dstchain, token):
 
 @app.route("/api/v1/crosschain/estimateFee/acrossto")
 def view_crosschain_estimateFee_acrossto():
-    from acrossto import acrossto_query
-    amt = float(request.args["amount"])
-    srcchain, dstchain, token = request.args.get("srcchain", None), request.args.get("dstchain", None), request.args.get("token", None)
-    outvalue, gastoken, fee_lp, gasprice, fee_lp_percent, liquidity = acrossto_query(srcchain, dstchain, token, amt, int(time.time()//10))
-    title = ["bridge", "srcchain","srctoken","dstchain","dsttoken", "fee_status", "fee_info", "received", "fee_gasvalue", "stat_info", "time_info"]
-    fee_info = [
-        ["Relayer Gas Fee", f"{gastoken:.4f} {token}"],
-        ["(Gas Price", f"{gasprice:.1f} Gwei)"],
-        ["LP Fee", f"{fee_lp:.4f} {token} ({fee_lp_percent:.2f}%)"],
-    ]
-    if amt>liquidity:
-        res = [["acrossto", srcchain, token, dstchain, token, f"bridge liquidity not enough, can only send {liquidity:.4f} {token}", [], 0, 0, "", ""]]
-    elif outvalue>0:
-        res = [["acrossto", srcchain, token, dstchain, token, "ok", fee_info, outvalue, 0, "", "1~3min"]]
-    else:
-        res = [["acrossto", srcchain, token, dstchain, token, f"amount not enough, gas fee ({gastoken:.4f} {token}) too high", [], 0, 0, "", ""]]
-    return jsonify([{title[idx]: item[idx] for idx in range(len(item))} for item in res])
+    amount, srcchain, dstchain, token = request.args.get("amount", None), request.args.get("srcchain", None), request.args.get("dstchain", None), request.args.get("token", None)
+    data = getsess().get(f"http://localhost:8587/v1/crosschain/estimateFee/across?token=${token}&srcchain=${srcchain}&dstchain=${dstchain}&amount=${amount}")
+    return jsonify(data)
+    # from acrossto import acrossto_query
+    # amt = float(request.args["amount"])
+    # outvalue, gastoken, fee_lp, gasprice, fee_lp_percent, liquidity = acrossto_query(srcchain, dstchain, token, amt, int(time.time()//10))
+    # title = ["bridge", "srcchain","srctoken","dstchain","dsttoken", "fee_status", "fee_info", "received", "fee_gasvalue", "stat_info", "time_info"]
+    # fee_info = [
+    #     ["Relayer Gas Fee", f"{gastoken:.4f} {token}"],
+    #     ["(Gas Price", f"{gasprice:.1f} Gwei)"],
+    #     ["LP Fee", f"{fee_lp:.4f} {token} ({fee_lp_percent:.2f}%)"],
+    # ]
+    # if amt>liquidity:
+    #     res = [["acrossto", srcchain, token, dstchain, token, f"bridge liquidity not enough, can only send {liquidity:.4f} {token}", [], 0, 0, "", ""]]
+    # elif outvalue>0:
+    #     res = [["acrossto", srcchain, token, dstchain, token, "ok", fee_info, outvalue, 0, "", "1~3min"]]
+    # else:
+    #     res = [["acrossto", srcchain, token, dstchain, token, f"amount not enough, gas fee ({gastoken:.4f} {token}) too high", [], 0, 0, "", ""]]
+    # return jsonify([{title[idx]: item[idx] for idx in range(len(item))} for item in res])
 
 @app.route("/api/v1/crosschain/estimateFee/synapse")
 def view_crosschain_estimateFee_synapse():
