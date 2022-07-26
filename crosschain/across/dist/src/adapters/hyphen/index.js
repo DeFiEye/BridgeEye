@@ -116,7 +116,7 @@ async function generateCSV() {
                 for (let retry = 0; index < 5; retry++) {
                     try {
                         const startTime = Date.now();
-                        console.log("estimateFeeAsCsv", fromChain.name, toChain.name, availableToken.symbol);
+                        console.log("estimateFeeAsCsv", BRIDGE_ID, fromChain.name, toChain.name, availableToken.symbol);
                         const feesInCsv = await estimateFeeAsCsv(fromChain.name, toChain.name, availableToken.symbol, ["ETH"].includes(availableToken.symbol) ? 1 : 100);
                         console.log("estimateFeeAsCsv", fromChain.name, toChain.name, availableToken.symbol, "spend", Date.now() - startTime);
                         allPathFeeRows.push(feesInCsv);

@@ -5,6 +5,7 @@ const sdk_1 = require("./sdk");
 const constants_1 = require("./constants");
 const config_1 = require("./config");
 const csv_writer_1 = require("csv-writer");
+const BRIDGE_ID = "acrossto";
 const CSV_HEADER = [
     "bridge",
     "srcchain",
@@ -79,7 +80,7 @@ async function estimateFeeAsCsv(fromChainName, toChainName, token, amount) {
     const fees = await estimateFee(fromChainName, toChainName, token, amount);
     const tokenDetail = fees.token;
     return [
-        "acrossto",
+        BRIDGE_ID,
         fromChainName,
         token,
         toChainName,
@@ -133,7 +134,7 @@ async function generateCSV() {
                     const startTime = Date.now();
                     console.log("estimateFeeAsCsv", fromChain.name, toChain.name, availableToken.symbol);
                     const feesInCsv = await estimateFeeAsCsv(fromChain.name, toChain.name, availableToken.symbol, 1000);
-                    console.log("estimateFeeAsCsv", fromChain.name, toChain.name, availableToken.symbol, "spend", Date.now() - startTime);
+                    console.log("estimateFeeAsCsv", BRIDGE_ID, fromChain.name, toChain.name, availableToken.symbol, "spend", Date.now() - startTime);
                     allPathFeeRows.push(feesInCsv);
                 }
                 catch (e) {
@@ -144,7 +145,7 @@ async function generateCSV() {
     }
     console.log("allPathFeeRows", allPathFeeRows.length, "spend", Date.now() - startTime);
     const csvWriter = (0, csv_writer_1.createArrayCsvWriter)({
-        path: "../acrossto.txt",
+        path: "../" + BRIDGE_ID + ".txt",
         header: CSV_HEADER,
     });
     await csvWriter.writeRecords(allPathFeeRows);

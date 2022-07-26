@@ -141,6 +141,7 @@ export async function generateCSV() {
             const startTime = Date.now();
             console.log(
               "estimateFeeAsCsv",
+              BRIDGE_ID,
               fromChain.name,
               toChain.name,
               availableToken.symbol

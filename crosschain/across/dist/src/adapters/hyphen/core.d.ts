@@ -21,11 +21,6 @@ export declare function calculateBridgeFee(transferAmount: number, inputSymbol: 
         display: string;
     } | {
         name: string;
-        total: string;
-        percent?: undefined;
-        display?: undefined;
-    } | {
-        name: string;
         total: any;
         display: string;
         percent?: undefined;

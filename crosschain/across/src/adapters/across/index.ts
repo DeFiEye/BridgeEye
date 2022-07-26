@@ -3,6 +3,7 @@ import { ChainId, calculateAvailableToChains } from "./constants";
 import { getConfig } from "./config";
 import { createArrayCsvWriter as createCsvWriter } from "csv-writer";
 
+const BRIDGE_ID = "acrossto";
 const CSV_HEADER = [
   "bridge",
   "srcchain",
@@ -102,7 +103,7 @@ export async function estimateFeeAsCsv(
   const fees = await estimateFee(fromChainName, toChainName, token, amount);
   const tokenDetail = fees.token;
   return [
-    "acrossto",
+    BRIDGE_ID,
     fromChainName,
     token,
     toChainName,
@@ -171,14 +172,15 @@ export async function generateCSV() {
             availableToken.symbol,
             1000
           );
-           console.log(
-             "estimateFeeAsCsv",
-             fromChain.name,
-             toChain.name,
-             availableToken.symbol,
-             "spend",
-             Date.now() - startTime
-           );
+          console.log(
+            "estimateFeeAsCsv",
+            BRIDGE_ID,
+            fromChain.name,
+            toChain.name,
+            availableToken.symbol,
+            "spend",
+            Date.now() - startTime
+          );
           allPathFeeRows.push(feesInCsv);
         } catch (e) {
           console.log("estimateFeeAsCsv.error", e);
@@ -194,7 +196,7 @@ export async function generateCSV() {
     Date.now() - startTime
   );
   const csvWriter = createCsvWriter({
-    path: "../acrossto.txt",
+    path: "../" + BRIDGE_ID + ".txt",
     header: CSV_HEADER,
   });
   await csvWriter.writeRecords(allPathFeeRows);

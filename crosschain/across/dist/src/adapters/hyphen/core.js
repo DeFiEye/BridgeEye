@@ -129,6 +129,7 @@ async function calculateBridgeFee(transferAmount, inputSymbol, fromChainName, to
         {
             name: "Transaction Fee",
             total: transactionFee,
+            display: `${transactionFee} ${selectedToken.symbol}`,
         },
         {
             name: "Reward Amount",
@@ -165,7 +166,7 @@ async function test() {
     // for (let index = 0; index < 10; index++) {
     //   await loadConf();
     // }
-    await calculateBridgeFee(2500, "USDC", "Ethereum", "Arbitrum");
+    console.log(await calculateBridgeFee(1000, "USDC", "Ethereum", "Arbitrum"));
 }
-// test()
+test();
 //# sourceMappingURL=core.js.map
