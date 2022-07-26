@@ -378,6 +378,13 @@ def view_crosschain_choices():
     tokens = set(i[2] for i in alldata)|set(i[4] for i in alldata)
     return jsonify({"srcchains":sorted(srcchains), "dstchains":sorted(dstchains), "tokens":sorted(tokens)})
 
+
+@lru_cache()
+@app.route("/api/v1/crosschain/getBridgeInfo")
+def get_bridge_info():
+    data = getsess().get("https://defieye.postxiami.space/state/allBridgeInfo.json")
+    return jsonify(data)
+
 @app.route("/api/v1/crosschain/basicInfo")
 def view_crosschain_basicInfo():
     return jsonify({
