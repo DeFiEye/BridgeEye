@@ -1,8 +1,7 @@
-import { calculateBridgeFee } from "./sdk";
-import { ChainId, calculateAvailableToChains } from "./constants";
-import { getConfig } from "./config";
+import { calculateBridgeFee, loadConf } from "./core";
 import { createArrayCsvWriter as createCsvWriter } from "csv-writer";
 
+const BRIDGE_ID = "hyphen";
 const CSV_HEADER = [
   "bridge",
   "srcchain",
@@ -23,59 +22,40 @@ const CSV_HEADER = [
   "extra",
 ];
 
-type Mapping = {
-  name: string;
-  chainId: ChainId;
-};
-
-export const availableChains: Array<Mapping> = [
-  {
-    name: "Ethereum",
-    chainId: ChainId.MAINNET,
-  },
-  {
-    name: "Arbitrum",
-    chainId: ChainId.ARBITRUM,
-  },
-  {
-    name: "Optimism",
-    chainId: ChainId.OPTIMISM,
-  },
-  {
-    name: "Boba",
-    chainId: ChainId.BOBA,
-  },
-  {
-    name: "Polygon",
-    chainId: ChainId.POLYGON,
-  },
-];
-
 async function getSupportedChains() {
-  return availableChains;
+  const { networks, tokens } = await loadConf();
+  return networks.map((_: any) => ({ name: _.name, chainId: _.chainId }));
 }
 
-export function getAvailableToChains(fromChainName: string) {
-  const config = getConfig();
-  const fromChain = availableChains.find((_) => _.name === fromChainName)
-    ?.chainId as number;
-  const availableRoutes = config.filterRoutes({ fromChain });
-  const availableToChains = calculateAvailableToChains(
-    fromChain,
-    availableRoutes,
-    config.listToChains()
-  );
-  return availableToChains;
+export async function getAvailableToChains(fromChainName: string) {
+  const allChains = await getSupportedChains();
+  return allChains.filter((network: any) => network.name !== fromChainName);
 }
 
-export function getAvailableTokens(fromChainName: string, toChainName: string) {
-  const config = getConfig();
-  const fromChain = availableChains.find((_) => _.name === fromChainName)
-    ?.chainId as number;
-  const toChain = availableChains.find((_) => _.name === toChainName)
-    ?.chainId as number;
-  const availableTokens = config.filterReachableTokens(fromChain, toChain);
-  return availableTokens;
+export async function getAvailableTokens(
+  fromChainName: string,
+  toChainName: string
+) {
+  const { networks, tokens } = await loadConf();
+  const allChains = await getSupportedChains();
+  const fromChain = allChains.find((_: any) => _.name === fromChainName);
+  const toChain = allChains.find((_: any) => _.name === toChainName);
+  const allTokens = tokens.reduce((acc: any, token: any) => {
+    const { symbol } = token;
+    return {
+      ...acc,
+      [symbol]: token,
+    };
+  }, {});
+
+  return allTokens
+    ? Object.keys(allTokens)
+        .filter((tokenSymbol: string) => {
+          const token = allTokens[tokenSymbol];
+          return !!(token[fromChain.chainId] && token[toChain.chainId]);
+        })
+        .map((tokenSymbol: string) => allTokens[tokenSymbol])
+    : [];
 }
 
 export async function estimateFee(
@@ -84,14 +64,14 @@ export async function estimateFee(
   token: string,
   amount: number
 ) {
-  const toChain = availableChains.find((_) => _.name === toChainName)
-    ?.chainId as number;
-  const fromChain = availableChains.find((_) => _.name === fromChainName)
-    ?.chainId as number;
-  const fees = await calculateBridgeFee(amount, token, fromChain, toChain);
+  const fees = await calculateBridgeFee(
+    amount,
+    token,
+    fromChainName,
+    toChainName
+  );
   return fees;
 }
-
 
 export async function estimateFeeAsCsv(
   fromChainName: string,
@@ -102,7 +82,7 @@ export async function estimateFeeAsCsv(
   const fees = await estimateFee(fromChainName, toChainName, token, amount);
   const tokenDetail = fees.token;
   return [
-    "acrossto",
+    BRIDGE_ID,
     fromChainName,
     token,
     toChainName,
@@ -143,7 +123,6 @@ export async function generateCSV() {
       //     1000
       //   );
       // });
-
       // console.log(
       //   "estimateFeeAsCsv Done",
       //   fromChain.name,
@@ -157,32 +136,41 @@ export async function generateCSV() {
       // });
       for (let index = 0; index < availableTokens.length; index++) {
         const availableToken = availableTokens[index];
-        try {
-          const startTime = Date.now();
-          console.log(
-            "estimateFeeAsCsv",
-            fromChain.name,
-            toChain.name,
-            availableToken.symbol
-          );
-          const feesInCsv = await estimateFeeAsCsv(
-            fromChain.name,
-            toChain.name,
-            availableToken.symbol,
-            1000
-          );
-           console.log(
-             "estimateFeeAsCsv",
-             fromChain.name,
-             toChain.name,
-             availableToken.symbol,
-             "spend",
-             Date.now() - startTime
-           );
-          allPathFeeRows.push(feesInCsv);
-        } catch (e) {
-          console.log("estimateFeeAsCsv.error", e);
+        for (let retry = 0; index < 5; retry++) {
+          try {
+            const startTime = Date.now();
+            console.log(
+              "estimateFeeAsCsv",
+              fromChain.name,
+              toChain.name,
+              availableToken.symbol
+            );
+            const feesInCsv = await estimateFeeAsCsv(
+              fromChain.name,
+              toChain.name,
+              availableToken.symbol,
+              ["ETH"].includes(availableToken.symbol) ? 1 : 100
+            );
+            console.log(
+              "estimateFeeAsCsv",
+              fromChain.name,
+              toChain.name,
+              availableToken.symbol,
+              "spend",
+              Date.now() - startTime
+            );
+            allPathFeeRows.push(feesInCsv);
+            break;
+          } catch (e) {
+            console.log("failed", e);
+          }
+          await new Promise((resolve) => {
+            setTimeout(resolve, 10 * 1000);
+          });
         }
+        await new Promise((resolve) => {
+          setTimeout(resolve, 1 * 1000);
+        });
       }
     }
   }
@@ -194,7 +182,7 @@ export async function generateCSV() {
     Date.now() - startTime
   );
   const csvWriter = createCsvWriter({
-    path: "../acrossto.txt",
+    path: `../${BRIDGE_ID}.txt`,
     header: CSV_HEADER,
   });
   await csvWriter.writeRecords(allPathFeeRows);
@@ -212,12 +200,16 @@ async function test() {
   // console.log("tokens", tokens);
   // const availableToChains = await getAvailableToChains("Ethereum");
   // console.log("availableToChains", availableToChains);
-  const fees = await estimateFee("Ethereum", "Arbitrum", "USDC", 1000);
+  const fees = await estimateFee("Ethereum", "Polygon", "ETH", 1);
   console.log("fees", fees);
-
-  // const feesInCsv = await estimateFee("Ethereum", "Arbitrum", "USDC", 1000);
+  // const feesInCsv = await estimateFeeAsCsv(
+  //   "Ethereum",
+  //   "Arbitrum",
+  //   "USDC",
+  //   1000
+  // );
   // console.log("feesInCsv", feesInCsv);
-  // await generateCSV();
+  await generateCSV();
 }
 
 // test();

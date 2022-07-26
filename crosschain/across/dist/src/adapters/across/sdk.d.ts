@@ -81,8 +81,15 @@ export default class LpFeeCalculator {
     getLpFeePct(tokenAddress: string, amount: utils.BigNumberish, timestamp?: number): Promise<ethers.BigNumber>;
 }
 export declare function relayFeeCalculatorConfig(chainId: ChainId): relayFeeCalculator.RelayFeeCalculatorConfig;
-export declare function calculateBridgeFee(inputAmount: number, inputSymbol: string, toChainId: ChainId): Promise<{
+export declare function getBridgeLimits(token?: string, fromChainId?: ChainId, toChainId?: ChainId): Promise<{
+    minDeposit: ethers.BigNumber;
+    maxDeposit: ethers.BigNumber;
+    maxDepositInstant: ethers.BigNumber;
+    maxDepositShortDelay: ethers.BigNumber;
+} | null>;
+export declare function calculateBridgeFee(inputAmount: number, inputSymbol: string, fromChainId: ChainId, toChainId: ChainId): Promise<{
     token: import("./constants").TokenInfo;
+    timeEstimate: string;
     input: string;
     output: string;
     breakdown: {

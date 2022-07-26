@@ -19,6 +19,11 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.across = void 0;
-exports.across = __importStar(require("./across"));
+exports.adapters = void 0;
+const across = __importStar(require("./across"));
+const hyphen = __importStar(require("./hyphen"));
+exports.adapters = {
+    across: across,
+    hyphen: hyphen,
+};
 //# sourceMappingURL=index.js.map

@@ -18,23 +18,9 @@ export declare function getAvailableToChains(fromChainName: string): {
     earliestBlock: number;
 }[];
 export declare function getAvailableTokens(fromChainName: string, toChainName: string): import("./config").TokenList;
-export declare function estimateFee(fromChain: string, toChainName: string, token: string, amount: number): Promise<{
+export declare function estimateFee(fromChainName: string, toChainName: string, token: string, amount: number): Promise<{
     token: import("./constants").TokenInfo;
-    input: string;
-    output: string;
-    breakdown: {
-        name: string;
-        total: string;
-        percent: string;
-        display: string;
-    }[];
-    totalFeeRaw: string;
-    fee: string;
-    feeDisplay: string;
-    totalFee: string;
-}>;
-export declare function estimateFeeAPI(fromChain: string, toChainName: string, token: string, amount: number): Promise<{
-    token: import("./constants").TokenInfo;
+    timeEstimate: string;
     input: string;
     output: string;
     breakdown: {

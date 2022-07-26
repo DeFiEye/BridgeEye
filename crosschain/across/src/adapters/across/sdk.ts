@@ -7,6 +7,7 @@ import {
 } from "@across-protocol/sdk-v2";
 import { Provider, Block } from "@ethersproject/providers";
 import { ethers, BigNumber } from "ethers";
+import fetch from "isomorphic-fetch";
 // import { BridgeLimits } from "hooks";
 
 import {
@@ -358,9 +359,31 @@ export function relayFeeCalculatorConfig(
   };
 }
 
+export async function getBridgeLimits(
+  token?: string,
+  fromChainId?: ChainId,
+  toChainId?: ChainId
+) {
+  try {
+    const req = await fetch(
+      `https://across.to/api/limits?token=${token}&originChainId=${fromChainId}&destinationChainId=${toChainId}`
+    );
+    const response = await req.json();
+    return {
+      minDeposit: BigNumber.from(response.minDeposit),
+      maxDeposit: BigNumber.from(response.maxDeposit),
+      maxDepositInstant: BigNumber.from(response.maxDepositInstant),
+      maxDepositShortDelay: BigNumber.from(response.maxDepositShortDelay),
+    };
+  } catch (e) {
+    return null;
+  }
+}
+
 export async function calculateBridgeFee(
   inputAmount: number,
   inputSymbol: string,
+  fromChainId: ChainId,
   toChainId: ChainId
 ) {
   // const inputAmount = 1000;
@@ -371,13 +394,39 @@ export async function calculateBridgeFee(
     BigNumber.from("10").pow(tokenDetail.decimals)
   );
 
-  const block = await getBlock(toChainId);
-  const fees = await getBridgeFees({
-    amount,
-    tokenSymbol: inputSymbol,
-    blockTimestamp: block!.timestamp,
-    toChainId,
+  const config = getConfig();
+  let availableRoutes = config.filterRoutes({
+    fromChain: fromChainId,
+    toChain: toChainId,
+    fromTokenSymbol: inputSymbol,
   });
+
+  if (!availableRoutes.length) {
+    availableRoutes = config.filterRoutes({ fromTokenSymbol: inputSymbol });
+  }
+
+  const [firstRoute] = availableRoutes;
+  // fromChain = firstRoute.fromChain;
+  // toChain = firstRoute.toChain;
+  const selectedRoute = firstRoute;
+  // console.log("selectedRoute", selectedRoute);
+  let timeEstimate = "estimation failed";
+
+  const block = await getBlock(toChainId);
+  const [fees, limits] = await Promise.all([
+    getBridgeFees({
+      amount,
+      tokenSymbol: inputSymbol,
+      blockTimestamp: block!.timestamp,
+      toChainId,
+    }),
+    getBridgeLimits(selectedRoute?.fromTokenAddress, fromChainId, toChainId),
+  ]);
+
+  if (limits) {
+    timeEstimate = getConfirmationDepositTime(amount, limits, toChainId);
+    // console.log("limits", limits, "timeEstimate", timeEstimate);
+  }
 
   const totalFeePct = fees.relayerFee.pct.add(fees.lpFee.pct);
   const destinationGasFee = fees.relayerGasFee.total;
@@ -392,7 +441,7 @@ export async function calculateBridgeFee(
           fees.lpFee.pct.add(fees.relayerCapitalFee.pct).toString()
         )
       ).toFixed(5),
-      display: ""
+      display: "",
     },
     {
       name: "Destination GasFee",
@@ -400,12 +449,13 @@ export async function calculateBridgeFee(
       percent: parseFloat(
         formatEtherRaw(fees.relayerGasFee.pct.toString())
       ).toFixed(5),
-      display: ""
+      display: "",
     },
   ];
 
   const result = {
     token: tokenDetail,
+    timeEstimate,
     input: formatUnits(amount, tokenDetail.decimals),
     output: formatUnits(
       amount.sub(fees.relayerFee.total).sub(fees.lpFee.total),
@@ -420,10 +470,13 @@ export async function calculateBridgeFee(
       fees.relayerFee.total.add(fees.lpFee.total),
       tokenDetail.decimals
     ),
-    feeDisplay: formatUnits(
-      fees.relayerFee.total.add(fees.lpFee.total),
-      tokenDetail.decimals
-    ) + ' '+tokenDetail.symbol,
+    feeDisplay:
+      formatUnits(
+        fees.relayerFee.total.add(fees.lpFee.total),
+        tokenDetail.decimals
+      ) +
+      " " +
+      tokenDetail.symbol,
     totalFee: parseFloat(formatEtherRaw(totalFeePct)).toFixed(5),
   };
   // console.log(result);
