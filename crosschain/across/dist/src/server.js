@@ -48,8 +48,8 @@ app.get("/v1/crosschain/estimateFee/:adapter", async (req, res) => {
 app.listen(8587);
 async function generate() {
     await Promise.all([
-        adapters_1.adapters.across.generateCSV(),
-        adapters_1.adapters.hyphen.generateCSV(),
+        // adapters.across.generateCSV(),
+        // adapters.hyphen.generateCSV(),
         adapters_1.adapters.multichain.generateCSV(),
     ]);
     // await across.generateCSV();
@@ -60,7 +60,7 @@ async function runTask() {
             await generate();
         }
         catch (e) {
-            console.log("failed");
+            console.log("failed", e);
         }
         await new Promise((resolve) => {
             setTimeout(resolve, 60 * 1000 * 60);

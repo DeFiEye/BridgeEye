@@ -51,8 +51,8 @@ app.listen(8587);
 
 async function generate() {
   await Promise.all([
-    adapters.across.generateCSV(),
-    adapters.hyphen.generateCSV(),
+    // adapters.across.generateCSV(),
+    // adapters.hyphen.generateCSV(),
     adapters.multichain.generateCSV(),
   ]);
   // await across.generateCSV();
@@ -63,7 +63,7 @@ async function runTask() {
     try {
       await generate();
     } catch (e) {
-      console.log("failed");
+      console.log("failed", e);
     }
     await new Promise((resolve) => {
       setTimeout(resolve, 60 * 1000 * 60);

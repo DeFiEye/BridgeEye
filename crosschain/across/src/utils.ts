@@ -26,7 +26,7 @@ export class DataCache {
         return data;
       });
     } else {
-      console.log("cache hit");
+      // console.log("cache hit");
       return Promise.resolve(this.cache);
     }
   }

@@ -60,15 +60,19 @@ async function getAvailableTokens(fromChainName, toChainName) {
             return fetchChainPool(fromChain.chainID);
         }, 5);
     }
-    const allTokens = await dataFetchers[fromChain.chainID].getData();
-    // const allTokens = await fetchChainPool(fromChain.chainID);
-    // console.log("allTokens", {
-    //   fromChain,
-    //   toChain,
-    // });
-    return allTokens.filter((token) => {
-        return token.destChains[toChain.chainID] ? true : false;
-    });
+    try {
+        const allTokens = await dataFetchers[fromChain.chainID].getData();
+        // const allTokens = await fetchChainPool(fromChain.chainID);
+        // console.log("allTokens", {
+        //   fromChain,
+        //   toChain,
+        // });
+        return allTokens.filter((token) => {
+            return token.destChains[toChain.chainID] ? true : false;
+        });
+    }
+    catch (e) { }
+    return [];
 }
 exports.getAvailableTokens = getAvailableTokens;
 async function estimateFee(fromChainName, toChainName, token, value) {
@@ -200,31 +204,25 @@ async function generateCSV() {
             // });
             for (let index = 0; index < availableTokens.length; index++) {
                 const availableToken = availableTokens[index];
-                for (let retry = 0; index < 5; retry++) {
-                    try {
-                        const startTime = Date.now();
-                        // console.log(
-                        //   "estimateFeeAsCsv",
-                        //   BRIDGE_ID,
-                        //   fromChain.name,
-                        //   toChain.name,
-                        //   availableToken.symbol
-                        // );
-                        const feesInCsv = await estimateFeeAsCsv(fromChain.name, toChain.name, availableToken.symbol, ["ETH", 'WBTC', 'BTC'].includes(availableToken.symbol) ? 1 : 1000);
-                        console.log("estimateFeeAsCsv", BRIDGE_ID, fromChain.name, toChain.name, availableToken.symbol, "spend", Date.now() - startTime);
-                        allPathFeeRows.push(feesInCsv);
-                        break;
-                    }
-                    catch (e) {
-                        console.log("failed", e);
-                    }
-                    await new Promise((resolve) => {
-                        setTimeout(resolve, 10 * 1000);
-                    });
+                // for (let retry = 0; index < 2; retry++) {
+                try {
+                    const startTime = Date.now();
+                    // console.log(
+                    //   "estimateFeeAsCsv",
+                    //   BRIDGE_ID,
+                    //   fromChain.name,
+                    //   toChain.name,
+                    //   availableToken.symbol
+                    // );
+                    const feesInCsv = await estimateFeeAsCsv(fromChain.name, toChain.name, availableToken.symbol, ["ETH", "WBTC", "BTC"].includes(availableToken.symbol) ? 1 : 100);
+                    console.log("estimateFeeAsCsv", BRIDGE_ID, fromChain.name, toChain.name, availableToken.symbol, "spend", Date.now() - startTime);
+                    allPathFeeRows.push(feesInCsv);
+                    // break;
                 }
-                await new Promise((resolve) => {
-                    setTimeout(resolve, 1 * 1000);
-                });
+                catch (e) {
+                    // console.log("failed", e);
+                }
+                // }
             }
         }
     }
