@@ -7,42 +7,12 @@ exports.calculateBridgeFee = exports.loadConf = exports.RPC_HEADERS = exports.DE
 const isomorphic_fetch_1 = __importDefault(require("isomorphic-fetch"));
 const ethers_1 = require("ethers");
 const LiquidityPools_abi_json_1 = __importDefault(require("./abis/LiquidityPools.abi.json"));
+const utils_1 = require("../../utils");
 exports.BASE_DIVISOR = 100000000;
 exports.DEFAULT_FIXED_DECIMAL_POINT = 5;
 exports.RPC_HEADERS = {
     origin: "https://hyphen.biconomy.io",
 };
-class DataCache {
-    constructor(fetchFunction, minutesToLive = 10) {
-        this.millisecondsToLive = minutesToLive * 60 * 1000;
-        this.fetchFunction = fetchFunction;
-        this.cache = null;
-        this.getData = this.getData.bind(this);
-        this.resetCache = this.resetCache.bind(this);
-        this.isCacheExpired = this.isCacheExpired.bind(this);
-        this.fetchDate = new Date(0);
-    }
-    isCacheExpired() {
-        return (this.fetchDate.getTime() + this.millisecondsToLive < new Date().getTime());
-    }
-    getData() {
-        if (!this.cache || this.isCacheExpired()) {
-            // console.log("expired - fetching new data");
-            return this.fetchFunction().then((data) => {
-                this.cache = data;
-                this.fetchDate = new Date();
-                return data;
-            });
-        }
-        else {
-            // console.log("cache hit");
-            return Promise.resolve(this.cache);
-        }
-    }
-    resetCache() {
-        this.fetchDate = new Date(0);
-    }
-}
 async function fetchTokens() {
     const req = await (0, isomorphic_fetch_1.default)("https://hyphen-v2-api.biconomy.io/api/v1/configuration/tokens");
     return await req.json();
@@ -55,8 +25,8 @@ async function getTokenPrice(tokenAddress, network) {
     const req = await (0, isomorphic_fetch_1.default)(`https://hyphen-v2-api.biconomy.io/api/v1/insta-exit/get-token-price?tokenAddress=${tokenAddress}&networkId=${network}`);
     return await req.json();
 }
-const fetchNetworksWithCache = new DataCache(fetchNetworks, 10);
-const fetchTokensWithCache = new DataCache(fetchTokens, 10);
+const fetchNetworksWithCache = new utils_1.DataCache(fetchNetworks, 10);
+const fetchTokensWithCache = new utils_1.DataCache(fetchTokens, 10);
 async function loadConf() {
     const [networks, tokens] = await Promise.all([
         fetchNetworksWithCache.getData(),
@@ -168,5 +138,5 @@ async function test() {
     // }
     console.log(await calculateBridgeFee(1000, "USDC", "Ethereum", "Arbitrum"));
 }
-test();
+// test()
 //# sourceMappingURL=core.js.map

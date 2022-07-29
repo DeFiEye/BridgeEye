@@ -1,49 +1,13 @@
 import fetch from "isomorphic-fetch";
 import { BigNumber, ethers } from "ethers";
 import liquidityPoolABI from "./abis/LiquidityPools.abi.json";
+import { DataCache }from '../../utils';
 
 export const BASE_DIVISOR = 100000000;
 export const DEFAULT_FIXED_DECIMAL_POINT = 5;
 export const RPC_HEADERS = {
   origin: "https://hyphen.biconomy.io",
 };
-
-class DataCache {
-  fetchDate;
-  millisecondsToLive;
-  fetchFunction;
-  cache: any;
-  constructor(fetchFunction: any, minutesToLive = 10) {
-    this.millisecondsToLive = minutesToLive * 60 * 1000;
-    this.fetchFunction = fetchFunction;
-    this.cache = null;
-    this.getData = this.getData.bind(this);
-    this.resetCache = this.resetCache.bind(this);
-    this.isCacheExpired = this.isCacheExpired.bind(this);
-    this.fetchDate = new Date(0);
-  }
-  isCacheExpired() {
-    return (
-      this.fetchDate.getTime() + this.millisecondsToLive < new Date().getTime()
-    );
-  }
-  getData() {
-    if (!this.cache || this.isCacheExpired()) {
-      // console.log("expired - fetching new data");
-      return this.fetchFunction().then((data: any) => {
-        this.cache = data;
-        this.fetchDate = new Date();
-        return data;
-      });
-    } else {
-      // console.log("cache hit");
-      return Promise.resolve(this.cache);
-    }
-  }
-  resetCache() {
-    this.fetchDate = new Date(0);
-  }
-}
 
 async function fetchTokens() {
   const req = await fetch(
@@ -224,4 +188,4 @@ async function test() {
   console.log(await calculateBridgeFee(1000, "USDC", "Ethereum", "Arbitrum"));
 }
 
-test()
+// test()

@@ -2,6 +2,7 @@ import { utils } from "@uma/sdk";
 import { relayFeeCalculator } from "@across-protocol/sdk-v2";
 import { Provider } from "@ethersproject/providers";
 import { ethers, BigNumber } from "ethers";
+export declare const DEFAULT_FIXED_DECIMAL_POINT = 5;
 import { ChainId } from "./constants";
 export declare type Fee = {
     total: ethers.BigNumber;

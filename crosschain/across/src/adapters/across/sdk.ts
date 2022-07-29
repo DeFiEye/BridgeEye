@@ -10,6 +10,8 @@ import { ethers, BigNumber } from "ethers";
 import fetch from "isomorphic-fetch";
 // import { BridgeLimits } from "hooks";
 
+export const DEFAULT_FIXED_DECIMAL_POINT = 5;
+
 import {
   MAX_RELAY_FEE_PERCENT,
   ChainId,
@@ -380,6 +382,12 @@ export async function getBridgeLimits(
   }
 }
 
+
+function makeNumberFixed(value: BigNumber, decimals: number) {
+  const data = ethers.utils.formatUnits(value, decimals);
+  return parseFloat(data).toFixed(DEFAULT_FIXED_DECIMAL_POINT);
+}
+
 export async function calculateBridgeFee(
   inputAmount: number,
   inputSymbol: string,
@@ -435,7 +443,7 @@ export async function calculateBridgeFee(
   const breakdown = [
     {
       name: "Across BridgeFee",
-      total: formatUnits(acrossBridgeFee, tokenDetail.decimals),
+      total: makeNumberFixed(acrossBridgeFee, tokenDetail.decimals),
       percent: parseFloat(
         formatEtherRaw(
           fees.lpFee.pct.add(fees.relayerCapitalFee.pct).toString()
@@ -445,7 +453,7 @@ export async function calculateBridgeFee(
     },
     {
       name: "Destination GasFee",
-      total: formatUnits(destinationGasFee, tokenDetail.decimals),
+      total: makeNumberFixed(destinationGasFee, tokenDetail.decimals),
       percent: parseFloat(
         formatEtherRaw(fees.relayerGasFee.pct.toString())
       ).toFixed(5),

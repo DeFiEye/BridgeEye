@@ -22,8 +22,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.adapters = void 0;
 const across = __importStar(require("./across"));
 const hyphen = __importStar(require("./hyphen"));
+const multichain = __importStar(require("./multichain"));
 exports.adapters = {
     across: across,
     hyphen: hyphen,
+    multichain: multichain,
 };
 //# sourceMappingURL=index.js.map

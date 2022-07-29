@@ -10,7 +10,7 @@ app.get("/v1/crosschain/estimateFee/:adapter", async (req, res) => {
     try {
       const currentAdapter = adapters[adapter];
       if (!currentAdapter) {
-        res.json({
+        return res.json({
           error: `${adapter} not support`,
         });
       }
@@ -24,15 +24,17 @@ app.get("/v1/crosschain/estimateFee/:adapter", async (req, res) => {
         {
           bridge: adapter,
           dstchain: dstchain,
-          dsttoken: token,
-          dsttoken_contract: "",
+          dsttoken: feeInfo.outputToken ? feeInfo.outputToken.symbol : token,
+          dsttoken_contract: feeInfo.outputToken
+            ? feeInfo.outputToken.mainnetAddress
+            : feeInfo.token.mainnetAddress,
           fee_gasvalue: 0,
           fee_info: feeInfo.breakdown.map((_: any) => [_.name, _.display]),
           fee_status: "ok",
           received: parseFloat(feeInfo.output),
           srcchain: srcchain,
           srctoken: token,
-          srctoken_contract: "",
+          srctoken_contract: feeInfo.token.mainnetAddress,
           stat_info: "",
           time_info: "",
           total_fee: feeInfo.feeDisplay,
@@ -51,6 +53,7 @@ async function generate() {
   await Promise.all([
     adapters.across.generateCSV(),
     adapters.hyphen.generateCSV(),
+    adapters.multichain.generateCSV(),
   ]);
   // await across.generateCSV();
 }

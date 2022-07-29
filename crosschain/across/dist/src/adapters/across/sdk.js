@@ -3,13 +3,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.calculateBridgeFee = exports.getBridgeLimits = exports.relayFeeCalculatorConfig = exports.sendAcrossApproval = exports.sendAcrossDeposit = exports.getConfirmationDepositTime = exports.getBridgeFees = exports.getLpFee = exports.getRelayerFee = void 0;
+exports.calculateBridgeFee = exports.getBridgeLimits = exports.relayFeeCalculatorConfig = exports.sendAcrossApproval = exports.sendAcrossDeposit = exports.getConfirmationDepositTime = exports.getBridgeFees = exports.getLpFee = exports.getRelayerFee = exports.DEFAULT_FIXED_DECIMAL_POINT = void 0;
 const assert_1 = __importDefault(require("assert"));
 const sdk_1 = require("@uma/sdk");
 const sdk_v2_1 = require("@across-protocol/sdk-v2");
 const ethers_1 = require("ethers");
 const isomorphic_fetch_1 = __importDefault(require("isomorphic-fetch"));
 // import { BridgeLimits } from "hooks";
+exports.DEFAULT_FIXED_DECIMAL_POINT = 5;
 const constants_1 = require("./constants");
 const format_1 = require("./format");
 const config_1 = require("./config");
@@ -212,6 +213,10 @@ async function getBridgeLimits(token, fromChainId, toChainId) {
     }
 }
 exports.getBridgeLimits = getBridgeLimits;
+function makeNumberFixed(value, decimals) {
+    const data = ethers_1.ethers.utils.formatUnits(value, decimals);
+    return parseFloat(data).toFixed(exports.DEFAULT_FIXED_DECIMAL_POINT);
+}
 async function calculateBridgeFee(inputAmount, inputSymbol, fromChainId, toChainId) {
     // const inputAmount = 1000;
     // const inputSymbol = "USDC";
@@ -253,13 +258,13 @@ async function calculateBridgeFee(inputAmount, inputSymbol, fromChainId, toChain
     const breakdown = [
         {
             name: "Across BridgeFee",
-            total: (0, format_1.formatUnits)(acrossBridgeFee, tokenDetail.decimals),
+            total: makeNumberFixed(acrossBridgeFee, tokenDetail.decimals),
             percent: parseFloat((0, format_1.formatEtherRaw)(fees.lpFee.pct.add(fees.relayerCapitalFee.pct).toString())).toFixed(5),
             display: "",
         },
         {
             name: "Destination GasFee",
-            total: (0, format_1.formatUnits)(destinationGasFee, tokenDetail.decimals),
+            total: makeNumberFixed(destinationGasFee, tokenDetail.decimals),
             percent: parseFloat((0, format_1.formatEtherRaw)(fees.relayerGasFee.pct.toString())).toFixed(5),
             display: "",
         },

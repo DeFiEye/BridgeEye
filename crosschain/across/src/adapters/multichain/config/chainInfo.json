@@ -1,0 +1,3577 @@
+{
+    "1": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/1",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "ETH",
+            "timestamp": "",
+            "tokens": [
+                {
+                    "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+                    "chainId": "1",
+                    "decimals": 6,
+                    "name": "Tether USD",
+                    "symbol": "USDT"
+                },
+                {
+                    "address": "0xb8c77482e45f1f44de1745f52c74426c631bdd52",
+                    "chainId": "1",
+                    "decimals": 18,
+                    "name": "BNB",
+                    "symbol": "BNB"
+                },
+                {
+                    "address": "0x4fabb145d64652a948d72533023f6e7a623c7c53",
+                    "chainId": "1",
+                    "decimals": 18,
+                    "name": "Binance USD",
+                    "symbol": "BUSD"
+                },
+                {
+                    "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+                    "chainId": "1",
+                    "decimals": 18,
+                    "name": "ChainLink",
+                    "symbol": "LINK"
+                },
+                {
+                    "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+                    "chainId": "1",
+                    "decimals": 8,
+                    "name": "Wrapped BTC",
+                    "symbol": "WBTC"
+                },
+                {
+                    "address": "0x3883f5e181fccaf8410fa61e12b59bad963fb645",
+                    "chainId": "1",
+                    "decimals": 18,
+                    "name": "Theta",
+                    "symbol": "THETA"
+                },
+                {
+                    "address": "0xd850942ef8811f2a866692a623011bde52a462c1",
+                    "chainId": "1",
+                    "decimals": 18,
+                    "name": "VeChain",
+                    "symbol": "VEN"
+                },
+                {
+                    "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+                    "chainId": "1",
+                    "decimals": 18,
+                    "name": "Dai Stablecoin",
+                    "symbol": "DAI"
+                }
+            ],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "bridgeInitChain": "56",
+        "nativeToken": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "crossBridgeInitToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "swapRouterToken": "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F",
+        "swapInitToken": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+        "multicalToken": "0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696",
+        "v1FactoryToken": "0xc0a47dFe034B400B47bDaD5FecDa2621de6c4d95",
+        "v2FactoryToken": "0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac",
+        "timelock": "0x9a8541Ddf3a932a9A922B607e9CF7301f1d47bD1",
+        "nodeRpc": "https://ethmainnet.anyswap.exchange",
+        "nodeRpcList": [
+            "https://ethmainnet.anyswap.exchange"
+        ],
+        "chainID": "1",
+        "lookHash": "https://etherscan.io/tx/",
+        "lookAddr": "https://etherscan.io/address/",
+        "lookBlock": "https://etherscan.io/block/",
+        "explorer": "https://etherscan.io",
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "networkName": "Ethereum mainnet",
+        "type": "main",
+        "label": "1",
+        "isSwitch": 1,
+        "suffix": "ERC20",
+        "anyToken": "0xf99d58e463a2e07e5692127302c20a191861b4d6"
+    },
+    "4": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/4",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "ETH",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "bridgeInitChain": "56",
+        "nativeToken": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "crossBridgeInitToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "swapRouterToken": "",
+        "swapInitToken": "0xb09bad01684f6d47fc7dc9591889cc77eaed8d22",
+        "multicalToken": "0x42Ad527de7d4e9d9d011aC45B31D8551f8Fe9821",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rinkeby.infura.io/v3/613a4ccfe37f4870a2c3d922e58fa2bd",
+        "nodeRpcList": [
+            "https://rinkeby.infura.io/v3/613a4ccfe37f4870a2c3d922e58fa2bd",
+            "https://rinkeby.infura.io/v3/613a4ccfe37f4870a2c3d922e58fa2bd",
+            "https://rinkeby.infura.io/v3/0e40cfd5e7a64b2d9aea8427e4bd52a0"
+        ],
+        "chainID": "4",
+        "lookHash": "https://rinkeby.etherscan.io/tx/",
+        "lookAddr": "https://rinkeby.etherscan.io/address/",
+        "lookBlock": "https://rinkeby.etherscan.io/block/",
+        "explorer": "https://rinkeby.etherscan.io",
+        "symbol": "ETH",
+        "name": "Rinkeby",
+        "networkName": "ETH rinkeby",
+        "type": "test",
+        "label": "4",
+        "isSwitch": 1,
+        "suffix": "ERC20"
+    },
+    "5": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/5",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "ETH",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "bridgeInitChain": "56",
+        "nativeToken": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "crossBridgeInitToken": "0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://goerli.infura.io/v3/613a4ccfe37f4870a2c3d922e58fa2bd",
+        "nodeRpcList": [
+            "https://goerli.infura.io/v3/613a4ccfe37f4870a2c3d922e58fa2bd"
+        ],
+        "chainID": "5",
+        "lookHash": "https://goerli.etherscan.io/tx/",
+        "lookAddr": "https://goerli.etherscan.io/address/",
+        "lookBlock": "https://goerli.etherscan.io/block/",
+        "explorer": "https://goerli.etherscan.io",
+        "symbol": "ETH",
+        "name": "Goerli",
+        "networkName": "ETH Goerli",
+        "type": "test",
+        "label": "5",
+        "isSwitch": 1,
+        "suffix": "ERC20"
+    },
+    "10": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/10",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "OETH",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "1",
+        "nativeToken": "0x4200000000000000000000000000000000000006",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xFbdd194376de19a88118e84E279b977f165d01b8",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://mainnet.optimism.io",
+        "nodeRpcList": [
+            "https://mainnet.optimism.io"
+        ],
+        "chainID": "10",
+        "lookHash": "https://optimistic.etherscan.io/tx/",
+        "lookAddr": "https://optimistic.etherscan.io/address/",
+        "lookBlock": "https://optimistic.etherscan.io/block/",
+        "explorer": "https://optimistic.etherscan.io",
+        "symbol": "OETH",
+        "name": "Optimism",
+        "networkName": "Optimism mainnet",
+        "networkLogo": "OPTIMISM",
+        "type": "main",
+        "label": "10",
+        "isSwitch": 1,
+        "suffix": "OPTIMISM",
+        "anyToken": ""
+    },
+    "24": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/24",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "KAI",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.kardiachain.io",
+        "nodeRpcList": [
+            "https://rpc.kardiachain.io"
+        ],
+        "chainID": "24",
+        "lookHash": "https://explorer.kardiachain.io/tx/",
+        "lookAddr": "https://explorer.kardiachain.io/address/",
+        "lookBlock": "https://explorer.kardiachain.io/block/",
+        "explorer": "https://explorer.kardiachain.io",
+        "symbol": "KAI",
+        "name": "KardiaChain",
+        "networkName": "KardiaChain mainnet",
+        "type": "main",
+        "label": "24",
+        "isSwitch": 1,
+        "suffix": "KAI",
+        "anyToken": ""
+    },
+    "25": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/25",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "CRO",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xfa9343c3897324496a05fc75abed6bac29f8a40f",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://evm.cronos.org",
+        "nodeRpcList": [
+            "https://evm.cronos.org",
+            "https://evm-cronos.crypto.org"
+        ],
+        "chainID": "25",
+        "lookHash": "https://cronoscan.com/tx/",
+        "lookAddr": "https://cronoscan.com/address/",
+        "lookBlock": "https://cronoscan.com/block/",
+        "explorer": "https://cronoscan.com",
+        "symbol": "CRO",
+        "name": "Cronos",
+        "networkName": "Cronos mainnet",
+        "type": "main",
+        "label": "25",
+        "isSwitch": 1,
+        "suffix": "CRO",
+        "anyToken": ""
+    },
+    "28": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/28",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "OMGX",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x667fd83e24ca1d935d36717d305d54fa0cac991c",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rinkeby.omgx.network",
+        "nodeRpcList": [
+            "https://rinkeby.omgx.network"
+        ],
+        "chainID": "28",
+        "lookHash": "https://blockexplorer.rinkeby.omgx.network/?network=OmgX/tx/",
+        "lookAddr": "https://blockexplorer.rinkeby.omgx.network/?network=OmgX/address/",
+        "lookBlock": "https://blockexplorer.rinkeby.omgx.network/?network=OmgX/block/",
+        "explorer": "https://blockexplorer.rinkeby.omgx.network/?network=OmgX",
+        "symbol": "OMGX",
+        "name": "OMGX",
+        "networkName": "OMGX Rinkeby",
+        "networkLogo": "OMGX",
+        "type": "main",
+        "label": "28",
+        "isSwitch": 1,
+        "suffix": "OMGX"
+    },
+    "30": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/30",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "RBTC",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xFbdd194376de19a88118e84E279b977f165d01b8",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://public-node.rsk.co",
+        "nodeRpcList": [
+            "https://public-node.rsk.co"
+        ],
+        "chainID": "30",
+        "lookHash": "https://explorer.rsk.co/tx/",
+        "lookAddr": "https://explorer.rsk.co/address/",
+        "lookBlock": "https://explorer.rsk.co/block/",
+        "explorer": "https://explorer.rsk.co",
+        "symbol": "RBTC",
+        "name": "Rootstock RSK",
+        "networkName": "Rootstock RSK mainnet",
+        "type": "main",
+        "label": "30",
+        "isSwitch": 1,
+        "suffix": "",
+        "anyToken": ""
+    },
+    "40": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/40",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "TLOS",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xd102ce6a4db07d247fcc28f366a623df0938ca9e",
+        "bridgeInitChain": "1",
+        "nativeToken": "0xd102ce6a4db07d247fcc28f366a623df0938ca9e",
+        "crossBridgeInitToken": "0xfa9343c3897324496a05fc75abed6bac29f8a40f",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xE1A34ca06e57f981A51C6a9518d1bCDAb3cE1c6d",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc1.us.telos.net/evm",
+        "nodeRpcList": [
+            "https://rpc1.us.telos.net/evm",
+            "https://rpc1.eu.telos.net/evm"
+        ],
+        "chainID": "40",
+        "lookHash": "https://www.teloscan.io/tx/",
+        "lookAddr": "https://www.teloscan.io/address/",
+        "lookBlock": "https://www.teloscan.io/block/",
+        "explorer": "https://www.teloscan.io",
+        "symbol": "TLOS",
+        "name": "Telos",
+        "networkName": "Telos mainnet",
+        "type": "main",
+        "label": "40",
+        "isSwitch": 1,
+        "suffix": "TLOS",
+        "anyToken": ""
+    },
+    "44": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/44",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "CRAB",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x639A647fbe20b6c8ac19E48E2de44ea792c62c5C",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "http://crab-rpc.darwinia.network",
+        "nodeRpcList": [
+            "http://crab-rpc.darwinia.network"
+        ],
+        "chainID": "44",
+        "lookHash": "https://crab.subscan.io/extrinsic/",
+        "lookAddr": "https://crab.subscan.io/account/",
+        "lookBlock": "https://crab.subscan.io/block/",
+        "explorer": "https://crab.subscan.io",
+        "symbol": "CRAB",
+        "name": "Darwinia Crab smart",
+        "networkName": "Darwinia Crab smart mainnet",
+        "type": "main",
+        "label": "44",
+        "isSwitch": 1,
+        "suffix": "CRAB",
+        "anyToken": ""
+    },
+    "56": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/56",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "BNB",
+            "timestamp": "",
+            "tokens": [
+                {
+                    "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+                    "chainId": "56",
+                    "decimals": 18,
+                    "name": "Binance-Peg Ethereum",
+                    "symbol": "ETH"
+                },
+                {
+                    "address": "0x4338665cbb7b2485a8855a139b75d5e34ab0db94",
+                    "chainId": "56",
+                    "decimals": 18,
+                    "name": "Binance-Peg Litecoin",
+                    "symbol": "LTC"
+                },
+                {
+                    "address": "0x55d398326f99059ff775485246999027b3197955",
+                    "chainId": "56",
+                    "decimals": 18,
+                    "name": "Binance-Peg BSC-USD",
+                    "symbol": "USDT"
+                }
+            ],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "bridgeInitChain": "137",
+        "nativeToken": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
+        "swapInitToken": "0x55d398326f99059ff775485246999027b3197955",
+        "multicalToken": "0xa9193376D09C7f31283C54e56D013fCF370Cd9D9",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
+        "timelock": "0x9a8541Ddf3a932a9A922B607e9CF7301f1d47bD1",
+        "nodeRpc": "https://bscnode1.anyswap.exchange",
+        "nodeRpcList": [
+            "https://bsc-dataseed1.defibit.io/",
+            "https://bsc-dataseed2.defibit.io/",
+            "https://bsc-dataseed3.defibit.io/",
+            "https://bsc-dataseed4.defibit.io/",
+            "https://bsc-dataseed1.ninicoin.io/",
+            "https://bsc-dataseed2.ninicoin.io/",
+            "https://bsc-dataseed3.ninicoin.io/",
+            "https://bsc-dataseed4.ninicoin.io/",
+            "https://bsc-dataseed1.binance.org/",
+            "https://bsc-dataseed2.binance.org/",
+            "https://bsc-dataseed3.binance.org/",
+            "https://bsc-dataseed4.binance.org/",
+            "https://bsc-mainnet.nodereal.io/v1/60da44aa9d5747eaab321b08cce17cbc"
+        ],
+        "chainID": "56",
+        "lookHash": "https://bscscan.com/tx/",
+        "lookAddr": "https://bscscan.com/address/",
+        "lookBlock": "https://bscscan.com/block/",
+        "explorer": "https://bscscan.com",
+        "symbol": "BNB",
+        "symbolName": "Binance",
+        "name": "BNB CHAIN",
+        "networkName": "BNB CHAIN mainnet",
+        "type": "main",
+        "label": "56",
+        "isSwitch": 1,
+        "suffix": "BEP20",
+        "anyToken": "0xf68c9df95a18b2a5a5fa1124d79eeeffbad0b6fa"
+    },
+    "57": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/57",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "SYS",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x077a210d0baa86c23ae8f80021b177ebc5bee25e",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.syscoin.org",
+        "nodeRpcList": [
+            "https://rpc.syscoin.org"
+        ],
+        "chainID": "57",
+        "lookHash": "https://explorer.syscoin.org/tx/",
+        "lookAddr": "https://explorer.syscoin.org/address/",
+        "lookBlock": "https://explorer.syscoin.org/block/",
+        "explorer": "https://explorer.syscoin.org",
+        "symbol": "SYS",
+        "name": "Syscoin NEVM",
+        "networkName": "Syscoin mainnet",
+        "networkLogo": "SYS",
+        "type": "main",
+        "label": "57",
+        "isSwitch": 1,
+        "suffix": "SYS",
+        "anyToken": ""
+    },
+    "61": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/61",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "ETC",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "0x1953cab0e5bfa6d4a9bad6e05fd46c1cc6527a5a",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://www.ethercluster.com/etc",
+        "nodeRpcList": [
+            "https://www.ethercluster.com/etc"
+        ],
+        "chainID": "61",
+        "lookHash": "https://blockscout.com/etc/mainnet/tx/",
+        "lookAddr": "https://blockscout.com/etc/mainnet/address/",
+        "lookBlock": "https://blockscout.com/etc/mainnet/block/",
+        "explorer": "https://blockscout.com/etc/mainnet",
+        "symbol": "ETC",
+        "name": "Ethereum Classic",
+        "networkName": "Ethereum Classic mainnet",
+        "type": "main",
+        "label": "61",
+        "isSwitch": 1,
+        "suffix": "ETC",
+        "anyToken": ""
+    },
+    "66": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/66",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "OKT",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xc946daf81b08146b1c7a8da2a851ddf2b3eaaf85",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "0x218c3c3d49d0e7b37aff0d8bb079de36ae61a4c0",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xF4d73326C13a4Fc5FD7A064217e12780e9Bd62c3",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
+        "timelock": "0x9a8541Ddf3a932a9A922B607e9CF7301f1d47bD1",
+        "nodeRpc": "https://exchainrpc.okex.org",
+        "nodeRpcList": [
+            "https://exchainrpc.okex.org"
+        ],
+        "chainID": "66",
+        "lookHash": "https://www.oklink.com/okexchain/tx/",
+        "lookAddr": "https://www.oklink.com/okexchain/address/",
+        "lookBlock": "https://www.oklink.com/okexchain/block/",
+        "explorer": "https://www.oklink.com/okexchain",
+        "symbol": "OKT",
+        "name": "OKC",
+        "networkName": "OKC mainnet",
+        "type": "main",
+        "label": "66",
+        "isSwitch": 1,
+        "suffix": "OKT",
+        "anyToken": ""
+    },
+    "69": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/69",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "OETH",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "1",
+        "nativeToken": "0x4200000000000000000000000000000000000006",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x332730a4f6e03d9c55829435f10360e13cfa41ff",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://kovan.optimism.io",
+        "chainID": "69",
+        "lookHash": "https://kovan-l2-explorer.surge.sh/tx/",
+        "lookAddr": "https://kovan-l2-explorer.surge.sh/address/",
+        "lookBlock": "https://kovan-l2-explorer.surge.sh/block/",
+        "explorer": "https://kovan-l2-explorer.surge.sh",
+        "symbol": "OETH",
+        "name": "OPTIMISM",
+        "networkName": "OPTIMISM Rinkeby",
+        "networkLogo": "OPTIMISM",
+        "type": "main",
+        "label": "69",
+        "isSwitch": 1,
+        "suffix": "OPTIMISM"
+    },
+    "70": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/70",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "HOO",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://http-mainnet.hoosmartchain.com",
+        "nodeRpcList": [
+            "https://http-mainnet.hoosmartchain.com"
+        ],
+        "chainID": "70",
+        "lookHash": "https://hooscan.com/tx/",
+        "lookAddr": "https://hooscan.com/address/",
+        "lookBlock": "https://hooscan.com/block/",
+        "explorer": "https://hooscan.com",
+        "symbol": "HOO",
+        "name": "HSC",
+        "networkName": "HSC mainnet",
+        "type": "main",
+        "label": "70",
+        "isSwitch": 1,
+        "suffix": "HOO",
+        "anyToken": ""
+    },
+    "86": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/86",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "GT",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xf29848418cDdA0710Ae8d32e951E9DD5249a797B",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://evm.gatenode.cc",
+        "nodeRpcList": [
+            "https://evm.gatenode.cc",
+            "https://evm-hk.gatenode.cc"
+        ],
+        "chainID": "86",
+        "lookHash": "https://gatescan.org/tx/",
+        "lookAddr": "https://gatescan.org/address/",
+        "lookBlock": "https://gatescan.org/block/",
+        "explorer": "https://gatescan.org",
+        "symbol": "GT",
+        "name": "GateChain",
+        "networkName": "GateChain mainnet",
+        "type": "main",
+        "label": "86",
+        "isSwitch": 1,
+        "suffix": "GT",
+        "anyToken": ""
+    },
+    "88": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/88",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "TOMO",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xf29848418cDdA0710Ae8d32e951E9DD5249a797B",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.tomochain.com",
+        "nodeRpcList": [
+            "https://rpc.tomochain.com"
+        ],
+        "chainID": "88",
+        "lookHash": "https://tomoscan.io/tx/",
+        "lookAddr": "https://tomoscan.io/address/",
+        "lookBlock": "https://tomoscan.io/block/",
+        "explorer": "https://tomoscan.io",
+        "symbol": "TOMO",
+        "name": "TomoChain",
+        "networkName": "TomoChain mainnet",
+        "type": "main",
+        "label": "88",
+        "isSwitch": 1,
+        "suffix": "TOMO",
+        "anyToken": ""
+    },
+    "97": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/97",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "BNB",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "bridgeInitChain": "137",
+        "nativeToken": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
+        "swapInitToken": "0x461d52769884ca6235b685ef2040f47d30c94eb5",
+        "multicalToken": "0xe348b292e8eA5FAB54340656f3D374b259D658b8",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
+        "timelock": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+        "nodeRpc": "https://data-seed-prebsc-1-s1.binance.org:8545",
+        "nodeRpcList": [
+            "https://data-seed-prebsc-1-s1.binance.org:8545"
+        ],
+        "chainID": "97",
+        "lookHash": "https://testnet.bscscan.com/tx/",
+        "lookAddr": "https://testnet.bscscan.com/address/",
+        "lookBlock": "https://testnet.bscscan.com/block/",
+        "explorer": "https://testnet.bscscan.com",
+        "symbol": "BNB",
+        "name": "BNB CHAIN",
+        "networkName": "BNB CHAIN testnet",
+        "type": "test",
+        "label": "97",
+        "isSwitch": 1,
+        "suffix": "BEP20"
+    },
+    "100": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/100",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "GNO",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "0xb44a9b6905af7c801311e8f4e76932ee959c663c",
+        "swapRouterToken": "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
+        "swapInitToken": "",
+        "multicalToken": "0x67dA5f2FfaDDfF067AB9d5F025F8810634d84287",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
+        "timelock": "0x9a8541Ddf3a932a9A922B607e9CF7301f1d47bD1",
+        "nodeRpc": "https://rpc.ankr.com/gnosis",
+        "nodeRpcList": [
+            "https://rpc.ankr.com/gnosis",
+            "https://gnosischain-rpc.gateway.pokt.network",
+            "https://gnosis-mainnet.public.blastapi.io/",
+            "https://xdai-rpc.gateway.pokt.network/",
+            "https://rpc.ankr.com/gnosis",
+            "https://rpc.gnosischain.com/",
+            "https://xdai-archive.blockscout.com/"
+        ],
+        "chainID": "100",
+        "lookHash": "https://blockscout.com/xdai/mainnet/tx/",
+        "lookAddr": "https://blockscout.com/xdai/mainnet/address/",
+        "lookBlock": "https://blockscout.com/xdai/mainnet/block/",
+        "explorer": "https://blockscout.com/xdai/mainnet",
+        "symbol": "GNO",
+        "name": "Gnosis",
+        "networkName": "Gnosis mainnet",
+        "type": "main",
+        "label": "100",
+        "isSwitch": 1,
+        "suffix": "Gnosis",
+        "anyToken": "0xb44a9b6905af7c801311e8f4e76932ee959c663c"
+    },
+    "106": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/106",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "VLX",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x624De1690fAf85B3B0b64d5c4ab3d9B195102e78",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://evmexplorer.velas.com/rpc",
+        "nodeRpcList": [
+            "https://evmexplorer.velas.com/rpc"
+        ],
+        "chainID": "106",
+        "lookHash": "https://evmexplorer.velas.com/tx/",
+        "lookAddr": "https://evmexplorer.velas.com/address/",
+        "lookBlock": "https://evmexplorer.velas.com/block/",
+        "explorer": "https://evmexplorer.velas.com",
+        "symbol": "VLX",
+        "name": "Velas",
+        "networkName": "Velas mainnet",
+        "type": "main",
+        "label": "106",
+        "isSwitch": 1,
+        "suffix": "VLX",
+        "anyToken": ""
+    },
+    "108": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/108",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "TT",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://mainnet-rpc.thundercore.io",
+        "nodeRpcList": [
+            "https://mainnet-rpc.thundercore.io",
+            "https://mainnet-rpc.thundertoken.net",
+            "https://mainnet-rpc.thundercore.com"
+        ],
+        "chainID": "108",
+        "lookHash": "https://viewblock.io/thundercore/tx/",
+        "lookAddr": "https://viewblock.io/thundercore/address/",
+        "lookBlock": "https://viewblock.io/thundercore/block/",
+        "explorer": "https://viewblock.io/thundercore",
+        "symbol": "TT",
+        "name": "ThunderCore",
+        "networkName": "ThunderCore mainnet",
+        "type": "main",
+        "label": "108",
+        "isSwitch": 1,
+        "suffix": "TT",
+        "anyToken": ""
+    },
+    "122": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/122",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "FUSE",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "0x0be9e53fd7edac9f859882afdda116645287c629",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.fuse.io",
+        "nodeRpcList": [
+            "https://rpc.fuse.io",
+            "https://fuse-mainnet.gateway.pokt.network"
+        ],
+        "chainID": "122",
+        "lookHash": "https://explorer.fuse.io/tx/",
+        "lookAddr": "https://explorer.fuse.io/address/",
+        "lookBlock": "https://explorer.fuse.io/block/",
+        "explorer": "https://explorer.fuse.io",
+        "symbol": "FUSE",
+        "name": "Fuse",
+        "networkName": "Fuse mainnet",
+        "type": "main",
+        "label": "122",
+        "isSwitch": 1,
+        "suffix": "FUSE",
+        "anyToken": ""
+    },
+    "128": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/128",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "HT",
+            "timestamp": "",
+            "tokens": [
+                {
+                    "address": "0x66a79d23e58475d2738179ca52cd0b41d73f0bea",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "Heco-Peg HBTC",
+                    "symbol": "HBTC"
+                },
+                {
+                    "address": "0x64ff637fb478863b7468bc97d30a5bf3a428a1fd",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "Heco-Peg ETH",
+                    "symbol": "HETH"
+                },
+                {
+                    "address": "0x0298c2b32eae4da002a15f36fdf7615bea3da047",
+                    "chainId": "128",
+                    "decimals": 8,
+                    "name": "Heco-Peg HUSD",
+                    "symbol": "HUSD"
+                },
+                {
+                    "address": "0xecb56cf772b5c9a6907fb7d32387da2fcbfb63b4",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "Heco-Peg HLTC",
+                    "symbol": "HLTC"
+                },
+                {
+                    "address": "0xae3a768f9ab104c69a7cd6041fe16ffa235d1810",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "Heco-Peg HFIL",
+                    "symbol": "HFIL"
+                },
+                {
+                    "address": "0xef3cebd77e0c52cb6f60875d9306397b5caca375",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "Heco-Peg HBCH",
+                    "symbol": "HBCH"
+                },
+                {
+                    "address": "0xa2c49cee16a5e5bdefde931107dc1fae9f7773e3",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "Heco-Peg HDOT",
+                    "symbol": "HDOT"
+                },
+                {
+                    "address": "0xc2cb6b5357ccce1b99cd22232942d9a225ea4eb1",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "Heco-Peg HBSV",
+                    "symbol": "HBSV"
+                },
+                {
+                    "address": "0x45e97dad828ad735af1df0473fc2735f0fd5330c",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "Heco-Peg HXTZ",
+                    "symbol": "HXTZ"
+                },
+                {
+                    "address": "0x734922e7b793b408cd434eedaa407c9c0c575d1e",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "HTCToken",
+                    "symbol": "HTC"
+                },
+                {
+                    "address": "0xe499ef4616993730ced0f31fa2703b92b50bb536",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "Heco-Peg HPT",
+                    "symbol": "HPT"
+                },
+                {
+                    "address": "0xa71edc38d189767582c38a3145b5873052c3e47a",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "Heco-Peg USDTHECO",
+                    "symbol": "USDT"
+                },
+                {
+                    "address": "0x5545153ccfca01fbd7dd11c0b23ba694d9509a6f",
+                    "chainId": "128",
+                    "decimals": 18,
+                    "name": "WHT",
+                    "symbol": "WHT"
+                }
+            ],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xa71edc38d189767582c38a3145b5873052c3e47a",
+        "bridgeInitChain": "66",
+        "crossBridgeInitToken": "HT",
+        "swapRouterToken": "0x77e0e26de17be1ea2df87269475431e0e17dc74f",
+        "swapInitToken": "0x734922e7b793b408cd434eedaa407c9c0c575d1e",
+        "multicalToken": "0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3",
+        "v1FactoryToken": "0xdd2bc74e7a5e613379663e72689e668300b42f37",
+        "v2FactoryToken": "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
+        "timelock": "",
+        "nodeRpc": "https://http-mainnet.hecochain.com",
+        "nodeRpcList": [
+            "https://http-mainnet.hecochain.com"
+        ],
+        "chainID": "128",
+        "lookHash": "https://hecoinfo.com//tx/",
+        "lookAddr": "https://hecoinfo.com//address/",
+        "lookBlock": "https://hecoinfo.com//block/",
+        "explorer": "https://hecoinfo.com/",
+        "symbol": "HT",
+        "name": "Huobi",
+        "networkName": "Heco mainnet",
+        "type": "main",
+        "label": "128",
+        "isSwitch": 1,
+        "suffix": "HECO",
+        "anyToken": "0x538cee985e930557d16c383783ca957fa90b63b3"
+    },
+    "137": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/137",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "MATIC",
+            "timestamp": "",
+            "tokens": [
+                {
+                    "address": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6",
+                    "chainId": "137",
+                    "decimals": 8,
+                    "name": "Wrapped BTC",
+                    "symbol": "WBTC"
+                },
+                {
+                    "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+                    "chainId": "137",
+                    "decimals": 18,
+                    "name": "Dai Stablecoin",
+                    "symbol": "DAI"
+                }
+            ],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+        "bridgeInitChain": "56",
+        "nativeToken": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
+        "swapInitToken": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+        "multicalToken": "0x02817C1e3543c2d908a590F5dB6bc97f933dB4BD",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
+        "timelock": "0x9a8541Ddf3a932a9A922B607e9CF7301f1d47bD1",
+        "nodeRpc": "https://maticnode1.anyswap.exchange",
+        "nodeRpcList": [
+            "https://maticnode1.anyswap.exchange",
+            "https://polygon-rpc.com/",
+            "https://rpc-mainnet.matic.network",
+            "https://matic-mainnet.chainstacklabs.com",
+            "https://rpc-mainnet.maticvigil.com",
+            "https://rpc-mainnet.matic.quiknode.pro",
+            "https://matic-mainnet-full-rpc.bwarelabs.com",
+            "https://matic-mainnet-archive-rpc.bwarelabs.com"
+        ],
+        "chainID": "137",
+        "lookHash": "https://polygonscan.com/tx/",
+        "lookAddr": "https://polygonscan.com/address/",
+        "lookBlock": "https://polygonscan.com/block/",
+        "explorer": "https://polygonscan.com",
+        "symbol": "MATIC",
+        "name": "Polygon",
+        "networkName": "Polygon mainnet",
+        "type": "main",
+        "label": "137",
+        "isSwitch": 1,
+        "suffix": "MATIC",
+        "anyToken": "0x6ab6d61428fde76768d7b45d8bfeec19c6ef91a8"
+    },
+    "199": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/199",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "BTT",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.bt.io/",
+        "nodeRpcList": [
+            "https://rpc.bt.io/"
+        ],
+        "chainID": "199",
+        "lookHash": "https://bttcscan.com/tx/",
+        "lookAddr": "https://bttcscan.com/address/",
+        "lookBlock": "https://bttcscan.com/block/",
+        "explorer": "https://bttcscan.com",
+        "symbol": "BTT",
+        "name": "BitTorrent",
+        "networkName": "BitTorrent mainnet",
+        "type": "main",
+        "label": "199",
+        "isSwitch": 1,
+        "suffix": "",
+        "anyToken": ""
+    },
+    "250": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/250",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "FTM",
+            "timestamp": "",
+            "tokens": [
+                {
+                    "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",
+                    "chainId": "250",
+                    "decimals": 18,
+                    "name": "Fantom",
+                    "symbol": "BASECURRENCY"
+                },
+                {
+                    "address": "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e",
+                    "chainId": "250",
+                    "decimals": 18,
+                    "name": "Dai",
+                    "symbol": "DAI"
+                }
+            ],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0x04068da6c83afcfa0e13ba15a6696662335d5b75",
+        "bridgeInitChain": "137",
+        "nativeToken": "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+        "crossBridgeInitToken": "FTM",
+        "swapRouterToken": "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
+        "swapInitToken": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",
+        "multicalToken": "0x22D4cF72C45F8198CfbF4B568dBdB5A85e8DC0B5",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
+        "timelock": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+        "nodeRpc": "https://rpc.ftm.tools/",
+        "nodeRpcList": [
+            "https://rpc.ftm.tools/",
+            "https://rpc.fantom.network",
+            "https://rpc2.fantom.network",
+            "https://rpc3.fantom.network",
+            "https://rpcapi.fantom.network"
+        ],
+        "chainID": "250",
+        "lookHash": "https://ftmscan.com/tx/",
+        "lookAddr": "https://ftmscan.com/address/",
+        "lookBlock": "https://ftmscan.com/block/",
+        "explorer": "https://ftmscan.com",
+        "symbol": "FTM",
+        "name": "Fantom",
+        "networkName": "Fantom mainnet",
+        "type": "main",
+        "label": "250",
+        "isSwitch": 1,
+        "suffix": "FRC20",
+        "anyToken": "0xddcb3ffd12750b45d32e084887fdf1aabab34239"
+    },
+    "256": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/256",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "HT",
+            "timestamp": "",
+            "tokens": [
+                {
+                    "address": "0x4373ca233c17b8bf1bf8159d56019d3394a0670d",
+                    "chainId": "256",
+                    "decimals": 18,
+                    "name": "ANY",
+                    "symbol": "ANY"
+                },
+                {
+                    "address": "0x3b2c595173831bc4ceea2406fe49577bdb95d90a",
+                    "chainId": "256",
+                    "decimals": 18,
+                    "name": "HTC",
+                    "symbol": "HTC"
+                },
+                {
+                    "address": "0xa5a3c93776ba2e1a78c79e88a2cb5abab2a0097f",
+                    "chainId": "256",
+                    "decimals": 18,
+                    "name": "WETH",
+                    "symbol": "WETH"
+                },
+                {
+                    "address": "0x130966628846bfd36ff31a822705796e8cb8c18d",
+                    "chainId": "256",
+                    "decimals": 6,
+                    "name": "aaa",
+                    "symbol": "AAA"
+                },
+                {
+                    "address": "0xe069af87450fb51fc0d0e044617f1c134163e591",
+                    "chainId": "256",
+                    "decimals": 6,
+                    "name": "USDT",
+                    "symbol": "USDT"
+                }
+            ],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xa71edc38d189767582c38a3145b5873052c3e47a",
+        "bridgeInitChain": "66",
+        "crossBridgeInitToken": "HT",
+        "swapRouterToken": "0x479ab92bf721de918f01d455e90540149dbfd9da",
+        "swapInitToken": "0xe069af87450fb51fc0d0e044617f1c134163e591",
+        "multicalToken": "0xe4ea48020f648b1aa7fc25af7b196596190c6b29",
+        "v1FactoryToken": "0x87fe4ea2692aeb64dbab6593de87cc4741e20c7f",
+        "v2FactoryToken": "0x2302c14f2928bb9b68053320309b84db3702f89f",
+        "timelock": "",
+        "nodeRpc": "https://http-testnet.hecochain.com",
+        "nodeRpcList": [
+            "https://http-testnet.hecochain.com"
+        ],
+        "chainID": "256",
+        "lookHash": "https://testnet.hecoinfo.com/tx/",
+        "lookAddr": "https://testnet.hecoinfo.com/address/",
+        "lookBlock": "https://testnet.hecoinfo.com/block/",
+        "explorer": "https://testnet.hecoinfo.com",
+        "symbol": "HT",
+        "name": "Huobi",
+        "networkName": "Heco testnet",
+        "type": "test",
+        "label": "256",
+        "isSwitch": 1,
+        "suffix": "HECO"
+    },
+    "288": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/288",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "OETH",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0x818ec0a7fe18ff94269904fced6ae3dae6d6dc0b",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "OETHssBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://mainnet.boba.network",
+        "nodeRpcList": [
+            "https://mainnet.boba.network"
+        ],
+        "chainID": "288",
+        "lookHash": "https://blockexplorer.boba.network/tx/",
+        "lookAddr": "https://blockexplorer.boba.network/address/",
+        "lookBlock": "https://blockexplorer.boba.network/block/",
+        "explorer": "https://blockexplorer.boba.network",
+        "symbol": "OETH",
+        "name": "Boba",
+        "networkName": "Boba mainnet",
+        "type": "main",
+        "label": "288",
+        "isSwitch": 1,
+        "suffix": "OETH",
+        "anyToken": ""
+    },
+    "321": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/321",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "KCS",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xA649325Aa7C5093d12D6F98EB4378deAe68CE23F",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc-mainnet.kcc.network",
+        "nodeRpcList": [
+            "https://rpc-mainnet.kcc.network"
+        ],
+        "chainID": "321",
+        "lookHash": "https://explorer.kcc.io/cn/tx/",
+        "lookAddr": "https://explorer.kcc.io/cn/address/",
+        "lookBlock": "https://explorer.kcc.io/cn/block/",
+        "explorer": "https://explorer.kcc.io/cn",
+        "symbol": "KCS",
+        "name": "KCC",
+        "networkName": "KCC mainnet",
+        "type": "main",
+        "label": "321",
+        "isSwitch": 1,
+        "suffix": "",
+        "anyToken": ""
+    },
+    "336": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/336",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "SDN",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xfa9343c3897324496a05fc75abed6bac29f8a40f",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "0xfa9343c3897324496a05fc75abed6bac29f8a40f",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xEba098A16d6092B66608A14A3f53A984186266e7",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.shiden.astar.network:8545",
+        "nodeRpcList": [
+            "https://rpc.shiden.astar.network:8545",
+            "https://rpc.shiden.astar.network:8545",
+            "https://shiden.api.onfinality.io/rpc?apikey=d5da52f9-c548-4d48-8a7b-2ebb4d5d8959"
+        ],
+        "chainID": "336",
+        "lookHash": "https://shiden.subscan.io/tx/",
+        "lookAddr": "https://shiden.subscan.io/address/",
+        "lookBlock": "https://shiden.subscan.io/block/",
+        "explorer": "https://shiden.subscan.io",
+        "symbol": "SDN",
+        "name": "Shiden Network",
+        "networkName": "Shiden Network mainnet",
+        "type": "main",
+        "label": "336",
+        "isSwitch": 1,
+        "suffix": "SDN",
+        "anyToken": ""
+    },
+    "592": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/592",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "ASTR",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x639A647fbe20b6c8ac19E48E2de44ea792c62c5C",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.astar.bldnodes.org/",
+        "nodeRpcList": [
+            "https://rpc.astar.bldnodes.org/",
+            "https://rpc.astar.network:8545",
+            "https://astar.subscan.io"
+        ],
+        "chainID": "592",
+        "lookHash": "https://astar.subscan.io/extrinsic/",
+        "lookAddr": "https://astar.subscan.io/account/",
+        "lookBlock": "https://astar.subscan.io/block/",
+        "explorer": "https://astar.subscan.io",
+        "symbol": "ASTR",
+        "name": "Astar Network",
+        "networkName": "Astar mainnet",
+        "networkLogo": "ASTR",
+        "type": "main",
+        "label": "592",
+        "isSwitch": 1,
+        "suffix": "ASTR",
+        "anyToken": ""
+    },
+    "1024": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/1024",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "CLV",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "0x1376c97c5c512d2d6f9173a9a3a016b6140b4536",
+        "crossBridgeInitToken": "0x1376c97c5c512d2d6f9173a9a3a016b6140b4536",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x59346C1143d1dFCa87F4570d4FC4f27c674a1593",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://api-para.clover.finance",
+        "nodeRpcList": [
+            "https://api-para.clover.finance"
+        ],
+        "chainID": "1024",
+        "lookHash": "https://clvscan.com/tx/",
+        "lookAddr": "https://clvscan.com/address/",
+        "lookBlock": "https://clvscan.com/block/",
+        "explorer": "https://clvscan.com",
+        "symbol": "CLV",
+        "name": "CLV Parachain",
+        "networkName": "CLV Parachain mainnet",
+        "type": "main",
+        "label": "1024",
+        "isSwitch": 1,
+        "suffix": "CLV",
+        "anyToken": ""
+    },
+    "1030": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/1030",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "CFX",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "0x14b2d3bc65e74dae1030eafd8ac30c533c976a9b",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xAe8E9F3EA6a5b462b0Ae29aa1a3F6aC072365d9d",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://evm.confluxrpc.com",
+        "nodeRpcList": [
+            "https://evm.confluxrpc.com"
+        ],
+        "chainID": "1030",
+        "lookHash": "https://evm.confluxscan.io/tx/",
+        "lookAddr": "https://evm.confluxscan.io/address/",
+        "lookBlock": "https://evm.confluxscan.io/block/",
+        "explorer": "https://evm.confluxscan.io",
+        "symbol": "CFX",
+        "name": "Conflux eSpace",
+        "networkName": "Conflux eSpace mainnet",
+        "type": "main",
+        "label": "1030",
+        "isSwitch": 1,
+        "suffix": "CFX",
+        "anyToken": ""
+    },
+    "1088": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/1088",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "METIS",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "1",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x7C598c96D02398d89FbCb9d41Eab3DF0C16F227D",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://andromeda.metis.io/?owner=1088",
+        "nodeRpcList": [
+            "https://andromeda.metis.io/?owner=1088"
+        ],
+        "chainID": "1088",
+        "lookHash": "https://andromeda-explorer.metis.io/tx/",
+        "lookAddr": "https://andromeda-explorer.metis.io/address/",
+        "lookBlock": "https://andromeda-explorer.metis.io/block/",
+        "explorer": "https://andromeda-explorer.metis.io",
+        "symbol": "METIS",
+        "name": "Metis",
+        "networkName": "Metis mainnet",
+        "type": "main",
+        "label": "1088",
+        "isSwitch": 1,
+        "suffix": "METIS",
+        "anyToken": ""
+    },
+    "1284": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/1284",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "GLMR",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "1",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x639A647fbe20b6c8ac19E48E2de44ea792c62c5C",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.api.moonbeam.network",
+        "nodeRpcList": [
+            "https://rpc.api.moonbeam.network"
+        ],
+        "chainID": "1284",
+        "lookHash": "https://moonscan.io/tx/",
+        "lookAddr": "https://moonscan.io/address/",
+        "lookBlock": "https://moonscan.io/block/",
+        "explorer": "https://moonscan.io",
+        "symbol": "GLMR",
+        "name": "Moonbeam",
+        "networkName": "Moonbeam mainnet",
+        "type": "main",
+        "label": "1284",
+        "isSwitch": 1,
+        "suffix": "GLMR",
+        "anyToken": ""
+    },
+    "1285": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/1285",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "MOVR",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0x0cae51e1032e8461f4806e26332c030e34de3adb",
+        "bridgeInitChain": "56",
+        "nativeToken": "0x98878b06940ae243284ca214f92bb71a2b032b8a",
+        "crossBridgeInitToken": "0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x270f2F35bED92B7A59eA5F08F6B3fd34c8D9D9b5",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.moonriver.moonbeam.network",
+        "nodeRpcList": [
+            "https://rpc.moonriver.moonbeam.network"
+        ],
+        "chainID": "1285",
+        "lookHash": "https://moonriver.moonscan.io/tx/",
+        "lookAddr": "https://moonriver.moonscan.io/address/",
+        "lookBlock": "https://moonriver.moonscan.io/block/",
+        "explorer": "https://moonriver.moonscan.io",
+        "symbol": "MOVR",
+        "name": "Moonriver",
+        "networkName": "Moonriver mainnet",
+        "type": "main",
+        "label": "1285",
+        "isSwitch": 1,
+        "suffix": "MOVR",
+        "anyToken": ""
+    },
+    "1818": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/1818",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "CUBE",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://http-mainnet.cube.network",
+        "nodeRpcList": [
+            "https://http-mainnet.cube.network",
+            "https://http-mainnet.cube.network",
+            "https://http-mainnet-sg.cube.network",
+            "https://http-mainnet-us.cube.network"
+        ],
+        "chainID": "1818",
+        "lookHash": "https://www.cubescan.network/en-us/tx/",
+        "lookAddr": "https://www.cubescan.network/en-us/address/",
+        "lookBlock": "https://www.cubescan.network/en-us/block/",
+        "explorer": "https://www.cubescan.network/en-us",
+        "symbol": "CUBE",
+        "name": "Cube Chain",
+        "networkName": "Cube Chain mainnet",
+        "type": "main",
+        "label": "1818",
+        "isSwitch": 1,
+        "suffix": "CUBE",
+        "anyToken": ""
+    },
+    "2000": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/2000",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "DOGE",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc-sg.dogechain.dog",
+        "nodeRpcList": [
+            "https://rpc-sg.dogechain.dog"
+        ],
+        "chainID": "2000",
+        "lookHash": "https://blockchair.com/dogecoin/transaction/",
+        "lookAddr": "https://blockchair.com/dogecoin/address/",
+        "lookBlock": "https://blockchair.com/dogecoin/block/",
+        "explorer": "https://blockchair.com/dogecoin",
+        "symbol": "DOGE",
+        "name": "Dogechain",
+        "networkName": "Dogechain mainnet",
+        "type": "main",
+        "label": "2000",
+        "isSwitch": 1,
+        "suffix": "DOGE",
+        "anyToken": ""
+    },
+    "2001": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/2001",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "milkADA",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.c1.milkomeda.com:8545",
+        "nodeRpcList": [
+            "https://rpc.c1.milkomeda.com:8545"
+        ],
+        "chainID": "2001",
+        "lookHash": "https://rpc.c1.milkomeda.com:4000/tx/",
+        "lookAddr": "https://rpc.c1.milkomeda.com:4000/address/",
+        "lookBlock": "https://rpc.c1.milkomeda.com:4000/block/",
+        "explorer": "https://rpc.c1.milkomeda.com:4000",
+        "symbol": "milkADA",
+        "name": "Milkomeda",
+        "networkName": "Milkomeda mainnet",
+        "type": "main",
+        "label": "2001",
+        "isSwitch": 1,
+        "suffix": "milkADA",
+        "anyToken": ""
+    },
+    "2020": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/2020",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "RON",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://api.roninchain.com/rpc",
+        "nodeRpcList": [
+            "https://api.roninchain.com/rpc"
+        ],
+        "chainID": "2020",
+        "lookHash": "https://explorer.roninchain.com/tx/",
+        "lookAddr": "https://explorer.roninchain.com/address/",
+        "lookBlock": "https://explorer.roninchain.com/block/",
+        "explorer": "https://explorer.roninchain.com",
+        "symbol": "RON",
+        "name": "Ronin",
+        "networkName": "Ronin mainnet",
+        "type": "main",
+        "label": "2020",
+        "isSwitch": 1,
+        "suffix": "RON",
+        "anyToken": ""
+    },
+    "2222": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/2222",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "KAVA",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x30A62aA52Fa099C4B227869EB6aeaDEda054d121",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://evm.kava.io",
+        "nodeRpcList": [
+            "https://evm.kava.io"
+        ],
+        "chainID": "2222",
+        "lookHash": "https://explorer.kava.io/tx/",
+        "lookAddr": "https://explorer.kava.io/address/",
+        "lookBlock": "https://explorer.kava.io/block/",
+        "explorer": "https://explorer.kava.io",
+        "symbol": "KAVA",
+        "name": "Kava",
+        "networkName": "Kava mainnet",
+        "type": "main",
+        "label": "2222",
+        "isSwitch": 1,
+        "suffix": "KAVA",
+        "anyToken": ""
+    },
+    "4002": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/4002",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "FTM",
+            "timestamp": "",
+            "tokens": [
+                {
+                    "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",
+                    "chainId": "250",
+                    "decimals": 18,
+                    "name": "Fantom",
+                    "symbol": "BASECURRENCY"
+                },
+                {
+                    "address": "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e",
+                    "chainId": "250",
+                    "decimals": 18,
+                    "name": "Dai",
+                    "symbol": "DAI"
+                }
+            ],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0x04068da6c83afcfa0e13ba15a6696662335d5b75",
+        "bridgeInitChain": "137",
+        "nativeToken": "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+        "crossBridgeInitToken": "FTM",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x5aF9b9de61F645C08eA4540C177737C6c6622060",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.testnet.fantom.network",
+        "nodeRpcList": [
+            "https://rpc.testnet.fantom.network"
+        ],
+        "chainID": "4002",
+        "lookHash": "https://testnet.ftmscan.com//tx/",
+        "lookAddr": "https://testnet.ftmscan.com//address/",
+        "lookBlock": "https://testnet.ftmscan.com//block/",
+        "explorer": "https://testnet.ftmscan.com/",
+        "symbol": "FTM",
+        "name": "Fantom",
+        "networkName": "Fantom testnet",
+        "type": "test",
+        "label": "4002",
+        "isSwitch": 1,
+        "suffix": "FRC20",
+        "anyToken": ""
+    },
+    "4689": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/4689",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "IOTX",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xa00744882684c3e4747faefd68d283ea44099d03",
+        "bridgeInitChain": "56",
+        "nativeToken": "0xa00744882684c3e4747faefd68d283ea44099d03",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xe6801928061cdbe32ac5ad0634427e140efd05f9",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://babel-api.mainnet.iotex.io",
+        "nodeRpcList": [
+            "https://babel-api.mainnet.iotex.io"
+        ],
+        "chainID": "4689",
+        "lookHash": "https://iotexscan.io/tx/",
+        "lookAddr": "https://iotexscan.io/address/",
+        "lookBlock": "https://iotexscan.io/block/",
+        "explorer": "https://iotexscan.io",
+        "symbol": "IOTX",
+        "name": "IoTeX",
+        "networkName": "IoTeX mainnet",
+        "type": "main",
+        "label": "4689",
+        "isSwitch": 1,
+        "suffix": "IoTeX",
+        "anyToken": ""
+    },
+    "8217": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/8217",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "KLAY",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x80A16016cC4A2E6a2CACA8a4a498b1699fF0f844",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://public-node-api.klaytnapi.com/v1/cypress",
+        "nodeRpcList": [
+            "https://public-node-api.klaytnapi.com/v1/cypress"
+        ],
+        "chainID": "8217",
+        "lookHash": "https://scope.klaytn.com/tx/",
+        "lookAddr": "https://scope.klaytn.com/address/",
+        "lookBlock": "https://scope.klaytn.com/block/",
+        "explorer": "https://scope.klaytn.com",
+        "symbol": "KLAY",
+        "name": "Klaytn",
+        "networkName": "Klaytn mainnet",
+        "type": "main",
+        "label": "8217",
+        "isSwitch": 1,
+        "suffix": "KLAY",
+        "anyToken": ""
+    },
+    "9001": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/9001",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "EVMOS",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "1",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xdD2bc74E7a5e613379663e72689e668300b42f37",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://eth.bd.evmos.org:8545",
+        "nodeRpcList": [
+            "https://eth.bd.evmos.org:8545"
+        ],
+        "chainID": "9001",
+        "lookHash": "https://evm.evmos.org/tx/",
+        "lookAddr": "https://evm.evmos.org/address/",
+        "lookBlock": "https://evm.evmos.org/block/",
+        "explorer": "https://evm.evmos.org",
+        "symbol": "EVMOS",
+        "name": "Evmos",
+        "networkName": "Evmos mainnet",
+        "type": "main",
+        "label": "9001",
+        "isSwitch": 1,
+        "suffix": "EVMOS",
+        "anyToken": ""
+    },
+    "14000": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/14000",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "BAS",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.dev-01.bas.ankr.com/",
+        "nodeRpcList": [
+            "https://rpc.dev-01.bas.ankr.com/"
+        ],
+        "chainID": "14000",
+        "lookHash": "https://explorer.dev-01.bas.ankr.com//tx/",
+        "lookAddr": "https://explorer.dev-01.bas.ankr.com//address/",
+        "lookBlock": "https://explorer.dev-01.bas.ankr.com//block/",
+        "explorer": "https://explorer.dev-01.bas.ankr.com/",
+        "symbol": "BAS",
+        "name": "BAS",
+        "networkName": "BAS testnet",
+        "type": "test",
+        "label": "14000",
+        "isSwitch": 1,
+        "suffix": ""
+    },
+    "32659": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/32659",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "FSN",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "FSN",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x461d52769884ca6235B685EF2040F47d30C94EB5",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://mainnet.anyswap.exchange",
+        "nodeRpcList": [
+            "https://mainnet.anyswap.exchange",
+            "https://mainnet.anyswap.exchange",
+            "https://fsn.dev/api"
+        ],
+        "rpc1": "https://mainnet.anyswap.exchange",
+        "chainID": "32659",
+        "lookHash": "https://fsnex.com/transaction/",
+        "lookAddr": "https://fsnex.com/address/",
+        "lookBlock": "https://fsnex.com/block/",
+        "explorer": "https://fsnex.com",
+        "symbol": "FSN",
+        "name": "Fusion",
+        "networkName": "Fusion mainnet",
+        "type": "main",
+        "label": "32659",
+        "isSwitch": 1,
+        "suffix": "Fusion",
+        "anyToken": "0x0c74199d22f732039e843366a236ff4f61986b32"
+    },
+    "42161": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/42161",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "ETH",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bridgeInitChain": "1",
+        "nativeToken": "",
+        "crossBridgeInitToken": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x80C7DD17B01855a6D2347444a0FCC36136a314de",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://arb1.arbitrum.io/rpc",
+        "nodeRpcList": [
+            "https://arb1.arbitrum.io/rpc"
+        ],
+        "chainID": "42161",
+        "lookHash": "https://arbiscan.io//tx/",
+        "lookAddr": "https://arbiscan.io//address/",
+        "lookBlock": "https://arbiscan.io//block/",
+        "explorer": "https://arbiscan.io/",
+        "symbol": "ETH",
+        "name": "Arbitrum",
+        "networkName": "Arbitrum mainnet",
+        "networkLogo": "ARBITRUM",
+        "type": "main",
+        "label": "42161",
+        "isSwitch": 1,
+        "suffix": "ARBITRUM",
+        "anyToken": ""
+    },
+    "42220": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/42220",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "CELO",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xa649325aa7c5093d12d6f98eb4378deae68ce23f",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "0xa649325aa7c5093d12d6f98eb4378deae68ce23f",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://forno.celo.org",
+        "nodeRpcList": [
+            "https://forno.celo.org"
+        ],
+        "chainID": "42220",
+        "lookHash": "https://explorer.celo.org/tx/",
+        "lookAddr": "https://explorer.celo.org/address/",
+        "lookBlock": "https://explorer.celo.org/block/",
+        "explorer": "https://explorer.celo.org",
+        "symbol": "CELO",
+        "name": "Celo",
+        "networkName": "Celo mainnet",
+        "type": "main",
+        "label": "42220",
+        "isSwitch": 1,
+        "suffix": "CELO",
+        "anyToken": ""
+    },
+    "42262": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/42262",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "ROSE",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x624De1690fAf85B3B0b64d5c4ab3d9B195102e78",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://emerald.oasis.dev",
+        "nodeRpcList": [
+            "https://emerald.oasis.dev"
+        ],
+        "chainID": "42262",
+        "lookHash": "https://explorer.emerald.oasis.dev/tx/",
+        "lookAddr": "https://explorer.emerald.oasis.dev/address/",
+        "lookBlock": "https://explorer.emerald.oasis.dev/block/",
+        "explorer": "https://explorer.emerald.oasis.dev",
+        "symbol": "ROSE",
+        "name": "Oasis Network",
+        "networkName": "Oasis Network mainnet",
+        "type": "main",
+        "label": "42262",
+        "isSwitch": 1,
+        "suffix": "ROSE",
+        "anyToken": ""
+    },
+    "43113": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/43113",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "AVAX",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+        "bridgeInitChain": "56",
+        "nativeToken": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+        "crossBridgeInitToken": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xd8e95abcce8901cc2640d2ff4444c85506fb829d",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://api.avax-test.network/ext/bc/C/rpc",
+        "nodeRpcList": [
+            "https://api.avax-test.network/ext/bc/C/rpc"
+        ],
+        "chainID": "43113",
+        "lookHash": "https://testnet.snowtrace.io/tx/",
+        "lookAddr": "https://testnet.snowtrace.io/address/",
+        "lookBlock": "https://testnet.snowtrace.io/block/",
+        "explorer": "https://testnet.snowtrace.io",
+        "symbol": "AVAX",
+        "name": "Avalanche",
+        "networkName": "Avalanche testnet",
+        "type": "test",
+        "label": "43113",
+        "isSwitch": 1,
+        "suffix": "AVAX",
+        "anyToken": "0xb44a9b6905af7c801311e8f4e76932ee959c663c"
+    },
+    "43114": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/43114",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "AVAX",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+        "bridgeInitChain": "56",
+        "nativeToken": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+        "crossBridgeInitToken": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xd8e95abcce8901cc2640d2ff4444c85506fb829d",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://api.avax.network/ext/bc/C/rpc",
+        "nodeRpcList": [
+            "https://api.avax.network/ext/bc/C/rpc"
+        ],
+        "chainID": "43114",
+        "lookHash": "https://snowtrace.io/tx/",
+        "lookAddr": "https://snowtrace.io/address/",
+        "lookBlock": "https://snowtrace.io/block/",
+        "explorer": "https://snowtrace.io",
+        "symbol": "AVAX",
+        "name": "Avalanche",
+        "networkName": "Avalanche mainnet",
+        "type": "main",
+        "label": "43114",
+        "isSwitch": 1,
+        "suffix": "AVAX",
+        "anyToken": "0xb44a9b6905af7c801311e8f4e76932ee959c663c"
+    },
+    "46688": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/46688",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "FSN",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x2fd94457b707b2776d4f4e4292a4280164fe8a15",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://testnet.fsn.dev/api",
+        "nodeRpcList": [
+            "https://testnet.fsn.dev/api"
+        ],
+        "chainID": "46688",
+        "lookHash": "https://fsnex.com/transaction/",
+        "lookAddr": "https://fsnex.com/address/",
+        "lookBlock": "https://fsnex.com/block/",
+        "explorer": "https://fsnex.com",
+        "symbol": "FSN",
+        "name": "Fusion",
+        "networkName": "Fusion testnet",
+        "type": "test",
+        "label": "46688",
+        "isSwitch": 1,
+        "suffix": "Fusion"
+    },
+    "47805": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/47805",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "REI",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x9e8955847586682971a53e1a2428CA7354A655f2",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc-mainnet.rei.network",
+        "nodeRpcList": [
+            "https://rpc-mainnet.rei.network"
+        ],
+        "chainID": "47805",
+        "lookHash": "https://scan.rei.network/tx/",
+        "lookAddr": "https://scan.rei.network/address/",
+        "lookBlock": "https://scan.rei.network/block/",
+        "explorer": "https://scan.rei.network",
+        "symbol": "REI",
+        "name": "REI",
+        "networkName": "REI mainnet",
+        "type": "main",
+        "label": "47805",
+        "isSwitch": 1,
+        "suffix": "REI",
+        "anyToken": ""
+    },
+    "53935": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/53935",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "JEWEL",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x5b24224dC16508DAD755756639E420817DD4c99E",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://subnets.avax.network/defi-kingdoms/dfk-chain/rpc",
+        "nodeRpcList": [
+            "https://subnets.avax.network/defi-kingdoms/dfk-chain/rpc"
+        ],
+        "chainID": "53935",
+        "lookHash": "https://subnets.avax.network/defi-kingdoms/dfk-chain/explorer/tx/",
+        "lookAddr": "https://subnets.avax.network/defi-kingdoms/dfk-chain/explorer/address/",
+        "lookBlock": "https://subnets.avax.network/defi-kingdoms/dfk-chain/explorer/block/",
+        "explorer": "https://subnets.avax.network/defi-kingdoms/dfk-chain/explorer",
+        "symbol": "JEWEL",
+        "name": "DeFi Kingdoms",
+        "networkName": "DeFi Kingdoms mainnet",
+        "type": "main",
+        "label": "53935",
+        "isSwitch": 1,
+        "suffix": "JEWEL",
+        "anyToken": ""
+    },
+    "80001": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/80001",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "MATIC",
+            "timestamp": "",
+            "tokens": [
+                {
+                    "address": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6",
+                    "chainId": "137",
+                    "decimals": 8,
+                    "name": "Wrapped BTC",
+                    "symbol": "WBTC"
+                },
+                {
+                    "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+                    "chainId": "137",
+                    "decimals": 18,
+                    "name": "Dai Stablecoin",
+                    "symbol": "DAI"
+                }
+            ],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+        "bridgeInitChain": "56",
+        "nativeToken": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xE9058a6685fB99b1dDA6a8aab2865b59f7095C3d",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc-mumbai.maticvigil.com",
+        "nodeRpcList": [
+            "https://rpc-mumbai.maticvigil.com"
+        ],
+        "chainID": "80001",
+        "lookHash": "https://testnet.polygonscan.com/tx/",
+        "lookAddr": "https://testnet.polygonscan.com/address/",
+        "lookBlock": "https://testnet.polygonscan.com/block/",
+        "explorer": "https://testnet.polygonscan.com",
+        "symbol": "MATIC",
+        "name": "Mumbai",
+        "networkName": "Mumbai testnet",
+        "type": "test",
+        "label": "80001",
+        "isSwitch": 1,
+        "suffix": "MATIC",
+        "anyToken": ""
+    },
+    "256256": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/256256",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "CMP",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "0x192816e2ad6cc5d1bd309e5bd36bde5b7ef3ebd9",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xC43E77E8641d41028785779Df0F3D021bD54a1d6",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://mainnet.block.caduceus.foundation",
+        "nodeRpcList": [
+            "https://mainnet.block.caduceus.foundation"
+        ],
+        "chainID": "256256",
+        "lookHash": "https://mainnet.scan.caduceus.foundation/tx/",
+        "lookAddr": "https://mainnet.scan.caduceus.foundation/address/",
+        "lookBlock": "https://mainnet.scan.caduceus.foundation/block/",
+        "explorer": "https://mainnet.scan.caduceus.foundation",
+        "symbol": "CMP",
+        "name": "Caduceus",
+        "networkName": "Caduceus mainnet",
+        "type": "main",
+        "label": "256256",
+        "isSwitch": 1,
+        "suffix": "CMP",
+        "anyToken": ""
+    },
+    "421611": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/421611",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "ETH",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bridgeInitChain": "1",
+        "nativeToken": "",
+        "crossBridgeInitToken": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xf27ee99622c3c9b264583dacb2cce056e194494f",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rinkeby.arbitrum.io/rpc",
+        "nodeRpcList": [
+            "https://rinkeby.arbitrum.io/rpc"
+        ],
+        "chainID": "421611",
+        "lookHash": "https://rinkeby-explorer.arbitrum.io/#/tx/",
+        "lookAddr": "https://rinkeby-explorer.arbitrum.io/#/address/",
+        "lookBlock": "https://rinkeby-explorer.arbitrum.io/#/block/",
+        "explorer": "https://rinkeby-explorer.arbitrum.io/#",
+        "symbol": "ETH",
+        "name": "Arbitrum",
+        "networkName": "Arbitrum testnet",
+        "networkLogo": "ARBITRUM",
+        "type": "test",
+        "label": "421611",
+        "isSwitch": 1,
+        "suffix": "ARBITRUM"
+    },
+    "1313161554": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/1313161554",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "ETH",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://mainnet.aurora.dev",
+        "nodeRpcList": [
+            "https://mainnet.aurora.dev"
+        ],
+        "chainID": "1313161554",
+        "lookHash": "https://aurorascan.dev/tx/",
+        "lookAddr": "https://aurorascan.dev/address/",
+        "lookBlock": "https://aurorascan.dev/block/",
+        "explorer": "https://aurorascan.dev",
+        "symbol": "ETH",
+        "name": "Aurora",
+        "networkName": "Aurora mainnet",
+        "networkLogo": "AURORA",
+        "type": "main",
+        "label": "1313161554",
+        "isSwitch": 1,
+        "suffix": "AURORA",
+        "anyToken": ""
+    },
+    "1666600000": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/1666600000",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "ONE",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "",
+        "bridgeInitChain": "56",
+        "nativeToken": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+        "crossBridgeInitToken": "0x2bf9b864cdc97b08b6d79ad4663e71b8ab65c45c",
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://api.harmony.one",
+        "nodeRpcList": [
+            "https://api.harmony.one",
+            "https://api.s0.t.hmny.io"
+        ],
+        "chainID": "1666600000",
+        "lookHash": "https://explorer.harmony.one/#/tx/",
+        "lookAddr": "https://explorer.harmony.one/#/address/",
+        "lookBlock": "https://explorer.harmony.one/#/block/",
+        "explorer": "https://explorer.harmony.one/#",
+        "symbol": "ONE",
+        "name": "Harmony",
+        "networkName": "Harmony mainnet",
+        "type": "main",
+        "label": "1666600000",
+        "isSwitch": 1,
+        "suffix": "",
+        "anyToken": ""
+    },
+    "NEAR": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/NEAR",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "NEAR",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.mainnet.near.org",
+        "chainID": "NEAR",
+        "lookHash": "https://explorer.mainnet.near.org/transactions/",
+        "lookAddr": "https://explorer.mainnet.near.org/accounts/",
+        "lookBlock": "https://explorer.mainnet.near.org/blocks/",
+        "explorer": "https://explorer.mainnet.near.org",
+        "symbol": "NEAR",
+        "name": "Near",
+        "networkName": "Near mainnet",
+        "networkLogo": "NEAR",
+        "type": "main",
+        "label": "NEAR",
+        "isSwitch": 1,
+        "suffix": "NEAR",
+        "anyToken": "",
+        "chainType": "NEAR"
+    },
+    "NEAR_TEST": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/NEAR_TEST",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "NEAR",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "https://rpc.testnet.near.org",
+        "chainID": "NEAR_TEST",
+        "lookHash": "https://explorer.testnet.near.org/transactions/",
+        "lookAddr": "https://explorer.testnet.near.org/accounts/",
+        "lookBlock": "https://explorer.testnet.near.org/blocks/",
+        "explorer": "https://explorer.testnet.near.org",
+        "symbol": "NEAR",
+        "name": "Near",
+        "networkName": "Near testnet",
+        "networkLogo": "NEAR",
+        "type": "main",
+        "label": "NEAR_TEST",
+        "isSwitch": 1,
+        "suffix": "NEAR",
+        "anyToken": "",
+        "chainType": "NEAR_TEST"
+    },
+    "LTC": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/LTC",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "LTC",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "",
+        "chainID": "LTC",
+        "lookHash": "/tx/",
+        "lookAddr": "/address/",
+        "lookBlock": "/block/",
+        "explorer": "",
+        "symbol": "LTC",
+        "name": "Litecoin",
+        "networkName": "Litecoin mainnet",
+        "type": "main",
+        "label": "LTC",
+        "isSwitch": 1,
+        "suffix": "LTC",
+        "anyToken": "",
+        "chainType": "BTC"
+    },
+    "BTC": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/BTC",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "BTC",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "",
+        "chainID": "BTC",
+        "lookHash": "/tx/",
+        "lookAddr": "/address/",
+        "lookBlock": "/block/",
+        "explorer": "",
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "networkName": "Bitcoin mainnet",
+        "type": "main",
+        "label": "BTC",
+        "isSwitch": 1,
+        "suffix": "BTC",
+        "anyToken": "",
+        "chainType": "BTC"
+    },
+    "BLOCK": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/BLOCK",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "BLOCK",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "",
+        "chainID": "BLOCK",
+        "lookHash": "/tx/",
+        "lookAddr": "/address/",
+        "lookBlock": "/block/",
+        "explorer": "",
+        "symbol": "BLOCK",
+        "name": "Blocknet",
+        "networkName": "Blocknet mainnet",
+        "type": "main",
+        "label": "BLOCK",
+        "isSwitch": 1,
+        "suffix": "BLOCK",
+        "anyToken": "",
+        "chainType": "BTC"
+    },
+    "": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "OMGX",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "swapRouterToken": "",
+        "swapInitToken": "",
+        "multicalToken": "0x9e73d56dd1942743ffdf055449b052a806b854be",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "",
+        "nodeRpcList": [
+            ""
+        ],
+        "chainID": "",
+        "lookHash": "/tx/",
+        "lookAddr": "/address/",
+        "lookBlock": "/block/",
+        "explorer": "",
+        "symbol": "OMGX",
+        "name": "OMGX",
+        "networkName": "OMGX mainnet",
+        "networkLogo": "OMGX",
+        "type": "main",
+        "label": "",
+        "isSwitch": 1,
+        "suffix": "OMGX",
+        "anyToken": ""
+    },
+    "COLX": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/COLX",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "COLX",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "",
+        "chainID": "COLX",
+        "lookHash": "/tx/",
+        "lookAddr": "/address/",
+        "lookBlock": "/block/",
+        "explorer": "",
+        "symbol": "COLX",
+        "name": "ColossusXT",
+        "networkName": "ColossusXT mainnet",
+        "type": "main",
+        "label": "COLX",
+        "isSwitch": 1,
+        "suffix": "COLX",
+        "anyToken": "",
+        "chainType": "BTC"
+    },
+    "TERRA": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/TERRA",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "LUNA",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "",
+        "chainID": "TERRA",
+        "lookHash": "https://finder.terra.money/classic/tx/",
+        "lookAddr": "https://finder.terra.money/classic/address/",
+        "lookBlock": "https://finder.terra.money/classic/block/",
+        "explorer": "https://finder.terra.money/classic",
+        "symbol": "LUNA",
+        "name": "Terra",
+        "networkName": "Terra mainnet",
+        "networkLogo": "TERRA",
+        "type": "main",
+        "label": "TERRA",
+        "isSwitch": 1,
+        "suffix": "TERRA",
+        "anyToken": "",
+        "chainType": "TERRA"
+    },
+    "NAS": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/NAS",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "NAS",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "",
+        "chainID": "NAS",
+        "lookHash": "https://explorer.nebulas.io/#/tx/",
+        "lookAddr": "https://explorer.nebulas.io/#/address/",
+        "lookBlock": "https://explorer.nebulas.io/#/block/",
+        "explorer": "https://explorer.nebulas.io/#",
+        "symbol": "NAS",
+        "name": "Nebulas",
+        "networkName": "Nebulas mainnet",
+        "networkLogo": "NAS",
+        "type": "main",
+        "label": "NAS",
+        "isSwitch": 1,
+        "suffix": "NAS",
+        "anyToken": "",
+        "chainType": "NAS"
+    },
+    "XRP": {
+        "tokenListUrl": "https://list.htswap.io/tokenList/XRP",
+        "tokenList": {
+            "keywords": [
+                "roll",
+                "default",
+                "social money",
+                "personal tokens"
+            ],
+            "logoURI": "",
+            "name": "XRP",
+            "timestamp": "",
+            "tokens": [],
+            "version": {
+                "major": 0,
+                "minor": 0,
+                "patch": 1
+            }
+        },
+        "bridgeInitToken": "xrp",
+        "bridgeInitChain": "",
+        "nativeToken": "",
+        "crossBridgeInitToken": "XRP",
+        "multicalToken": "",
+        "v1FactoryToken": "",
+        "v2FactoryToken": "",
+        "timelock": "",
+        "nodeRpc": "",
+        "chainID": "XRP",
+        "lookHash": "https://xrpscan.com/tx/",
+        "lookAddr": "https://xrpscan.com/address/",
+        "lookBlock": "https://xrpscan.com/block/",
+        "explorer": "https://xrpscan.com",
+        "symbol": "XRP",
+        "name": "XRP Ledger",
+        "networkName": "XRP Ledger mainnet",
+        "networkLogo": "XRP",
+        "type": "main",
+        "label": "XRP",
+        "isSwitch": 1,
+        "suffix": "XRP",
+        "anyToken": "",
+        "chainType": "BTC"
+    }
+}
