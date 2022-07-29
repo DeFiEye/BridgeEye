@@ -21,6 +21,9 @@ export declare function estimateFee(fromChainName: string, toChainName: string, 
     totalFee: any;
     input: number;
     output: number;
+    minFee: number;
+    maxFee: number;
+    minNum: number;
     feeDisplay: string;
 }>;
 export declare function estimateFeeAsCsv(fromChainName: string, toChainName: string, token: string, amount: number): Promise<any[]>;

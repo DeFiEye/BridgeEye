@@ -84,9 +84,9 @@ async function estimateFee(fromChainName, toChainName, token, value) {
     const fee = (Number(tokenItem.SwapFeeRatePerMillion) * value) / 100;
     const maxFee = Number(tokenItem.MaximumSwapFee);
     const minFee = Number(tokenItem.MinimumSwapFee);
-    // console.log("toChain", selectedToken);
     const maxNum = Number(tokenItem.MaximumSwap);
     const minNum = Number(tokenItem.MinimumSwap);
+    // console.log("maxNum", maxNum);
     let currentFee = null;
     let output = null;
     if (maxNum < val || minNum > val) {
@@ -130,6 +130,9 @@ async function estimateFee(fromChainName, toChainName, token, value) {
         totalFee: tokenItem.SwapFeeRatePerMillion,
         input: value,
         output: output,
+        minFee,
+        maxFee,
+        minNum,
         feeDisplay: `${currentFee} ${selectedToken.symbol}`,
     };
     // const fees = await calculateBridgeFee(
@@ -158,10 +161,10 @@ async function estimateFeeAsCsv(fromChainName, toChainName, token, amount) {
         "",
         true,
         0,
-        parseFloat(fees.totalFee) * 100,
-        0,
-        0,
-        0,
+        parseFloat(fees.totalFee),
+        fees.minFee,
+        fees.maxFee,
+        fees.minNum,
         0,
         "",
     ];
@@ -238,13 +241,12 @@ async function test() {
     // console.log("supportedChains", supportedChains);
     // const tokens = await getAvailableTokens("Ethereum", "Arbitrum");
     // console.log("tokens", tokens.length, tokens[0]);
-    const fees = await estimateFee("Ethereum", "BNB CHAIN", "WBTC", 1);
-    console.log("fees", fees);
-    const feesInCsv = await estimateFeeAsCsv("Ethereum", "BNB CHAIN", "WBTC", 1);
+    // const fees = await estimateFee("Ethereum", "BNB CHAIN", "WBTC", 1);
+    // console.log("fees", fees);
+    const feesInCsv = await estimateFeeAsCsv("Ethereum", "BNB CHAIN", "USDC", 100);
     console.log("feesInCsv", feesInCsv);
     // const fees1 = await estimateFee("Ethereum", "BNB CHAIN", "WBTC", 1);
     // console.log("fees1", fees1);
 }
-// test();
 // test();
 //# sourceMappingURL=index.js.map
