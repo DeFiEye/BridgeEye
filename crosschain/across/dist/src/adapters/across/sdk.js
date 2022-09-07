@@ -3,12 +3,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.calculateBridgeFee = exports.relayFeeCalculatorConfig = exports.sendAcrossApproval = exports.sendAcrossDeposit = exports.getConfirmationDepositTime = exports.getBridgeFees = exports.getLpFee = exports.getRelayerFee = void 0;
+exports.calculateBridgeFee = exports.getBridgeLimits = exports.relayFeeCalculatorConfig = exports.sendAcrossApproval = exports.sendAcrossDeposit = exports.getConfirmationDepositTime = exports.getBridgeFees = exports.getLpFee = exports.getRelayerFee = exports.DEFAULT_FIXED_DECIMAL_POINT = void 0;
 const assert_1 = __importDefault(require("assert"));
 const sdk_1 = require("@uma/sdk");
 const sdk_v2_1 = require("@across-protocol/sdk-v2");
 const ethers_1 = require("ethers");
+const isomorphic_fetch_1 = __importDefault(require("isomorphic-fetch"));
 // import { BridgeLimits } from "hooks";
+exports.DEFAULT_FIXED_DECIMAL_POINT = 4;
 const constants_1 = require("./constants");
 const format_1 = require("./format");
 const config_1 = require("./config");
@@ -195,47 +197,98 @@ function relayFeeCalculatorConfig(chainId) {
     };
 }
 exports.relayFeeCalculatorConfig = relayFeeCalculatorConfig;
-async function calculateBridgeFee(inputAmount, inputSymbol, toChainId) {
+async function getBridgeLimits(token, fromChainId, toChainId) {
+    try {
+        const req = await (0, isomorphic_fetch_1.default)(`https://across.to/api/limits?token=${token}&originChainId=${fromChainId}&destinationChainId=${toChainId}`);
+        const response = await req.json();
+        return {
+            minDeposit: ethers_1.BigNumber.from(response.minDeposit),
+            maxDeposit: ethers_1.BigNumber.from(response.maxDeposit),
+            maxDepositInstant: ethers_1.BigNumber.from(response.maxDepositInstant),
+            maxDepositShortDelay: ethers_1.BigNumber.from(response.maxDepositShortDelay),
+        };
+    }
+    catch (e) {
+        return null;
+    }
+}
+exports.getBridgeLimits = getBridgeLimits;
+function makeNumberFixed(value, decimals) {
+    const data = ethers_1.ethers.utils.formatUnits(value, decimals);
+    return parseFloat(data).toFixed(exports.DEFAULT_FIXED_DECIMAL_POINT);
+}
+async function calculateBridgeFee(inputAmount, inputSymbol, fromChainId, toChainId) {
     // const inputAmount = 1000;
     // const inputSymbol = "USDC";
     const tokenDetail = (0, constants_1.getToken)(inputSymbol);
     // const toChainId = ChainId.ARBITRUM;
     const amount = ethers_1.BigNumber.from(inputAmount).mul(ethers_1.BigNumber.from("10").pow(tokenDetail.decimals));
-    const block = await getBlock(toChainId);
-    const fees = await getBridgeFees({
-        amount,
-        tokenSymbol: inputSymbol,
-        blockTimestamp: block.timestamp,
-        toChainId,
+    const config = (0, config_1.getConfig)();
+    let availableRoutes = config.filterRoutes({
+        fromChain: fromChainId,
+        toChain: toChainId,
+        fromTokenSymbol: inputSymbol,
     });
+    if (!availableRoutes.length) {
+        availableRoutes = config.filterRoutes({ fromTokenSymbol: inputSymbol });
+    }
+    const [firstRoute] = availableRoutes;
+    // fromChain = firstRoute.fromChain;
+    // toChain = firstRoute.toChain;
+    const selectedRoute = firstRoute;
+    // console.log("selectedRoute", selectedRoute);
+    let timeEstimate = "estimation failed";
+    const block = await getBlock(toChainId);
+    const [fees, limits] = await Promise.all([
+        getBridgeFees({
+            amount,
+            tokenSymbol: inputSymbol,
+            blockTimestamp: block.timestamp,
+            toChainId,
+        }),
+        getBridgeLimits(selectedRoute === null || selectedRoute === void 0 ? void 0 : selectedRoute.fromTokenAddress, fromChainId, toChainId),
+    ]);
+    if (limits) {
+        timeEstimate = (0, exports.getConfirmationDepositTime)(amount, limits, toChainId);
+        // console.log("limits", limits, "timeEstimate", timeEstimate);
+    }
     const totalFeePct = fees.relayerFee.pct.add(fees.lpFee.pct);
     const destinationGasFee = fees.relayerGasFee.total;
     const acrossBridgeFee = fees.lpFee.total.add(fees.relayerCapitalFee.total);
     const breakdown = [
         {
             name: "Across BridgeFee",
-            total: (0, format_1.formatUnits)(acrossBridgeFee, tokenDetail.decimals),
+            total: makeNumberFixed(acrossBridgeFee, tokenDetail.decimals),
             percent: parseFloat((0, format_1.formatEtherRaw)(fees.lpFee.pct.add(fees.relayerCapitalFee.pct).toString())).toFixed(5),
-            display: ""
+            display: "",
         },
         {
             name: "Destination GasFee",
-            total: (0, format_1.formatUnits)(destinationGasFee, tokenDetail.decimals),
+            total: makeNumberFixed(destinationGasFee, tokenDetail.decimals),
             percent: parseFloat((0, format_1.formatEtherRaw)(fees.relayerGasFee.pct.toString())).toFixed(5),
-            display: ""
+            display: "",
         },
     ];
     const result = {
         token: tokenDetail,
+        timeEstimate,
         input: (0, format_1.formatUnits)(amount, tokenDetail.decimals),
-        output: (0, format_1.formatUnits)(amount.sub(fees.relayerFee.total).sub(fees.lpFee.total), tokenDetail.decimals),
+        outputToken: {
+            name: tokenDetail.name,
+            symbol: tokenDetail.symbol,
+            decimals: tokenDetail.decimals,
+            mainnetAddress: "",
+        },
+        output: makeNumberFixed(amount.sub(fees.relayerFee.total).sub(fees.lpFee.total), tokenDetail.decimals),
         breakdown: breakdown.map((_) => {
             _.display = `${_.total} ${tokenDetail.symbol}`;
             return _;
         }),
         totalFeeRaw: totalFeePct.toString(),
         fee: (0, format_1.formatUnits)(fees.relayerFee.total.add(fees.lpFee.total), tokenDetail.decimals),
-        feeDisplay: (0, format_1.formatUnits)(fees.relayerFee.total.add(fees.lpFee.total), tokenDetail.decimals) + ' ' + tokenDetail.symbol,
+        feeDisplay: (0, format_1.formatUnits)(fees.relayerFee.total.add(fees.lpFee.total), tokenDetail.decimals) +
+            " " +
+            tokenDetail.symbol,
         totalFee: parseFloat((0, format_1.formatEtherRaw)(totalFeePct)).toFixed(5),
     };
     // console.log(result);

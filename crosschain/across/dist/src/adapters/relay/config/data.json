@@ -1,0 +1,3033 @@
+// 20220801154230
+// https://relay-api-33e56.ondigitalocean.app/api/crosschain-config
+[
+    {
+        "chainId": 255,
+        "networkId": 1,
+        "name": "Ethereum",
+        "bridgeAddress": "0xc4DC891d5B5171f789829D6050D5eB64c447e0FE",
+        "erc20HandlerAddress": "N/A, it's a eth-transfers chain",
+        "tokenDepositerAddr": "0x6cC62069EEd6529382fAfefC52CB89261bD95085",
+        "rpcUrl": "https://main-light.eth.linkpool.io/",
+        "type": "EthTransfers",
+        "blockExplorer": "https://etherscan.io",
+        "nativeTokenSymbol": "ETH",
+        "marketPlace": "https://app.uniswap.org/",
+        "tokens": [
+            {
+                "address": "0x0000000000000000000000000000000000000000",
+                "name": "zWETH",
+                "symbol": "zWETH",
+                "assetBase": "ETH",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc201",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                "name": "zUSDT",
+                "symbol": "zUSDT",
+                "assetBase": "USDT",
+                "decimals": 6,
+                "resourceId": "0x0000000000000000000000dac17f958d2ee523a2206206994597c13d831ec701",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "name": "zUSDC",
+                "symbol": "zUSDC",
+                "assetBase": "zUSDC",
+                "decimals": 6,
+                "resourceId": "0x0000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4801",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0xF0939011a9bb95c3B791f0cb546377Ed2693a574",
+                "name": "ZERO(ETH)",
+                "symbol": "ZERO",
+                "assetBase": "ZERO",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000f0939011a9bb95c3b791f0cb546377ed2693a57401",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x743864B0562754F47f91CD400Ac8d4356a8fc720",
+                "name": "eAVAX",
+                "symbol": "AVAX",
+                "assetBase": "AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    6,
+                    8,
+                    10,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+                "name": "LINK",
+                "symbol": "LINK",
+                "assetBase": "LINK",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000514910771af9ca656af840dff83e8264ecf986ca01",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+                "name": "AAVE",
+                "symbol": "AAVE",
+                "assetBase": "AAVE",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae901",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+                "name": "UNI",
+                "symbol": "UNI",
+                "assetBase": "UNI",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f98401",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
+                "name": "SUSHI",
+                "symbol": "SUSHI",
+                "assetBase": "SUSHI",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000006b3595068778dd592e39a122f4f5a5cf09c90fe201",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x111111111117dC0aa78b770fA6A738034120C302",
+                "name": "1INCH",
+                "symbol": "1INCH",
+                "assetBase": "1INCH",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000111111111117dc0aa78b770fa6a738034120c30201",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e",
+                "name": "YFI",
+                "symbol": "YFI",
+                "assetBase": "YFI",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000bc529c00c6401aef6d220be8c6ea1667f6ad93e01",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x1d37986F252d0e349522EA6C3B98Cb935495E63E",
+                "name": "ChartEx",
+                "symbol": "CHART",
+                "assetBase": "CHART",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000001d37986f252d0e349522ea6c3b98cb935495e63e01",
+                "allowedChainsToTransfer": [
+                    2,
+                    5
+                ]
+            },
+            {
+                "address": "0xF268fE3d6909508ddA90DccF2bf69050D19f4CdD",
+                "name": "Grow Token",
+                "symbol": "GROW",
+                "assetBase": "GROW",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000081a4d4e4a0cc74d6a7a61578f86b8c93cc950a003",
+                "allowedChainsToTransfer": [
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            {
+                "address": "0x5D843Fa9495d23dE997C394296ac7B4D721E841c",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0xd4a8D3A592C109D17ECcE6f974d80249F9630c17",
+                "name": "Canary",
+                "symbol": "CNR",
+                "assetBase": "CNR",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000008d88e48465f30acfb8dac0b3e35c9d6d7d36abaf02",
+                "allowedChainsToTransfer": [
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            {
+                "address": "0x3bb86d867A9F3adDF994cdaDb210Fa82F0D4157A",
+                "name": "GHOUL",
+                "symbol": "GHOUL",
+                "assetBase": "GHOUL",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000003bb86d867a9f3addf994cdadb210fa82f0d4157a01",
+                "allowedChainsToTransfer": [
+                    3
+                ]
+            },
+            {
+                "address": "0xAE87C3bEB0BDa5141962E70A4A6A0A0512D59e1E",
+                "name": "Qi Dao",
+                "symbol": "QI",
+                "assetBase": "QI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000580a84c73811e1839f75d86d75d88cca0c241ff405",
+                "allowedChainsToTransfer": [
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            {
+                "address": "0x71Fc1F555a39E0B698653AB0b475488EC3c34D57",
+                "name": "Rainmaker Games",
+                "symbol": "RAIN",
+                "assetBase": "RAIN",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000071fc1f555a39e0b698653ab0b475488ec3c34d5701",
+                "allowedChainsToTransfer": [
+                    3
+                ]
+            },
+            {
+                "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                "name": "USDC",
+                "symbol": "USDC",
+                "assetBase": "USDC",
+                "decimals": 6,
+                "resourceId": "0xeeeeeeeeeeeeeeeeeeeeeea0b86991c6218b36c1d19d4a2e9eb0ce3606eb4801",
+                "allowedChainsToTransfer": [
+                    2,
+                    3,
+                    5,
+                    13
+                ]
+            },
+            {
+                "address": "0x0000000000000000000000000000000000000000",
+                "name": "ETH",
+                "symbol": "ETH",
+                "assetBase": "ETH",
+                "decimals": 18,
+                "resourceId": "0xffffffffffffffffffffffc02aaa39b223fe8d0a0e5c4f27ead9083c756cc201",
+                "allowedChainsToTransfer": [
+                    2,
+                    3,
+                    5,
+                    13
+                ]
+            },
+            {
+                "address": "0x5a75A093747b72a0e14056352751eDF03518031d",
+                "name": "EmiDao Token",
+                "symbol": "ESW",
+                "assetBase": "EMISWAP",
+                "decimals": 18,
+                "resourceId": "0xffffffffffffffffffffff5a75a093747b72a0e14056352751edf03518031d01",
+                "allowedChainsToTransfer": [
+                    5,
+                    8
+                ]
+            },
+            {
+                "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+                "name": "Wrapped BTC",
+                "symbol": "WBTC",
+                "assetBase": "BTC",
+                "decimals": 8,
+                "resourceId": "0x02000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59901",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+                "name": "Dai Stablecoin",
+                "symbol": "DAI",
+                "assetBase": "DAI",
+                "decimals": 18,
+                "resourceId": "0x02000000000000000000006b175474e89094c44da98b954eedeac495271d0f01",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                "name": "Tether USD",
+                "symbol": "USDT",
+                "assetBase": "USDT",
+                "decimals": 6,
+                "resourceId": "0x0200000000000000000000dac17f958d2ee523a2206206994597c13d831ec701",
+                "allowedChainsToTransfer": [
+                    13
+                ]
+            },
+            {
+                "address": "0x0000000000085d4780B73119b644AE5ecd22b376",
+                "name": "TrueUSD",
+                "symbol": "TUSD",
+                "assetBase": "TUSD",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000000000000085d4780b73119b644ae5ecd22b37601",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0x7659CE147D0e714454073a5dd7003544234b6Aa0",
+                "name": "XCAD Token",
+                "symbol": "XCAD",
+                "assetBase": "XCAD",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000007659ce147d0e714454073a5dd7003544234b6aa001",
+                "allowedChainsToTransfer": [
+                    3,
+                    14
+                ]
+            },
+            {
+                "address": "0x88aa4a6C5050b9A1b2Aa7e34D0582025cA6AB745",
+                "name": "DXP",
+                "symbol": "DXP",
+                "assetBase": "DXP",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000088aa4a6c5050b9a1b2aa7e34d0582025ca6ab74501",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0x03fDcAdc09559262F40F5EA61C720278264eB1da",
+                "name": "Ludus",
+                "symbol": "LUDUS",
+                "assetBase": "LUDUS",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000009eaa644489a728f7923da985df1dbecf9a2ebe1701",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 2,
+        "networkId": 43114,
+        "name": "Avalanche",
+        "bridgeAddress": "0xc81A7Ec0c677Ca8a773750A20BF617bc41e09565",
+        "erc20HandlerAddress": "0x43BEddB3199F2a635C85FfC4f1af228198D268Ab",
+        "rpcUrl": "https://api.avax.network/ext/bc/C/rpc",
+        "type": "Ethereum",
+        "blockExplorer": "https://snowtrace.io",
+        "nativeTokenSymbol": "AVAX",
+        "defaultGasPrice": 225,
+        "exchangeContractAddress": "0x3f9F80f64a921Db7956Fc285f96b97FfB9B9b1b1",
+        "rateZeroToRelay": 0.01,
+        "zeroContractAddress": "0x008E26068B3EB40B443d3Ea88c1fF99B789c10F7",
+        "relayContractAddress": "0x78c42324016cd91D1827924711563fb66E33A83A",
+        "marketPlace": "https://www.traderjoexyz.com/",
+        "tokens": [
+            {
+                "address": "0xf6F3EEa905ac1da6F6DD37d06810C6Fcb0EF5183",
+                "name": "zETH",
+                "symbol": "zETH",
+                "assetBase": "ETH",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc201",
+                "allowedChainsToTransfer": [
+                    255,
+                    3
+                ]
+            },
+            {
+                "address": "0x650CECaFE61f3f65Edd21eFacCa18Cc905EeF0B7",
+                "name": "zUSDT",
+                "symbol": "zUSDT",
+                "assetBase": "USDT",
+                "decimals": 6,
+                "resourceId": "0x0000000000000000000000dac17f958d2ee523a2206206994597c13d831ec701",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0x474Bb79C3e8E65DcC6dF30F9dE68592ed48BBFDb",
+                "name": "zUSDC",
+                "symbol": "zUSDC",
+                "assetBase": "USDC",
+                "decimals": 6,
+                "resourceId": "0x0000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4801",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0x008E26068B3EB40B443d3Ea88c1fF99B789c10F7",
+                "name": "ZERO",
+                "symbol": "ZERO",
+                "assetBase": "ZERO",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000f0939011a9bb95c3b791f0cb546377ed2693a57401",
+                "allowedChainsToTransfer": [
+                    255,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            {
+                "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+                "name": "WAVAX",
+                "symbol": "WAVAX",
+                "assetBase": "C-AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    8,
+                    10,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0xc770701264aD059DD5700Ff68e85ea7A2CaaeF0B",
+                "name": "zLINK",
+                "symbol": "zLINK",
+                "assetBase": "LINK",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000514910771af9ca656af840dff83e8264ecf986ca01",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0xbf5a94cFe186FC22aFd6637243b9822586960825",
+                "name": "zAAVE",
+                "symbol": "zAAVE",
+                "assetBase": "AAVE",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae901",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0xBa9aF11661520129Af69d233E92d69BD40CD90AF",
+                "name": "zUNI",
+                "symbol": "zUNI",
+                "assetBase": "UNI",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f98401",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0xD4feE2e3F88B9138B74a323B40bC63bcc1A1B9eC",
+                "name": "zSUSHI",
+                "symbol": "zSUSHI",
+                "assetBase": "SUSHI",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000006b3595068778dd592e39a122f4f5a5cf09c90fe201",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0x5a0dDfA245c02d1256AfDcDa38aDFE89F34367Ce",
+                "name": "z1INCH",
+                "symbol": "z1INCH",
+                "assetBase": "1INCH",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000111111111117dc0aa78b770fa6a738034120c30201",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0xD94f76f8DD5c3832dd798621c0d673bBae9D946b",
+                "name": "zYFI",
+                "symbol": "zYFI",
+                "assetBase": "YFI",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000bc529c00c6401aef6d220be8c6ea1667f6ad93e01",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0xD769bDFc0CaEe933dc0a047C7dBad2Ec42CFb3E2",
+                "name": "ChartEx",
+                "symbol": "CHART",
+                "assetBase": "CHART",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000001d37986f252d0e349522ea6c3b98cb935495e63e01",
+                "allowedChainsToTransfer": [
+                    255,
+                    5
+                ]
+            },
+            {
+                "address": "0x5506bD8C8F5D6733E2738496d5C51Ed62934C9f8",
+                "name": "Grow Token",
+                "symbol": "GROW",
+                "assetBase": "GROW",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000081a4d4e4a0cc74d6a7a61578f86b8c93cc950a003",
+                "allowedChainsToTransfer": [
+                    255,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            {
+                "address": "0x78c42324016cd91D1827924711563fb66E33A83A",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0x3B55E45fD6bd7d4724F5c47E0d1bCaEdd059263e",
+                "name": "MAI",
+                "symbol": "MAI (miMatic)",
+                "assetBase": "MAI (miMatic)",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000a3fa99a148fa48d14ed51d610c367c61876997f105",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    8,
+                    11
+                ]
+            },
+            {
+                "address": "0x8D88e48465F30Acfb8daC0b3E35c9D6D7d36abaf",
+                "name": "Canary",
+                "symbol": "CNR",
+                "assetBase": "CNR",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000008d88e48465f30acfb8dac0b3e35c9d6d7d36abaf02",
+                "allowedChainsToTransfer": [
+                    255,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            {
+                "address": "0xF873633DF9D5cDd62BB1f402499CC470a72A02D7",
+                "name": "MOVR",
+                "symbol": "MOVR",
+                "assetBase": "MOVR",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000098878b06940ae243284ca214f92bb71a2b032b8a06",
+                "allowedChainsToTransfer": [
+                    6,
+                    8,
+                    13
+                ]
+            },
+            {
+                "address": "0xA56B1b9f4e5A1A1e0868F5Fd4352ce7CdF0C2A4F",
+                "name": "MATIC",
+                "symbol": "MATIC",
+                "assetBase": "MATIC",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000d500b1d8e8ef31e21c99d1db9a6444d3adf127005",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    8,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0xc7198437980c041c805A1EDcbA50c1Ce5db95118",
+                "name": "Tether USD",
+                "symbol": "USDT.e",
+                "assetBase": "USDT",
+                "decimals": 6,
+                "resourceId": "0x0000000000000000000000c7198437980c041c805a1edcba50c1ce5db9511802",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
+                "name": "Dai Stablecoin",
+                "symbol": "DAI.e",
+                "assetBase": "DAI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000d586e7f844cea2f87f50152665bcbc2c279d8d7002",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
+                "name": "Wrapped Ether",
+                "symbol": "WETH.e",
+                "assetBase": "WETH",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000049d5c2bdffac6ce2bfdb6640f4f80f226bc10bab02",
+                "allowedChainsToTransfer": [
+                    8
+                ]
+            },
+            {
+                "address": "0xcca02f75Fd65055991d6424D5a738F7340c95796",
+                "name": "Qi Dao",
+                "symbol": "QI",
+                "assetBase": "QI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000580a84c73811e1839f75d86d75d88cca0c241ff405",
+                "allowedChainsToTransfer": [
+                    255,
+                    3,
+                    4,
+                    5,
+                    6,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            {
+                "address": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
+                "name": "USDC",
+                "symbol": "USDC",
+                "assetBase": "USDC",
+                "decimals": 6,
+                "resourceId": "0xeeeeeeeeeeeeeeeeeeeeeea0b86991c6218b36c1d19d4a2e9eb0ce3606eb4801",
+                "allowedChainsToTransfer": [
+                    255,
+                    3,
+                    5,
+                    13
+                ]
+            },
+            {
+                "address": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
+                "name": "WETH",
+                "symbol": "WETH",
+                "assetBase": "WETH",
+                "decimals": 18,
+                "resourceId": "0xffffffffffffffffffffffc02aaa39b223fe8d0a0e5c4f27ead9083c756cc201",
+                "allowedChainsToTransfer": [
+                    255,
+                    3,
+                    5,
+                    13
+                ]
+            },
+            {
+                "address": "0x50b7545627a5162F82A992c33b87aDc75187B218",
+                "name": "Wrapped BTC",
+                "symbol": "WBTC",
+                "assetBase": "BTC",
+                "decimals": 8,
+                "resourceId": "0x02000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59901",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
+                "name": "Dai Stablecoin",
+                "symbol": "DAI",
+                "assetBase": "DAI",
+                "decimals": 18,
+                "resourceId": "0x02000000000000000000006b175474e89094c44da98b954eedeac495271d0f01",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0xc7198437980c041c805A1EDcbA50c1Ce5db95118",
+                "name": "Tether USD",
+                "symbol": "USDT",
+                "assetBase": "USDT",
+                "decimals": 6,
+                "resourceId": "0x0200000000000000000000dac17f958d2ee523a2206206994597c13d831ec701",
+                "allowedChainsToTransfer": [
+                    13
+                ]
+            },
+            {
+                "address": "0x9C8E99eb130AED653Ef90fED709D9C3E9cC8b269",
+                "name": "Hertz Token",
+                "symbol": "HTZ",
+                "assetBase": "HTZ",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000009c8e99eb130aed653ef90fed709d9c3e9cc8b26902",
+                "allowedChainsToTransfer": [
+                    7,
+                    13
+                ]
+            },
+            {
+                "address": "0x1C20E891Bab6b1727d14Da358FAe2984Ed9B59EB",
+                "name": "TrueUSD",
+                "symbol": "TUSD",
+                "assetBase": "TUSD",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000000000000085d4780b73119b644ae5ecd22b37601",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 3,
+        "networkId": 56,
+        "name": "Smart Chain",
+        "bridgeAddress": "0xAC6953D66e06eea69d0F7435C679ae0d0c02B282",
+        "erc20HandlerAddress": "0x3Ea1f65cf49297eA6d265291a2b09D0f2AE649D6",
+        "rpcUrl": "https://bsc-dataseed2.binance.org",
+        "type": "Ethereum",
+        "gasLimit": 6721975,
+        "defaultGasPrice": 12.5,
+        "blockExplorer": "https://bscscan.com",
+        "nativeTokenSymbol": "BNB",
+        "exchangeContractAddress": "0xFCB89d87FF5c07B44B774806063318c1D411571d",
+        "rateZeroToRelay": 0.01,
+        "zeroContractAddress": "0x1f534d2B1ee2933f1fdF8e4b63A44b2249d77EAf",
+        "relayContractAddress": "0xE338D4250A4d959F88Ff8789EaaE8c32700BD175",
+        "marketPlace": "https://app.apeswap.finance/",
+        "tokens": [
+            {
+                "address": "0x7c815BBc21FED2B97CA163552991A5C30d6a2336",
+                "name": "zETH",
+                "symbol": "zETH",
+                "assetBase": "ETH",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc201",
+                "allowedChainsToTransfer": [
+                    255,
+                    2
+                ]
+            },
+            {
+                "address": "0x6FF5e1865a833B81c1DE013c925D2e3ab0B6EbD2",
+                "name": "CrystalToken",
+                "symbol": "CRYSTL",
+                "assetBase": "CRYSTL",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000076bf0c28e604cc3fe9967c83b3c3f31c213cfe6405",
+                "allowedChainsToTransfer": [
+                    5,
+                    11
+                ]
+            },
+            {
+                "address": "0x1f534d2B1ee2933f1fdF8e4b63A44b2249d77EAf",
+                "name": "ZERO(BSC)",
+                "symbol": "ZERO",
+                "assetBase": "ZERO",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000f0939011a9bb95c3b791f0cb546377ed2693a57401",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    4,
+                    5
+                ]
+            },
+            {
+                "address": "0xaC532d2FC81a077C9F93Be7ea698E2f1d224Ec04",
+                "name": "zAVAX",
+                "symbol": "AVAX",
+                "assetBase": "AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    6,
+                    8,
+                    10,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+                "name": "BUSD Token Old",
+                "symbol": "BUSD Old",
+                "assetBase": "BUSD Old",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000e9e7cea3dedca5984780bafc599bd69add087d5603",
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x4f491d389A5bF7C56bd1e4d8aF2280fD217C8543",
+                "name": "Wise Token",
+                "symbol": "WISB",
+                "assetBase": "WISB",
+                "decimals": 18,
+                "resourceId": "",
+                "disableTransfer": true,
+                "directions": "only-in",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x081A4D4e4A0cC74D6a7A61578f86b8C93CC950a0",
+                "name": "Grow Token",
+                "symbol": "GROW",
+                "assetBase": "GROW",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000081a4d4e4a0cc74d6a7a61578f86b8c93cc950a003",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    4,
+                    5
+                ]
+            },
+            {
+                "address": "0xE338D4250A4d959F88Ff8789EaaE8c32700BD175",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                "name": "Binance token",
+                "symbol": "BNB",
+                "assetBase": "BNB",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c03",
+                "allowedChainsToTransfer": [
+                    5,
+                    13
+                ]
+            },
+            {
+                "address": "0x7Ea7D47f638C100481D1347BacF1CdF1F4054454",
+                "name": "Canary",
+                "symbol": "CNR",
+                "assetBase": "CNR",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000008d88e48465f30acfb8dac0b3e35c9d6d7d36abaf02",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    4,
+                    5
+                ]
+            },
+            {
+                "address": "0x6FF5e1865a833B81c1DE013c925D2e3ab0B6EbD2",
+                "name": "CrystalToken",
+                "symbol": "CRYSTL",
+                "assetBase": "CRYSTL",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000076bf0c28e604cc3fe9967c83b3c3f31c213cfe6405",
+                "allowedChainsToTransfer": [
+                    5,
+                    11
+                ]
+            },
+            {
+                "address": "0x171cE6141E7a5980222bc6B757ee2F1f95b3264e",
+                "name": "GHOUL",
+                "symbol": "GHOUL",
+                "assetBase": "GHOUL",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000003bb86d867a9f3addf994cdadb210fa82f0d4157a01",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0xEC4C95d5DCe839D9CDE9c9A81A8254a0D3a028D0",
+                "name": "Qi Dao",
+                "symbol": "QI",
+                "assetBase": "QI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000580a84c73811e1839f75d86d75d88cca0c241ff405",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    4,
+                    5,
+                    6,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            {
+                "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+                "name": "BUSD Token",
+                "symbol": "BUSD",
+                "assetBase": "BUSD",
+                "decimals": 18,
+                "resourceId": "0x0100000000000000000000e9e7cea3dedca5984780bafc599bd69add087d5603",
+                "allowedChainsToTransfer": [
+                    13
+                ]
+            },
+            {
+                "address": "0x6Bcd897D4BA5675F860C7418ddc034f6c5610114",
+                "name": "Rainmaker Games",
+                "symbol": "RAIN",
+                "assetBase": "RAIN",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000071fc1f555a39e0b698653ab0b475488ec3c34d5701",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+                "name": "WETH",
+                "symbol": "WETH",
+                "assetBase": "WETH",
+                "decimals": 18,
+                "resourceId": "0xffffffffffffffffffffffc02aaa39b223fe8d0a0e5c4f27ead9083c756cc201",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    5,
+                    13
+                ]
+            },
+            {
+                "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+                "name": "USDC",
+                "symbol": "USDC",
+                "assetBase": "USDC",
+                "decimals": 18,
+                "resourceId": "0xeeeeeeeeeeeeeeeeeeeeeea0b86991c6218b36c1d19d4a2e9eb0ce3606eb4801",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    5,
+                    13
+                ]
+            },
+            {
+                "address": "0xF215A127A196e3988C09d052e16BcFD365Cd7AA3",
+                "name": "Wrapped Mirror TSLA Token",
+                "symbol": "mTSLA",
+                "assetBase": "TSLA",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000f215a127a196e3988c09d052e16bcfd365cd7aa303",
+                "allowedChainsToTransfer": []
+            },
+            {
+                "address": "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3",
+                "name": "Dai Stablecoin",
+                "symbol": "DAI",
+                "assetBase": "DAI",
+                "decimals": 18,
+                "resourceId": "0x02000000000000000000006b175474e89094c44da98b954eedeac495271d0f01",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0x55d398326f99059fF775485246999027B3197955",
+                "name": "Tether USD",
+                "symbol": "USDT",
+                "assetBase": "USDT",
+                "decimals": 18,
+                "resourceId": "0x0200000000000000000000dac17f958d2ee523a2206206994597c13d831ec701",
+                "allowedChainsToTransfer": [
+                    13
+                ]
+            },
+            {
+                "address": "0x14016E85a25aeb13065688cAFB43044C2ef86784",
+                "name": "TrueUSD",
+                "symbol": "TUSD",
+                "assetBase": "TUSD",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000000000000085d4780b73119b644ae5ecd22b37601",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0x431e0cD023a32532BF3969CddFc002c00E98429d",
+                "name": "XCAD Token",
+                "symbol": "XCAD",
+                "assetBase": "XCAD",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000007659ce147d0e714454073a5dd7003544234b6aa001",
+                "allowedChainsToTransfer": [
+                    255,
+                    14
+                ]
+            },
+            {
+                "address": "0xb97c7637a9a1dA7296faC49Ca18e7abF3593fe7b",
+                "name": "CroArmy",
+                "symbol": "Army",
+                "assetBase": "Army",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b20115b8b176d72f077c4f93e95492870240a0b211",
+                "allowedChainsToTransfer": [
+                    7,
+                    11
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 4,
+        "networkId": 128,
+        "name": "HECO",
+        "bridgeAddress": "0xd323AFA844299f69A5aa5AE0961b5a7BDbE6D3f5",
+        "erc20HandlerAddress": "0xA21D529B86ef6B71C0caaE4669726755876a0Dc0",
+        "rpcUrl": "https://http-mainnet.hecochain.com",
+        "type": "Ethereum",
+        "gasLimit": 60000,
+        "defaultGasPrice": 10,
+        "blockExplorer": "https://hecoinfo.com",
+        "nativeTokenSymbol": "HT",
+        "marketPlace": "https://ht.mdex.com/#/swap?lang=en",
+        "tokens": [
+            {
+                "address": "0x0E4564692B15Af6526b6910CFd9E1F4B6671CA1A",
+                "name": "ZERO",
+                "symbol": "ZERO",
+                "assetBase": "ZERO",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000f0939011a9bb95c3b791f0cb546377ed2693a57401",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    5
+                ]
+            },
+            {
+                "address": "0x87F86C5870e96a55A29e37f0c11C7620edb7B203",
+                "name": "GROW",
+                "symbol": "GROW",
+                "assetBase": "GROW",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000081a4d4e4a0cc74d6a7a61578f86b8c93cc950a003",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    5
+                ]
+            },
+            {
+                "address": "0xf1361d97a1b134eBF96A9aA482BC005D4F41177e",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0x5545153CCFcA01fbd7Dd11C0b23ba694D9509A6F",
+                "name": "Huobi token",
+                "symbol": "WHT",
+                "assetBase": "HT",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005545153ccfca01fbd7dd11c0b23ba694d9509a6f04",
+                "allowedChainsToTransfer": [
+                    5
+                ]
+            },
+            {
+                "address": "0x9583b56B806AD0BafD554f2DE9C6f0246BC464A9",
+                "name": "Canary",
+                "symbol": "CNR",
+                "assetBase": "CNR",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000008d88e48465f30acfb8dac0b3e35c9d6d7d36abaf02",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    5
+                ]
+            },
+            {
+                "address": "0x0216c623AcA7bc61Fa8Ee560eefBe35758D4b34e",
+                "name": "Qi Dao",
+                "symbol": "QI",
+                "assetBase": "QI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000580a84c73811e1839f75d86d75d88cca0c241ff405",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    5,
+                    6,
+                    8,
+                    9,
+                    10
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 5,
+        "networkId": 137,
+        "name": "Polygon",
+        "bridgeAddress": "0xAC6953D66e06eea69d0F7435C679ae0d0c02B282",
+        "erc20HandlerAddress": "0x3Ea1f65cf49297eA6d265291a2b09D0f2AE649D6",
+        "rpcUrl": "https://polygon-rpc.com/",
+        "type": "Ethereum",
+        "gasLimit": 60000,
+        "defaultGasPrice": 2,
+        "blockExplorer": "https://polygonscan.com",
+        "nativeTokenSymbol": "MATIC",
+        "exchangeContractAddress": "0xb0dcE4EE2CF51B2E27a7C368EA36A4af16603b58",
+        "rateZeroToRelay": 0.01,
+        "zeroContractAddress": "0xb67176655e7919a27aA34C279157124619aDFd4B",
+        "relayContractAddress": "0x904371845Bc56dCbBcf0225ef84a669b2fD6bd0d",
+        "marketPlace": "https://quickswap.exchange/",
+        "tokens": [
+            {
+                "address": "0xb67176655e7919a27aA34C279157124619aDFd4B",
+                "name": "ZERO(Matic)",
+                "symbol": "ZERO",
+                "assetBase": "ZERO",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000f0939011a9bb95c3b791f0cb546377ed2693a57401",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            {
+                "address": "0x2C89bbc92BD86F8075d1DEcc58C7F4E0107f286b",
+                "name": "zAVAX",
+                "symbol": "AVAX",
+                "assetBase": "AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "allowedChainsToTransfer": [
+                    2,
+                    6,
+                    8,
+                    10,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x083c56d87eAD73D6231C165Ec450C6E28f3399C9",
+                "name": "ChartEx",
+                "symbol": "CHART",
+                "assetBase": "CHART",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000001d37986f252d0e349522ea6c3b98cb935495e63e01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2
+                ]
+            },
+            {
+                "address": "0xDcDC86A38d1ddA13EEB346eeBf34d0148C8197d9",
+                "name": "Grow Token",
+                "symbol": "GROW",
+                "assetBase": "GROW",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000081a4d4e4a0cc74d6a7a61578f86b8c93cc950a003",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            {
+                "address": "0x904371845Bc56dCbBcf0225ef84a669b2fD6bd0d",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0x5c4b7CCBF908E64F32e12c6650ec0C96d717f03F",
+                "name": "Binance token",
+                "symbol": "BNB",
+                "assetBase": "BNB",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c03",
+                "allowedChainsToTransfer": [
+                    3,
+                    13
+                ]
+            },
+            {
+                "address": "0xA731349fa468614c1698fc46ebf06Da6F380239e",
+                "name": "Huobi token",
+                "symbol": "HT",
+                "assetBase": "HT",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005545153ccfca01fbd7dd11c0b23ba694d9509a6f04",
+                "allowedChainsToTransfer": [
+                    4
+                ]
+            },
+            {
+                "address": "0xa3Fa99A148fA48D14Ed51d610c367C61876997F1",
+                "name": "MAI",
+                "symbol": "MAI (miMatic)",
+                "assetBase": "MAI (miMatic)",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000a3fa99a148fa48d14ed51d610c367c61876997f105",
+                "allowedChainsToTransfer": [
+                    2,
+                    6,
+                    8,
+                    11
+                ]
+            },
+            {
+                "address": "0x34421517f71e1B888eF40D7f176469263Fa92Cc8",
+                "name": "Canary",
+                "symbol": "CNR",
+                "assetBase": "CNR",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000008d88e48465f30acfb8dac0b3e35c9d6d7d36abaf02",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            {
+                "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+                "name": "MATIC",
+                "symbol": "MATIC",
+                "assetBase": "MATIC",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000d500b1d8e8ef31e21c99d1db9a6444d3adf127005",
+                "allowedChainsToTransfer": [
+                    6,
+                    8,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0xB85517b87BF64942adf3A0B9E4c71E4Bc5Caa4e5",
+                "name": "FANTOM",
+                "symbol": "FTM",
+                "assetBase": "FTM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000021be370d5312f44cb42ce377bc9b8a0cef1a4c8307",
+                "allowedChainsToTransfer": [
+                    6,
+                    7,
+                    8,
+                    10,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x580A84C73811E1839F75d86d75d88cCa0c241fF4",
+                "name": "Qi Dao",
+                "symbol": "QI",
+                "assetBase": "QI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000580a84c73811e1839f75d86d75d88cca0c241ff405",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    6,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            {
+                "address": "0x8A953CfE442c5E8855cc6c61b1293FA648BAE472",
+                "name": "PolyDoge",
+                "symbol": "PolyDoge",
+                "assetBase": "PolyDoge",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000008a953cfe442c5e8855cc6c61b1293fa648bae47205",
+                "allowedChainsToTransfer": [
+                    11
+                ]
+            },
+            {
+                "address": "0x76bF0C28e604CC3fE9967c83b3C3F31c213cfE64",
+                "name": "CrystalToken",
+                "symbol": "CRYSTL",
+                "assetBase": "CRYSTL",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000076bf0c28e604cc3fe9967c83b3c3f31c213cfe6405",
+                "allowedChainsToTransfer": [
+                    3,
+                    11
+                ]
+            },
+            {
+                "address": "0xf2D8124b8F9267DaD61351c7aD252362880C6638",
+                "name": "Wrapped CRO",
+                "symbol": "WCRO",
+                "assetBase": "WCRO",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005c7f8a570d578ed84e63fdfa7b1ee72deae1ae2311",
+                "allowedChainsToTransfer": [
+                    6,
+                    11,
+                    13
+                ]
+            },
+            {
+                "address": "0x80c0CBDB8d0B190238795d376f0bD57fd40525F2",
+                "name": "Wrapped ONE",
+                "symbol": "WONE",
+                "assetBase": "ONE",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000cf664087a5bb0237a0bad6742852ec6c8d69a27a10",
+                "allowedChainsToTransfer": [
+                    10,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+                "name": "USDC",
+                "symbol": "USDC",
+                "assetBase": "USDC",
+                "decimals": 6,
+                "resourceId": "0xeeeeeeeeeeeeeeeeeeeeeea0b86991c6218b36c1d19d4a2e9eb0ce3606eb4801",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    13
+                ]
+            },
+            {
+                "address": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+                "name": "WETH",
+                "symbol": "WETH",
+                "assetBase": "WETH",
+                "decimals": 18,
+                "resourceId": "0xffffffffffffffffffffffc02aaa39b223fe8d0a0e5c4f27ead9083c756cc201",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    13
+                ]
+            },
+            {
+                "address": "0xd2A2a353D28e4833FAFfC882f6649c9c884a7D8f",
+                "name": "EmiDao Token",
+                "symbol": "ESW",
+                "assetBase": "EMISWAP",
+                "decimals": 18,
+                "resourceId": "0xffffffffffffffffffffff5a75a093747b72a0e14056352751edf03518031d01",
+                "allowedChainsToTransfer": [
+                    255,
+                    8
+                ]
+            },
+            {
+                "address": "0xA863246658DEA34111C3C1DceDb2cfd5d6067334",
+                "name": "Wrapped METIS",
+                "symbol": "WMETIS",
+                "assetBase": "METIS",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000deaddeaddeaddeaddeaddeaddeaddeaddead000014",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
+                "name": "Wrapped BTC",
+                "symbol": "WBTC",
+                "assetBase": "BTC",
+                "decimals": 8,
+                "resourceId": "0x02000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59901",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
+                "name": "Dai Stablecoin",
+                "symbol": "DAI",
+                "assetBase": "DAI",
+                "decimals": 18,
+                "resourceId": "0x02000000000000000000006b175474e89094c44da98b954eedeac495271d0f01",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+                "name": "Tether USD",
+                "symbol": "USDT",
+                "assetBase": "USDT",
+                "decimals": 6,
+                "resourceId": "0x0200000000000000000000dac17f958d2ee523a2206206994597c13d831ec701",
+                "allowedChainsToTransfer": [
+                    13
+                ]
+            },
+            {
+                "address": "0x2e1AD108fF1D8C782fcBbB89AAd783aC49586756",
+                "name": "TrueUSD",
+                "symbol": "TUSD",
+                "assetBase": "TUSD",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000000000000085d4780b73119b644ae5ecd22b37601",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 6,
+        "networkId": 1285,
+        "name": "Moonriver",
+        "bridgeAddress": "0xc3a720588d915274B3c81c0bDf473D3FFb279017",
+        "erc20HandlerAddress": "0x3e3f619940d9a20DbcF3F7c0c7958f4A67Fac688",
+        "rpcUrl": "https://moonriver.api.onfinality.io/public",
+        "type": "Ethereum",
+        "gasLimit": 60000,
+        "defaultGasPrice": 2.5,
+        "blockExplorer": "https://blockscout.moonriver.moonbeam.network",
+        "nativeTokenSymbol": "MOVR",
+        "marketPlace": "https://solarbeam.io/exchange/swap",
+        "tokens": [
+            {
+                "address": "0x14a0243C333A5b238143068dC3A7323Ba4C30ECB",
+                "name": "zAVAX",
+                "symbol": "AVAX",
+                "assetBase": "AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    8,
+                    10,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0xAd7F1844696652ddA7959a49063BfFccafafEfe7",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0x98878B06940aE243284CA214f92Bb71a2b032B8A",
+                "name": "MOVR",
+                "symbol": "MOVR",
+                "assetBase": "MOVR",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000098878b06940ae243284ca214f92bb71a2b032b8a06",
+                "allowedChainsToTransfer": [
+                    2,
+                    8,
+                    13
+                ]
+            },
+            {
+                "address": "0x682F81e57EAa716504090C3ECBa8595fB54561D8",
+                "name": "MATIC",
+                "symbol": "MATIC",
+                "assetBase": "MATIC",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000d500b1d8e8ef31e21c99d1db9a6444d3adf127005",
+                "allowedChainsToTransfer": [
+                    5,
+                    8,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x7f5a79576620C046a293F54FFCdbd8f2468174F1",
+                "name": "MAI",
+                "symbol": "MAI (miMatic)",
+                "assetBase": "MAI (miMatic)",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000a3fa99a148fa48d14ed51d610c367c61876997f105",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    8,
+                    11
+                ]
+            },
+            {
+                "address": "0xaD12daB5959f30b9fF3c2d6709f53C335dC39908",
+                "name": "FANTOM",
+                "symbol": "FTM",
+                "assetBase": "FTM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000021be370d5312f44cb42ce377bc9b8a0cef1a4c8307",
+                "allowedChainsToTransfer": [
+                    5,
+                    7,
+                    8,
+                    10,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0xf97C8556Af29089D5d1627096958187b11F1915C",
+                "name": "Tether USD",
+                "symbol": "USDT.e",
+                "assetBase": "USDT",
+                "decimals": 6,
+                "resourceId": "0x0000000000000000000000c7198437980c041c805a1edcba50c1ce5db9511802",
+                "allowedChainsToTransfer": [
+                    2,
+                    8
+                ]
+            },
+            {
+                "address": "0x26dFff76D9123A1C79279AbC29B676c48A8BD77e",
+                "name": "Dai Stablecoin",
+                "symbol": "DAI.e",
+                "assetBase": "DAI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000d586e7f844cea2f87f50152665bcbc2c279d8d7002",
+                "allowedChainsToTransfer": [
+                    2,
+                    8
+                ]
+            },
+            {
+                "address": "0x63F2ADf5f76F00d48fe2CBef19000AF13Bb8de82",
+                "name": "FreeRiver Token",
+                "symbol": "FREE",
+                "assetBase": "FREE",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000063f2adf5f76f00d48fe2cbef19000af13bb8de8206",
+                "allowedChainsToTransfer": [
+                    8,
+                    11
+                ]
+            },
+            {
+                "address": "0x062bD733268269d7Ecb85Cd3EA84281E6bEd7f5F",
+                "name": "Dragon Token",
+                "symbol": "DRAGON",
+                "assetBase": "DRAGON",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000062bd733268269d7ecb85cd3ea84281e6bed7f5f06",
+                "allowedChainsToTransfer": [
+                    8
+                ]
+            },
+            {
+                "address": "0x22bBe2E8ea84BBCD32d4d48d499B0d3E1a8e3De6",
+                "name": "Shiden Token",
+                "symbol": "SDN",
+                "assetBase": "SDN",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000001a6a12953d5439e8965d94d3d8452464fbd53e3008",
+                "allowedChainsToTransfer": [
+                    8,
+                    9
+                ]
+            },
+            {
+                "address": "0x02a8B1752497267AAe79Dca183FE3BE6693E975C",
+                "name": "Qi Dao",
+                "symbol": "QI",
+                "assetBase": "QI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000580a84c73811e1839f75d86d75d88cca0c241ff405",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            {
+                "address": "0x52f04C806EB82930F40D410259b7AF8E18d3BDc9",
+                "name": "MOONKAFE",
+                "symbol": "KAFE",
+                "assetBase": "KAFE",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000052f04c806eb82930f40d410259b7af8e18d3bdc906",
+                "allowedChainsToTransfer": [
+                    11
+                ]
+            },
+            {
+                "address": "0x80b1DfC5390EBC5a9F58aE1a25409A417c73603e",
+                "name": "Wrapped CRO",
+                "symbol": "WCRO",
+                "assetBase": "WCRO",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005c7f8a570d578ed84e63fdfa7b1ee72deae1ae2311",
+                "allowedChainsToTransfer": [
+                    5,
+                    11,
+                    13
+                ]
+            },
+            {
+                "address": "0xBd2FFdffc15918471f77B66E7857030150d8b761",
+                "name": "Crodex Token",
+                "symbol": "CRX",
+                "assetBase": "CRX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000e243ccab9e66e6cf1215376980811ddf1eb7f68911",
+                "allowedChainsToTransfer": [
+                    11
+                ]
+            },
+            {
+                "address": "0x5D4360f1Be94bD6f182F09cFE5EF9832e65EB1ac",
+                "name": "RivrDoge",
+                "symbol": "RivrDoge",
+                "assetBase": "RivrDoge",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d4360f1be94bd6f182f09cfe5ef9832e65eb1ac06",
+                "allowedChainsToTransfer": [
+                    8,
+                    11
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 7,
+        "networkId": 250,
+        "name": "Fantom",
+        "bridgeAddress": "0xAa6520a71619f3a77F12b87BAfA1f32F7002dFEa",
+        "erc20HandlerAddress": "0x502B4683D213C68507fc6d19417df0bB7995b23B",
+        "rpcUrl": "https://rpcapi.fantom.network",
+        "type": "Ethereum",
+        "gasLimit": 60000,
+        "defaultGasPrice": 2,
+        "blockExplorer": "https://ftmscan.com",
+        "nativeTokenSymbol": "FTM",
+        "marketPlace": "https://pwawallet.fantom.network/",
+        "tokens": [
+            {
+                "address": "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+                "name": "FANTOM",
+                "symbol": "WFTM",
+                "assetBase": "FTM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000021be370d5312f44cb42ce377bc9b8a0cef1a4c8307",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    8,
+                    10,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x338003E074DabFec661E1901bdB397aF9Cab6A76",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    8,
+                    9,
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0x468003B688943977e6130F4F68F23aad939a1040",
+                "name": "Spell Token",
+                "symbol": "SPELL",
+                "assetBase": "SPELL",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000468003b688943977e6130f4f68f23aad939a104007",
+                "allowedChainsToTransfer": [
+                    10
+                ]
+            },
+            {
+                "address": "0x82f0B8B456c1A451378467398982d4834b6829c1",
+                "name": "Magic Internet Money",
+                "symbol": "MIM",
+                "assetBase": "MIM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000082f0b8b456c1a451378467398982d4834b6829c107",
+                "allowedChainsToTransfer": [
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0xD16F510e5912899b07c1c619E607EA39f0E3F241",
+                "name": "Artemis",
+                "symbol": "MIS",
+                "assetBase": "MIS",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000d74433b187cf0ba998ad9be3486b929c7681521510",
+                "allowedChainsToTransfer": [
+                    10
+                ]
+            },
+            {
+                "address": "0x321162Cd933E2Be498Cd2267a90534A804051b11",
+                "name": "Wrapped BTC",
+                "symbol": "WBTC",
+                "assetBase": "BTC",
+                "decimals": 8,
+                "resourceId": "0x02000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59901",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+                "name": "Hertz Token",
+                "symbol": "HTZ",
+                "assetBase": "HTZ",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000009c8e99eb130aed653ef90fed709d9c3e9cc8b26902",
+                "allowedChainsToTransfer": [
+                    2,
+                    13
+                ]
+            },
+            {
+                "address": "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E",
+                "name": "Dai Stablecoin",
+                "symbol": "DAI",
+                "assetBase": "DAI",
+                "decimals": 18,
+                "resourceId": "0x02000000000000000000006b175474e89094c44da98b954eedeac495271d0f01",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0x9879aBDea01a879644185341F7aF7d8343556B7a",
+                "name": "TrueUSD",
+                "symbol": "TUSD",
+                "assetBase": "TUSD",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000000000000085d4780b73119b644ae5ecd22b37601",
+                "allowedChainsToTransfer": [
+                    14
+                ]
+            },
+            {
+                "address": "0x9eBCCb3A574c26F0371914350df3a6B39AaEEa12",
+                "name": "CroArmy",
+                "symbol": "Army",
+                "assetBase": "Army",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b20115b8b176d72f077c4f93e95492870240a0b211",
+                "allowedChainsToTransfer": [
+                    3,
+                    11
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 8,
+        "networkId": 336,
+        "name": "Shiden",
+        "bridgeAddress": "0x86355488458DC123184c7cc0fA40DCd7E065Bb67",
+        "erc20HandlerAddress": "0x074412fae37D4C3de9964980352faD07aacDd674",
+        "rpcUrl": "https://rpc.shiden.astar.network:8545",
+        "type": "Ethereum",
+        "gasLimit": 60000,
+        "defaultGasPrice": 2,
+        "blockExplorer": "https://shiden.subscan.io",
+        "nativeTokenSymbol": "SDN",
+        "marketPlace": "https://portal.astar.network/#/balance/balance-plasm",
+        "tokens": [
+            {
+                "address": "0x17fcCD90a1911c3C2e0cCb7922b233a0f15A46B1",
+                "name": "Moonriver Token",
+                "symbol": "MOVR",
+                "assetBase": "MOVR",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000098878b06940ae243284ca214f92bb71a2b032b8a06",
+                "allowedChainsToTransfer": [
+                    2,
+                    6,
+                    13
+                ]
+            },
+            {
+                "address": "0x64D70C807C20B5F3bCadC4D92874Fc986049D76D",
+                "name": "MAI",
+                "symbol": "miMatic",
+                "assetBase": "miMatic",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000a3fa99a148fa48d14ed51d610c367c61876997f105",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    6,
+                    11
+                ]
+            },
+            {
+                "address": "0xcc4e0a2fc0c95304175236666c80a056E530BA2e",
+                "name": "Avalanche Token",
+                "symbol": "AVAX",
+                "assetBase": "AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    6,
+                    10,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0xe174aa1927a429815c61ae6a7b2608ECd61e100a",
+                "name": "Fantom Token",
+                "symbol": "FTM",
+                "assetBase": "FTM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000021be370d5312f44cb42ce377bc9b8a0cef1a4c8307",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    7,
+                    10,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x35188e3CB4e5eb81350f7b47E153354A12794FeC",
+                "name": "Tether USD",
+                "symbol": "USDT.e",
+                "assetBase": "USDT",
+                "decimals": 6,
+                "resourceId": "0x0000000000000000000000c7198437980c041c805a1edcba50c1ce5db9511802",
+                "allowedChainsToTransfer": [
+                    2,
+                    6
+                ]
+            },
+            {
+                "address": "0x7b7e696df8Ca22A8dC6c1dC14c4D5bC153a225D5",
+                "name": "Dai Stablecoin",
+                "symbol": "DAI.e",
+                "assetBase": "DAI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000d586e7f844cea2f87f50152665bcbc2c279d8d7002",
+                "allowedChainsToTransfer": [
+                    2,
+                    6
+                ]
+            },
+            {
+                "address": "0x3Fbd1C493227ff8c32be165aCbe483897e3B496d",
+                "name": "Wrapped Ether",
+                "symbol": "WETH.e",
+                "assetBase": "WETH",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000049d5c2bdffac6ce2bfdb6640f4f80f226bc10bab02",
+                "allowedChainsToTransfer": [
+                    2
+                ]
+            },
+            {
+                "address": "0x3671af96072B60296F79e17Df07c4Ac2c3f43dEC",
+                "name": "FreeRiver Token",
+                "symbol": "FREE",
+                "assetBase": "FREE",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000063f2adf5f76f00d48fe2cbef19000af13bb8de8206",
+                "allowedChainsToTransfer": [
+                    6,
+                    11
+                ]
+            },
+            {
+                "address": "0x30C47c0ceBc79bCEfd3F9714F5FFbc86555D7615",
+                "name": "Dragon Token",
+                "symbol": "DRAGON",
+                "assetBase": "DRAGON",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000062bd733268269d7ecb85cd3ea84281e6bed7f5f06",
+                "allowedChainsToTransfer": [
+                    6
+                ]
+            },
+            {
+                "address": "0x576bD05d4475632D647367394cb3359Fd8E7A6ca",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    9,
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0x1A6a12953d5439e8965d94d3D8452464FBd53e30",
+                "name": "Shiden Token",
+                "symbol": "SDN",
+                "assetBase": "SDN",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000001a6a12953d5439e8965d94d3d8452464fbd53e3008",
+                "allowedChainsToTransfer": [
+                    6,
+                    9
+                ]
+            },
+            {
+                "address": "0x8E9a06ceD7316Bd6EFb6F336f5B0CcDF8549A9f3",
+                "name": "MATIC",
+                "symbol": "MATIC",
+                "assetBase": "MATIC",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000d500b1d8e8ef31e21c99d1db9a6444d3adf127005",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x5038ff5EbcF417c68484fbC7288c07ea97971487",
+                "name": "Qi Dao",
+                "symbol": "QI",
+                "assetBase": "QI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000580a84c73811e1839f75d86d75d88cca0c241ff405",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    9,
+                    10
+                ]
+            },
+            {
+                "address": "0x6D072DC0Fb5B0f964C36238997F86A32c301318A",
+                "name": "RivrDoge",
+                "symbol": "RivrDoge",
+                "assetBase": "RivrDoge",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d4360f1be94bd6f182f09cfe5ef9832e65eb1ac06",
+                "allowedChainsToTransfer": [
+                    6,
+                    11
+                ]
+            },
+            {
+                "address": "0xb4BcA5955F26d2fA6B57842655d7aCf2380Ac854",
+                "name": "EmiDao Token",
+                "symbol": "ESW",
+                "assetBase": "EMISWAP",
+                "decimals": 18,
+                "resourceId": "0xffffffffffffffffffffff5a75a093747b72a0e14056352751edf03518031d01",
+                "allowedChainsToTransfer": [
+                    255,
+                    5
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 9,
+        "networkId": 4689,
+        "name": "Iotex",
+        "bridgeAddress": "0xc92a5Ad85ed1CC829F17F29807b92D98c60a94f0",
+        "erc20HandlerAddress": "0xEfB3E6a5cCe777AE472D1255D712407fd22A9547",
+        "rpcUrl": "https://babel-api.mainnet.iotex.io",
+        "type": "Ethereum",
+        "gasLimit": 60000,
+        "defaultGasPrice": 2,
+        "blockExplorer": "https://iotexscan.io",
+        "nativeTokenSymbol": "IOTX",
+        "marketPlace": "https://pro.coinbase.com/trade/IOTX-USD",
+        "tokens": [
+            {
+                "address": "0x77dB7E455f013324A5153391cD3223b39436DDF5",
+                "name": "Shiden Token",
+                "symbol": "SDN",
+                "assetBase": "SDN",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000001a6a12953d5439e8965d94d3d8452464fbd53e3008",
+                "allowedChainsToTransfer": [
+                    6,
+                    8
+                ]
+            },
+            {
+                "address": "0x8F378D6C019EEB6360D41Cf15e6f7aB79C2EeFD8",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0xd78c0c781d10347D1675111307D302241e33bb13",
+                "name": "Qi Dao",
+                "symbol": "QI",
+                "assetBase": "QI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000580a84c73811e1839f75d86d75d88cca0c241ff405",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    8,
+                    10
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 10,
+        "networkId": 1666600000,
+        "name": "Harmony",
+        "bridgeAddress": "0xFd39422E1E4BBF544089D4E23Bea80BC2f6153BB",
+        "erc20HandlerAddress": "0xa0026a3047bDf539f6Bf405aF576BE2038faC5A8",
+        "rpcUrl": "https://api.harmony.one",
+        "type": "Ethereum",
+        "gasLimit": 60000,
+        "defaultGasPrice": 2,
+        "blockExplorer": "https://explorer.harmony.one",
+        "nativeTokenSymbol": "ONE",
+        "marketPlace": "https://coinmarketcap.com/currencies/harmony/markets/",
+        "tokens": [
+            {
+                "address": "0x53BA62dDD5a9A6B6d97C7a496D7832D13A9218c4",
+                "name": "Avalanche Token",
+                "symbol": "AVAX",
+                "assetBase": "AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    6,
+                    8,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x0E4d3A20B757cEA2A0910129991B9d42cC2bE188",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0xD647090c1cdcdbB72De411B1bA16f03d4A7bba02",
+                "name": "Fantom Token",
+                "symbol": "rFTM",
+                "assetBase": "FTM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000021be370d5312f44cb42ce377bc9b8a0cef1a4c8307",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0xD8d461d6841D2B03C8deE60eE03f2a5a5d6c7cD4",
+                "name": "Spell Token",
+                "symbol": "SPELL",
+                "assetBase": "SPELL",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000468003b688943977e6130f4f68f23aad939a104007",
+                "allowedChainsToTransfer": [
+                    7
+                ]
+            },
+            {
+                "address": "0x8f4B54D93BC8A4aB29dA8362Ad0C088C770A5F35",
+                "name": "Magic Internet Money",
+                "symbol": "MIM",
+                "assetBase": "MIM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000082f0b8b456c1a451378467398982d4834b6829c107",
+                "allowedChainsToTransfer": [
+                    7,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0xD74433B187Cf0ba998Ad9Be3486B929c76815215",
+                "name": "Artemis",
+                "symbol": "MIS",
+                "assetBase": "MIS",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000d74433b187cf0ba998ad9be3486b929c7681521510",
+                "allowedChainsToTransfer": [
+                    7
+                ]
+            },
+            {
+                "address": "0x8D0Ac37202D3570b811475f592de8bd93D95e171",
+                "name": "Qi Dao",
+                "symbol": "QI",
+                "assetBase": "QI",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000580a84c73811e1839f75d86d75d88cca0c241ff405",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    8,
+                    9
+                ]
+            },
+            {
+                "address": "0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a",
+                "name": "Wrapped ONE",
+                "symbol": "WONE",
+                "assetBase": "ONE",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000cf664087a5bb0237a0bad6742852ec6c8d69a27a10",
+                "allowedChainsToTransfer": [
+                    5,
+                    13,
+                    14
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 11,
+        "networkId": 25,
+        "name": "Cronos",
+        "bridgeAddress": "0x0bAeEcA59B33761b9a5AE4Af53D04408047A0378",
+        "erc20HandlerAddress": "0x3f1B059d94551c9300176ceB55FD23aF0e4E2E29",
+        "rpcUrl": "https://evm.cronos.org/",
+        "type": "Ethereum",
+        "blockExplorer": "https://cronos.crypto.org/explorer",
+        "nativeTokenSymbol": "CRO",
+        "marketPlace": "https://www.cronosworld.io/",
+        "tokens": [
+            {
+                "address": "0xe7e12F436ae05cE6623eFB68B28ca4b83A953600",
+                "name": "Avalanche Token",
+                "symbol": "AVAX",
+                "assetBase": "AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    6,
+                    8,
+                    10,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x9C29650a1B273A031A35F3121914aae882B144A4",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    14
+                ]
+            },
+            {
+                "address": "0x1c965D8E53fb1a448789e2B0FA5abc3EB2c36993",
+                "name": "MAI",
+                "symbol": "miMatic",
+                "assetBase": "miMatic",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000a3fa99a148fa48d14ed51d610c367c61876997f105",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    6,
+                    8
+                ]
+            },
+            {
+                "address": "0xad79AC3c5a5c15C6B9194F5568e451b3fc3C2B40",
+                "name": "Matic Token",
+                "symbol": "MATIC",
+                "assetBase": "MATIC",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000d500b1d8e8ef31e21c99d1db9a6444d3adf127005",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    8,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x9209d64F2930DaAe334e0fc2939709E593A88041",
+                "name": "FreeRiver Token",
+                "symbol": "FREE",
+                "assetBase": "FREE",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000063f2adf5f76f00d48fe2cbef19000af13bb8de8206",
+                "allowedChainsToTransfer": [
+                    6,
+                    8
+                ]
+            },
+            {
+                "address": "0x2BC472832Eb20C65F82d6A869db845aB0C0099ba",
+                "name": "Magic Internet Money",
+                "symbol": "MIM",
+                "assetBase": "MIM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000082f0b8b456c1a451378467398982d4834b6829c107",
+                "allowedChainsToTransfer": [
+                    7,
+                    10,
+                    14
+                ]
+            },
+            {
+                "address": "0xD62A9d7BE4404675ab0e5CBD5DfCE4aa6A15566E",
+                "name": "MOONKAFE",
+                "symbol": "KAFE",
+                "assetBase": "KAFE",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000052f04c806eb82930f40d410259b7af8e18d3bdc906",
+                "allowedChainsToTransfer": [
+                    6
+                ]
+            },
+            {
+                "address": "0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23",
+                "name": "Wrapped CRO",
+                "symbol": "WCRO",
+                "assetBase": "WCRO",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005c7f8a570d578ed84e63fdfa7b1ee72deae1ae2311",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    13
+                ]
+            },
+            {
+                "address": "0xe243CCab9E66E6cF1215376980811ddf1eb7F689",
+                "name": "Crodex Token",
+                "symbol": "CRX",
+                "assetBase": "CRX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000e243ccab9e66e6cf1215376980811ddf1eb7f68911",
+                "allowedChainsToTransfer": [
+                    6
+                ]
+            },
+            {
+                "address": "0xd58965deF657320aE290083e1d5Df6C15964f9E8",
+                "name": "RivrDoge",
+                "symbol": "RivrDoge",
+                "assetBase": "RivrDoge",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d4360f1be94bd6f182f09cfe5ef9832e65eb1ac06",
+                "allowedChainsToTransfer": [
+                    6,
+                    8
+                ]
+            },
+            {
+                "address": "0x9b8077C6590b560f1A9D60512648277D29b35A3B",
+                "name": "PolyDoge",
+                "symbol": "PolyDoge",
+                "assetBase": "PolyDoge",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000008a953cfe442c5e8855cc6c61b1293fa648bae47205",
+                "allowedChainsToTransfer": [
+                    5
+                ]
+            },
+            {
+                "address": "0xCbDE0E17d14F49e10a10302a32d17AE88a7Ecb8B",
+                "name": "CrystalToken",
+                "symbol": "CRYSTL",
+                "assetBase": "CRYSTL",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000076bf0c28e604cc3fe9967c83b3c3f31c213cfe6405",
+                "allowedChainsToTransfer": [
+                    3,
+                    5
+                ]
+            },
+            {
+                "address": "0xB20115B8B176D72F077C4f93e95492870240a0b2",
+                "name": "CroArmy",
+                "symbol": "Army",
+                "assetBase": "Army",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b20115b8b176d72f077c4f93e95492870240a0b211",
+                "allowedChainsToTransfer": [
+                    3,
+                    7
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 12,
+        "networkId": 66,
+        "name": "OKEx",
+        "bridgeAddress": "0xe4DE67002d980eA357D7278d673D0D95D50548Dc",
+        "erc20HandlerAddress": "0xe2975Aa20D9358B7305a9d8917534a576369Efb1",
+        "rpcUrl": "https://exchainrpc.okex.org",
+        "type": "Ethereum",
+        "blockExplorer": "https://www.oklink.com/en/oec",
+        "nativeTokenSymbol": "OKT",
+        "marketPlace": "https://www.okex.com/",
+        "tokens": []
+    },
+    {
+        "chainId": 13,
+        "networkId": 62621,
+        "name": "MultiVAC",
+        "bridgeAddress": "0xE760095C4B6cceBBAe0FFD6184D638B8d888cDAB",
+        "erc20HandlerAddress": "0xfC737b4Bbf8C0f2383df7385Bee41D60534a614E",
+        "rpcUrl": "https://rpc.mtv.ac",
+        "type": "Ethereum",
+        "blockExplorer": "https://e.mtv.ac",
+        "nativeTokenSymbol": "MTV",
+        "marketPlace": "https://trade.kucoin.com/MTV-USDT",
+        "tokens": [
+            {
+                "address": "0x338A6997011c4eee53822837c4F95bBbA3a0a7f5",
+                "name": "BUSD Token Old",
+                "symbol": "BUSD Old",
+                "assetBase": "BUSD Old",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000e9e7cea3dedca5984780bafc599bd69add087d5603",
+                "allowedChainsToTransfer": [
+                    3
+                ]
+            },
+            {
+                "address": "0xCd65eb7630e5A2C46E1b99c0F3a45611be4960B2",
+                "name": "BUSD Token",
+                "symbol": "BUSD",
+                "assetBase": "BUSD",
+                "decimals": 18,
+                "resourceId": "0x0100000000000000000000e9e7cea3dedca5984780bafc599bd69add087d5603",
+                "allowedChainsToTransfer": [
+                    3
+                ]
+            },
+            {
+                "address": "0xEa1199d50Ee09fA8062fd9dA3D55C6F90C1bABd2",
+                "name": "USD Coin",
+                "symbol": "USDC",
+                "assetBase": "USDC",
+                "decimals": 6,
+                "resourceId": "0xeeeeeeeeeeeeeeeeeeeeeea0b86991c6218b36c1d19d4a2e9eb0ce3606eb4801",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    5
+                ]
+            },
+            {
+                "address": "0x3b6e35574Fe60D7CeB9CA70DcA56D7294EF28926",
+                "name": "Wrapped Ether",
+                "symbol": "WETH",
+                "assetBase": "ETH",
+                "decimals": 18,
+                "resourceId": "0xffffffffffffffffffffffc02aaa39b223fe8d0a0e5c4f27ead9083c756cc201",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    5
+                ]
+            },
+            {
+                "address": "0x175E9B026cf31fbE181628C9BDAb3DF6143b6F18",
+                "name": "Avalanche Token",
+                "symbol": "AVAX",
+                "assetBase": "AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    6,
+                    8,
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0x25009A734EfFE43cf7609Bc313E987d7ee8ee346",
+                "name": "Binance Token",
+                "symbol": "BNB",
+                "assetBase": "BNB",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c03",
+                "allowedChainsToTransfer": [
+                    3,
+                    5
+                ]
+            },
+            {
+                "address": "0x91c57B70EcD17DB27d22EaD74Cc86781936115E7",
+                "name": "Moonriver Token",
+                "symbol": "MOVR",
+                "assetBase": "MOVR",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000098878b06940ae243284ca214f92bb71a2b032b8a06",
+                "allowedChainsToTransfer": [
+                    2,
+                    6,
+                    8
+                ]
+            },
+            {
+                "address": "0x185B1FF9878D27DdE302A511FC2f80765232ADB7",
+                "name": "Matic Token",
+                "symbol": "MATIC",
+                "assetBase": "MATIC",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000d500b1d8e8ef31e21c99d1db9a6444d3adf127005",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    8,
+                    11,
+                    14
+                ]
+            },
+            {
+                "address": "0x67558D91654A6ccbe88a3cc4e1DB862BC51fc322",
+                "name": "Fantom Token",
+                "symbol": "FTM",
+                "assetBase": "FTM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000021be370d5312f44cb42ce377bc9b8a0cef1a4c8307",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    10,
+                    14
+                ]
+            },
+            {
+                "address": "0x282A0c6a96747bfF4BAa80eBa6CE6744aafaBEbB",
+                "name": "Wrapped CRO",
+                "symbol": "WCRO",
+                "assetBase": "CRO",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005c7f8a570d578ed84e63fdfa7b1ee72deae1ae2311",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    11
+                ]
+            },
+            {
+                "address": "0x4E51774CB9704109f6Ff8F9a9DfFd8fAF823C38f",
+                "name": "Wrapped ONE",
+                "symbol": "WONE",
+                "assetBase": "ONE",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000cf664087a5bb0237a0bad6742852ec6c8d69a27a10",
+                "allowedChainsToTransfer": [
+                    5,
+                    10,
+                    14
+                ]
+            },
+            {
+                "address": "0x2f9c74d3C42023C533437c9EE743D4a6329e78Df",
+                "name": "Tether USD",
+                "symbol": "USDT",
+                "assetBase": "USDT",
+                "decimals": 6,
+                "resourceId": "0x0200000000000000000000dac17f958d2ee523a2206206994597c13d831ec701",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    5
+                ]
+            },
+            {
+                "address": "0xFC0c8D38166fc417F19De5B44CfC339079a70913",
+                "name": "Hertz Token",
+                "symbol": "HTZ",
+                "assetBase": "HTZ",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000009c8e99eb130aed653ef90fed709d9c3e9cc8b26902",
+                "allowedChainsToTransfer": [
+                    2,
+                    7
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 14,
+        "networkId": 1088,
+        "name": "Metis Network",
+        "bridgeAddress": "0x6A7b82e91E16934EaE0123179b1498F1f2aef45a",
+        "erc20HandlerAddress": "0x640b3408EaC140297136677aC0cFF13a8c82C5Ed",
+        "rpcUrl": "https://andromeda.metis.io/?owner=1088",
+        "type": "Ethereum",
+        "blockExplorer": "https://andromeda-explorer.metis.io",
+        "nativeTokenSymbol": "METIS",
+        "marketPlace": "https://app.uniswap.org/#/swap",
+        "tokens": [
+            {
+                "address": "0xE253E0CeA0CDD43d9628567d097052B33F98D611",
+                "name": "Avalanche Token",
+                "symbol": "AVAX",
+                "assetBase": "AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    6,
+                    8,
+                    10,
+                    11,
+                    13
+                ]
+            },
+            {
+                "address": "0xa9109271abcf0C4106Ab7366B4eDB34405947eED",
+                "name": "Fantom Token",
+                "symbol": "rFTM",
+                "assetBase": "FTM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000021be370d5312f44cb42ce377bc9b8a0cef1a4c8307",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    10,
+                    13
+                ]
+            },
+            {
+                "address": "0x729de3792a5f810a2E7D7899DA74DE0D108E7E6B",
+                "name": "Wrapped ONE",
+                "symbol": "WONE",
+                "assetBase": "ONE",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000cf664087a5bb0237a0bad6742852ec6c8d69a27a10",
+                "allowedChainsToTransfer": [
+                    5,
+                    10,
+                    13
+                ]
+            },
+            {
+                "address": "0xfe282Af5f9eB59C30A3f78789EEfFA704188bdD4",
+                "name": "Relay Token",
+                "symbol": "RELAY",
+                "assetBase": "RELAY",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005d843fa9495d23de997c394296ac7b4d721e841c01",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            {
+                "address": "0x4b9D2923D875edF43980BF5dddDEde3Fb20fC742",
+                "name": "Matic Token",
+                "symbol": "MATIC",
+                "assetBase": "MATIC",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000d500b1d8e8ef31e21c99d1db9a6444d3adf127005",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    8,
+                    11,
+                    13
+                ]
+            },
+            {
+                "address": "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000",
+                "name": "Wrapped METIS",
+                "symbol": "WMETIS",
+                "assetBase": "METIS",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000deaddeaddeaddeaddeaddeaddeaddeaddead000014",
+                "allowedChainsToTransfer": [
+                    5
+                ]
+            },
+            {
+                "address": "0x44Dd7C98885cD3086E723B8554a90c9cC4089C4C",
+                "name": "Magic Internet Money",
+                "symbol": "MIM",
+                "assetBase": "MIM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000082f0b8b456c1a451378467398982d4834b6829c107",
+                "allowedChainsToTransfer": [
+                    7,
+                    10,
+                    11
+                ]
+            },
+            {
+                "address": "0xa5B55ab1dAF0F8e1EFc0eB1931a957fd89B918f4",
+                "name": "Wrapped BTC",
+                "symbol": "WBTC",
+                "assetBase": "BTC",
+                "decimals": 8,
+                "resourceId": "0x02000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59901",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    5,
+                    7
+                ]
+            },
+            {
+                "address": "0x4651B38e7ec14BB3db731369BFE5B08F2466Bd0A",
+                "name": "Dai Stablecoin",
+                "symbol": "DAI",
+                "assetBase": "DAI",
+                "decimals": 18,
+                "resourceId": "0x02000000000000000000006b175474e89094c44da98b954eedeac495271d0f01",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    5,
+                    7
+                ]
+            },
+            {
+                "address": "0x3f8F3438d45D3065E4dbe10273c10C8B3Aea9B1F",
+                "name": "TrueUSD",
+                "symbol": "TUSD",
+                "assetBase": "TUSD",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000000000000085d4780b73119b644ae5ecd22b37601",
+                "allowedChainsToTransfer": [
+                    255,
+                    2,
+                    3,
+                    5,
+                    7
+                ]
+            },
+            {
+                "address": "0x66673f0a3b5d99524bA76A558B93A9ca1386f4Cd",
+                "name": "XCAD Token",
+                "symbol": "XCAD",
+                "assetBase": "XCAD",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000007659ce147d0e714454073a5dd7003544234b6aa001",
+                "allowedChainsToTransfer": [
+                    255,
+                    3
+                ]
+            },
+            {
+                "address": "0xA31848AA61F784CDBb6F74260d224A4356295799",
+                "name": "DXP",
+                "symbol": "DXP",
+                "assetBase": "DXP",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000088aa4a6c5050b9a1b2aa7e34d0582025ca6ab74501",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            },
+            {
+                "address": "0x0389CC74cc0e0600ae7687ecF8237c8EEb872C6D",
+                "name": "Ludus",
+                "symbol": "LUDUS",
+                "assetBase": "LUDUS",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000009eaa644489a728f7923da985df1dbecf9a2ebe1701",
+                "allowedChainsToTransfer": [
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "chainId": 15,
+        "networkId": 1284,
+        "name": "Moonbeam",
+        "bridgeAddress": "0x0736303CfE77eeee5ea14a45753421c23ABAb32A",
+        "erc20HandlerAddress": "0x6e62e4186DB556Cda8851FCAa9685b506E81342b",
+        "rpcUrl": "https://rpc.api.moonbeam.network",
+        "type": "Ethereum",
+        "blockExplorer": "https://moonscan.io",
+        "nativeTokenSymbol": "GLMR",
+        "marketPlace": "https://app.uniswap.org/#/swap",
+        "tokens": [
+            {
+                "address": "0x1e3683a205b7A0A4F0c8fE4Dbc7D4E6f7eE13fbE",
+                "name": "Avalanche Token",
+                "symbol": "AVAX",
+                "assetBase": "AVAX",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000b31f66aa3c1e785363f0875a1b74e27b85fd66c702",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    2,
+                    5,
+                    6,
+                    8,
+                    10,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x726312Be83A6369e020a66d71Bb1eB2442484759",
+                "name": "Moonriver Token",
+                "symbol": "MOVR",
+                "assetBase": "MOVR",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000098878b06940ae243284ca214f92bb71a2b032b8a06",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    2,
+                    6,
+                    8,
+                    13
+                ]
+            },
+            {
+                "address": "0x7d8aF5dc9E573156849f1d6E5Bbe6393E0ee324e",
+                "name": "Matic Token",
+                "symbol": "MATIC",
+                "assetBase": "MATIC",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000000d500b1d8e8ef31e21c99d1db9a6444d3adf127005",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    8,
+                    11,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0x83b665B23Cc32f928E86a061F527226b49d5f7C0",
+                "name": "Wrapped Mirror TSLA Token",
+                "symbol": "mTSLA",
+                "assetBase": "TSLA",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000f215a127a196e3988c09d052e16bcfd365cd7aa303",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    3
+                ]
+            },
+            {
+                "address": "0xaD0623ce67Dcb075670C1570cA39c03ec5A23Fd1",
+                "name": "Fantom Token",
+                "symbol": "FTM",
+                "assetBase": "FTM",
+                "decimals": 18,
+                "resourceId": "0x000000000000000000000021be370d5312f44cb42ce377bc9b8a0cef1a4c8307",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    10,
+                    13,
+                    14
+                ]
+            },
+            {
+                "address": "0xD911de59d6baF5aF671bEC73304756518AE229dE",
+                "name": "Wrapped CRO",
+                "symbol": "WCRO",
+                "assetBase": "WCRO",
+                "decimals": 18,
+                "resourceId": "0x00000000000000000000005c7f8a570d578ed84e63fdfa7b1ee72deae1ae2311",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    5,
+                    6,
+                    11,
+                    13
+                ]
+            },
+            {
+                "address": "0xAEfCAB0371FF04E6a06522D4B5145f3730fe18E4",
+                "name": "Wrapped ONE",
+                "symbol": "WONE",
+                "assetBase": "ONE",
+                "decimals": 18,
+                "resourceId": "0x0000000000000000000000cf664087a5bb0237a0bad6742852ec6c8d69a27a10",
+                "directions": "only-out",
+                "allowedChainsToTransfer": [
+                    5,
+                    10,
+                    13,
+                    14
+                ]
+            }
+        ]
+    }
+]

@@ -19,6 +19,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.across = void 0;
-exports.across = __importStar(require("./across"));
+exports.adapters = void 0;
+const across = __importStar(require("./across"));
+const hyphen = __importStar(require("./hyphen"));
+const multichain = __importStar(require("./multichain"));
+const relay = __importStar(require("./relay"));
+exports.adapters = {
+    across: across,
+    hyphen: hyphen,
+    multichain: multichain,
+    relay: relay,
+};
 //# sourceMappingURL=index.js.map

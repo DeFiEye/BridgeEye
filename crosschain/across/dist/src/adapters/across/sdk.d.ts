@@ -2,6 +2,7 @@ import { utils } from "@uma/sdk";
 import { relayFeeCalculator } from "@across-protocol/sdk-v2";
 import { Provider } from "@ethersproject/providers";
 import { ethers, BigNumber } from "ethers";
+export declare const DEFAULT_FIXED_DECIMAL_POINT = 4;
 import { ChainId } from "./constants";
 export declare type Fee = {
     total: ethers.BigNumber;
@@ -81,9 +82,22 @@ export default class LpFeeCalculator {
     getLpFeePct(tokenAddress: string, amount: utils.BigNumberish, timestamp?: number): Promise<ethers.BigNumber>;
 }
 export declare function relayFeeCalculatorConfig(chainId: ChainId): relayFeeCalculator.RelayFeeCalculatorConfig;
-export declare function calculateBridgeFee(inputAmount: number, inputSymbol: string, toChainId: ChainId): Promise<{
+export declare function getBridgeLimits(token?: string, fromChainId?: ChainId, toChainId?: ChainId): Promise<{
+    minDeposit: ethers.BigNumber;
+    maxDeposit: ethers.BigNumber;
+    maxDepositInstant: ethers.BigNumber;
+    maxDepositShortDelay: ethers.BigNumber;
+} | null>;
+export declare function calculateBridgeFee(inputAmount: number, inputSymbol: string, fromChainId: ChainId, toChainId: ChainId): Promise<{
     token: import("./constants").TokenInfo;
+    timeEstimate: string;
     input: string;
+    outputToken: {
+        name: string;
+        symbol: string;
+        decimals: number;
+        mainnetAddress: string;
+    };
     output: string;
     breakdown: {
         name: string;

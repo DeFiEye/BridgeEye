@@ -1,0 +1,350 @@
+{
+    "code": 200,
+    "message": [
+        {
+            "enabled": true,
+            "nativeToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "nativeDecimal": 18,
+            "eip1559Supported": true,
+            "baseFeeMultiplier": 1.5,
+            "watchTower": "alchemyWebsocket",
+            "networkAgnosticTransferSupported": false,
+            "tokenPriceToBeCalculated": true,
+            "sdkConfig": {
+                "metaTransactionSupported": false
+            },
+            "name": "Ethereum",
+            "image": "https://biconomy-public-assets.s3.amazonaws.com/tokens/eth-icon.svg",
+            "chainId": 1,
+            "chainColor": "#C4C4C41A",
+            "currency": "ETH",
+            "gasless": {
+                "enable": false,
+                "apiKey": ""
+            },
+            "topicIds": {
+                "deposit": "0x522e11fa05593b306c8df10d2b0b8e01eec48f9d0a9427a7a93f21ff90d66fb1",
+                "assetSent": "0x6bfd5ee5792d66b151a3fab9f56ee828a0f1c3216d4b752e267cd5590326b15c",
+                "routerSwapForEth": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+            },
+            "graphUrl": "https://api.thegraph.com/subgraphs/name/divyan73/hyphenethereumv2",
+            "v2GraphUrl": "https://api.thegraph.com/subgraphs/name/shantanu-bico/hyphenv2-liquidity-pool-ethereum",
+            "explorerUrl": "https://etherscan.io",
+            "rpc": "https://mainnet.infura.io/v3/d126f392798444609246423b06116c77",
+            "contracts": {
+                "uniswapRouter": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+                "hyphen": {
+                    "tokenManager": "0xe6dbf5861ed9828594Af4C6ea6356411c3A0B168",
+                    "liquidityPool": "0x2a5c2568b10a0e826bfa892cf21ba7218310180b",
+                    "executorManager": "0xbd761d917fb77381b4398bda89c7f0d9a2bd1399",
+                    "lpToken": "0xc49b65e5a350292afda1f239ebefe562668717c2",
+                    "liquidityProviders": "0xebab24f13de55789ec1f3ffe99a285754e15f7b9",
+                    "liquidityFarming": "0x781f4efc37a08c0ea6631204e46b206330c8c161",
+                    "liquidityFarmingV1": "0x781f4efc37a08c0ea6631204e46b206330c8c161",
+                    "liquidityFarmingV2": "",
+                    "whitelistPeriodManager": "0x684f574ca8c6b52c2b713ad1d1eacddf3976e7eb"
+                },
+                "biconomyForwarders": [
+                    "0x84a0856b038eaad1cc7e297cf34a7e72685a8693"
+                ],
+                "gnosisMasterAccount": "0x34cfac646f301356faa8b21e94227e3583fe3f5f",
+                "whiteListedExternalContracts": [
+                    "0x0a4061b2511a51c240cd03a3e2f78b99dec48553",
+                    "0x6d290609b3f5f02d52f28d97c75a443ed8564cbf",
+                    "0xc30141b657f4216252dc59af2e7cdb9d8792e1b0",
+                    "0x5a9fd7c39a6c488e715437d7b1f3c823d5596ed1",
+                    "0x9dd11f4fc672006ea9e666b6a222c5a8141f2ac0",
+                    "0x362fa9d0bca5d19f743db50738345ce2b40ec99f",
+                    "0x1111115f592e50c3a08f68cc2ea0fb9daccde798"
+                ]
+            }
+        },
+        {
+            "enabled": true,
+            "nativeToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "nativeDecimal": 18,
+            "eip1559Supported": true,
+            "baseFeeMultiplier": 1.5,
+            "watchTower": "alchemyWebsocket",
+            "networkAgnosticTransferSupported": true,
+            "tokenPriceToBeCalculated": false,
+            "sdkConfig": {
+                "metaTransactionSupported": true
+            },
+            "name": "Polygon",
+            "image": "https://biconomy-public-assets.s3.amazonaws.com/tokens/matic-icon.svg",
+            "chainId": 137,
+            "chainColor": "#8247E51A",
+            "currency": "MATIC",
+            "gasless": {
+                "enable": true,
+                "apiKey": "jYEsJEDel.8bc71a9b-4097-4f77-98dc-3a713e3988b9"
+            },
+            "topicIds": {
+                "deposit": "0x522e11fa05593b306c8df10d2b0b8e01eec48f9d0a9427a7a93f21ff90d66fb1",
+                "assetSent": "0x6bfd5ee5792d66b151a3fab9f56ee828a0f1c3216d4b752e267cd5590326b15c",
+                "routerSwapForEth": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+            },
+            "graphUrl": "https://api.thegraph.com/subgraphs/name/divyan73/hyphenpolygonv2",
+            "v2GraphUrl": "https://api.thegraph.com/subgraphs/name/shantanu-bico/hyphenv2-liquidity-pool-polygon",
+            "explorerUrl": "https://polygonscan.com",
+            "rpc": "https://polygon-mainnet.g.alchemy.com/v2/SsLbrjcZfm-DHu3sWWw08_LjlIiRDdcH",
+            "contracts": {
+                "uniswapRouter": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+                "hyphen": {
+                    "tokenManager": "0x79E559AC5b499A5676e28f0074e29763F6c2A27e",
+                    "liquidityPool": "0x2a5c2568b10a0e826bfa892cf21ba7218310180b",
+                    "executorManager": "0xbd761d917fb77381b4398bda89c7f0d9a2bd1399",
+                    "lpToken": "0xc49b65e5a350292afda1f239ebefe562668717c2",
+                    "liquidityProviders": "0xebab24f13de55789ec1f3ffe99a285754e15f7b9",
+                    "liquidityFarming": "0x781f4efc37a08c0ea6631204e46b206330c8c161",
+                    "liquidityFarmingV1": "0x781f4efc37a08c0ea6631204e46b206330c8c161",
+                    "liquidityFarmingV2": "",
+                    "whitelistPeriodManager": "0x684f574ca8c6b52c2b713ad1d1eacddf3976e7eb"
+                },
+                "biconomyForwarders": [
+                    "0x86c80a8aa58e0a4fa09a69624c31ab2a6cad56b8"
+                ],
+                "gnosisMasterAccount": "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+                "whiteListedExternalContracts": [
+                    "0xc8582180f52b6303f51e7028c3a9f428eb43dfe7",
+                    "0xca09f09e0f7b93f19e5a29fbe0486606ff32bb4e",
+                    "0xc30141b657f4216252dc59af2e7cdb9d8792e1b0",
+                    "0x5a9fd7c39a6c488e715437d7b1f3c823d5596ed1",
+                    "0x9dd11f4fc672006ea9e666b6a222c5a8141f2ac0",
+                    "0x362fa9d0bca5d19f743db50738345ce2b40ec99f",
+                    "0xf0adf157c4e7b92ffeab045816560f41ff930dd2",
+                    "0xcb74fa05f005774f8ed206970d18af49243f7da4",
+                    "0xc4c87ac80132ac874993a4607d3fe272f7b18ed0",
+                    "0x1111115f592e50c3a08f68cc2ea0fb9daccde798",
+                    "0x8808d14106558d26fae408511c76c6e0df7dad8a",
+                    "0xb5ac9bb37f3ab451cd96c7ea3529daddd3b779ca"
+                ]
+            }
+        },
+        {
+            "enabled": true,
+            "nativeToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "nativeDecimal": 18,
+            "eip1559Supported": true,
+            "baseFeeMultiplier": 1.5,
+            "watchTower": "blockWise",
+            "networkAgnosticTransferSupported": false,
+            "tokenPriceToBeCalculated": true,
+            "sdkConfig": {
+                "metaTransactionSupported": false
+            },
+            "name": "Avalanche",
+            "image": "https://biconomy-public-assets.s3.amazonaws.com/tokens/avax-icon.svg",
+            "chainId": 43114,
+            "chainColor": "#00000010",
+            "currency": "AVAX",
+            "gasless": {
+                "enable": false,
+                "apiKey": ""
+            },
+            "topicIds": {
+                "deposit": "0x522e11fa05593b306c8df10d2b0b8e01eec48f9d0a9427a7a93f21ff90d66fb1",
+                "assetSent": "0x6bfd5ee5792d66b151a3fab9f56ee828a0f1c3216d4b752e267cd5590326b15c",
+                "routerSwapForEth": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+            },
+            "graphUrl": "https://api.thegraph.com/subgraphs/name/divyan73/hyphen-avalanche",
+            "v2GraphUrl": "https://api.thegraph.com/subgraphs/name/shantanu-bico/hyphenv2-liquidity-pool-avalanche",
+            "explorerUrl": "https://snowtrace.io",
+            "rpc": "https://api.avax.network/ext/bc/C/rpc",
+            "contracts": {
+                "uniswapRouter": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+                "hyphen": {
+                    "tokenManager": "0x06c8863317F7c53Aeb63BA5465569f28b3406F13",
+                    "liquidityPool": "0x2a5c2568b10a0e826bfa892cf21ba7218310180b",
+                    "executorManager": "0xbd761d917fb77381b4398bda89c7f0d9a2bd1399",
+                    "lpToken": "0xc49b65e5a350292afda1f239ebefe562668717c2",
+                    "liquidityProviders": "0xebab24f13de55789ec1f3ffe99a285754e15f7b9",
+                    "liquidityFarming": "0x781f4efc37a08c0ea6631204e46b206330c8c161",
+                    "liquidityFarmingV1": "0x781f4efc37a08c0ea6631204e46b206330c8c161",
+                    "liquidityFarmingV2": "",
+                    "whitelistPeriodManager": "0x684f574ca8c6b52c2b713ad1d1eacddf3976e7eb"
+                },
+                "biconomyForwarders": [
+                    "0x64cd353384109423a966dcd3aa30d884c9b2e057"
+                ],
+                "gnosisMasterAccount": "",
+                "whiteListedExternalContracts": [
+                    "0x2b42affd4b7c14d9b7c2579229495c052672ccd3",
+                    "0x5a9fd7c39a6c488e715437d7b1f3c823d5596ed1",
+                    "0x9dd11f4fc672006ea9e666b6a222c5a8141f2ac0",
+                    "0x362fa9d0bca5d19f743db50738345ce2b40ec99f",
+                    "0x1c50fa929e8e28c1333d921b4aa86425bb7b0b73",
+                    "0x1111115f592e50c3a08f68cc2ea0fb9daccde798"
+                ]
+            }
+        },
+        {
+            "enabled": true,
+            "nativeToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "nativeDecimal": 18,
+            "eip1559Supported": false,
+            "baseFeeMultiplier": 1.5,
+            "watchTower": "alchemyWebsocket",
+            "networkAgnosticTransferSupported": false,
+            "tokenPriceToBeCalculated": true,
+            "sdkConfig": {
+                "metaTransactionSupported": false
+            },
+            "name": "Optimism",
+            "image": "https://biconomy-public-assets.s3.amazonaws.com/tokens/optimism-icon.svg",
+            "chainId": 10,
+            "chainColor": "#FF04201A",
+            "currency": "ETH",
+            "gasless": {
+                "enable": false,
+                "apiKey": ""
+            },
+            "topicIds": {
+                "deposit": "0x522e11fa05593b306c8df10d2b0b8e01eec48f9d0a9427a7a93f21ff90d66fb1",
+                "assetSent": "0x6bfd5ee5792d66b151a3fab9f56ee828a0f1c3216d4b752e267cd5590326b15c",
+                "routerSwapForEth": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+            },
+            "graphUrl": "https://api.thegraph.com/subgraphs/name/shantanu-bico/hyphenv2-liquidity-pool-optimism",
+            "v2GraphUrl": "https://api.thegraph.com/subgraphs/name/shantanu-bico/hyphenv2-liquidity-pool-optimism",
+            "explorerUrl": "https://optimistic.etherscan.io/",
+            "rpc": "https://mainnet.optimism.io",
+            "contracts": {
+                "uniswapRouter": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+                "hyphen": {
+                    "tokenManager": "0x4c5ccff7fa764ce150f07dd9ec9805a7c9260be1",
+                    "liquidityPool": "0x856cb5c3cbbe9e2e21293a644aa1f9363cee11e8",
+                    "executorManager": "0x9bcf58cd6d22c532e77dcaa196fc45589042bc5b",
+                    "lpToken": "0x126be6a9ec71a1fea19d2288ba2ce4cdc0facb68",
+                    "liquidityProviders": "0xb4778f5aefeb4605ed96e893417271d4a55e32ee",
+                    "liquidityFarming": "0xf46c7d442bc9e279d1e7bc4bfa57813d5f32c239",
+                    "liquidityFarmingV1": "0x781f4efc37a08c0ea6631204e46b206330c8c161",
+                    "liquidityFarmingV2": "0xf46c7d442bc9e279d1e7bc4bfa57813d5f32c239",
+                    "whitelistPeriodManager": "0xfac79f6b18ade2e9973b590472ea9f079af9668e"
+                },
+                "biconomyForwarders": [
+                    ""
+                ],
+                "gnosisMasterAccount": "",
+                "whiteListedExternalContracts": [
+                    "0xc30141b657f4216252dc59af2e7cdb9d8792e1b0",
+                    "0x362fa9d0bca5d19f743db50738345ce2b40ec99f",
+                    "0x1111115f592e50c3a08f68cc2ea0fb9daccde798"
+                ]
+            }
+        },
+        {
+            "enabled": true,
+            "nativeToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "nativeDecimal": 18,
+            "eip1559Supported": false,
+            "baseFeeMultiplier": 1.5,
+            "watchTower": "blockWise",
+            "networkAgnosticTransferSupported": false,
+            "tokenPriceToBeCalculated": true,
+            "sdkConfig": {
+                "metaTransactionSupported": false
+            },
+            "name": "BNB",
+            "image": "https://biconomy-public-assets.s3.amazonaws.com/tokens/bsc-logo.svg",
+            "chainId": 56,
+            "chainColor": "#F0B90B14",
+            "currency": "BNB",
+            "gasless": {
+                "enable": false,
+                "apiKey": ""
+            },
+            "topicIds": {
+                "deposit": "0x522e11fa05593b306c8df10d2b0b8e01eec48f9d0a9427a7a93f21ff90d66fb1",
+                "assetSent": "0x6bfd5ee5792d66b151a3fab9f56ee828a0f1c3216d4b752e267cd5590326b15c",
+                "routerSwapForEth": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+            },
+            "graphUrl": "https://api.thegraph.com/subgraphs/name/shantanu-bico/hyphenv2-liquidity-pool-bsc",
+            "v2GraphUrl": "https://api.thegraph.com/subgraphs/name/shantanu-bico/hyphenv2-liquidity-pool-bsc",
+            "explorerUrl": "https://bscscan.com",
+            "rpc": "https://bsc-dataseed.binance.org/",
+            "contracts": {
+                "uniswapRouter": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+                "hyphen": {
+                    "tokenManager": "0x13a4cc0750296bb72eb0006febec306551a4f472",
+                    "liquidityPool": "0x94d3e62151b12a12a4976f60edc18459538faf08",
+                    "executorManager": "0xbd761d917fb77381b4398bda89c7f0d9a2bd1399",
+                    "lpToken": "0x6cc7e949807c0945afcb2be0c92f42191b31dfd7",
+                    "liquidityProviders": "0x279ac60785a2fcb85550eb243b9a42a543171cc7",
+                    "liquidityFarming": "0x5c41d1b06ae6099a2205b50918e44b566afd9556",
+                    "liquidityFarmingV1": "0x5c41d1b06ae6099a2205b50918e44b566afd9556",
+                    "liquidityFarmingV2": "",
+                    "whitelistPeriodManager": "0xdc5ac79ad5b113b979bb57ff7e9b43a822da45e4"
+                },
+                "biconomyForwarders": [
+                    "0x86c80a8aa58e0a4fa09a69624c31ab2a6cad56b8"
+                ],
+                "gnosisMasterAccount": "",
+                "whiteListedExternalContracts": [
+                    "0xc30141b657f4216252dc59af2e7cdb9d8792e1b0",
+                    "0x9dd11f4fc672006ea9e666b6a222c5a8141f2ac0",
+                    "0x362fa9d0bca5d19f743db50738345ce2b40ec99f",
+                    "0x921641455a39893d1390b5125d5b693ce4b11c1c",
+                    "0xb2e12ed01989103043e699679238fd1868738e89",
+                    "0x1111115f592e50c3a08f68cc2ea0fb9daccde798",
+                    "0xfb57f8f6613167cdb4e1a89d9ef0e731b9d7a15e"
+                ]
+            }
+        },
+        {
+            "enabled": true,
+            "nativeToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "nativeDecimal": 18,
+            "eip1559Supported": false,
+            "baseFeeMultiplier": 1.5,
+            "watchTower": "alchemyWebsocket",
+            "networkAgnosticTransferSupported": false,
+            "tokenPriceToBeCalculated": true,
+            "sdkConfig": {
+                "metaTransactionSupported": false
+            },
+            "name": "Arbitrum",
+            "image": "https://biconomy-public-assets.s3.amazonaws.com/assets/arbitrum.svg",
+            "chainId": 42161,
+            "chainColor": "#28A0F01E",
+            "currency": "ETH",
+            "gasless": {
+                "enable": false,
+                "apiKey": ""
+            },
+            "topicIds": {
+                "deposit": "0x522e11fa05593b306c8df10d2b0b8e01eec48f9d0a9427a7a93f21ff90d66fb1",
+                "assetSent": "0x6bfd5ee5792d66b151a3fab9f56ee828a0f1c3216d4b752e267cd5590326b15c",
+                "routerSwapForEth": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+            },
+            "graphUrl": "https://api.thegraph.com/subgraphs/name/shantanu-bico/hyphenv2-liquidity-pool-arbitrum",
+            "v2GraphUrl": "https://api.thegraph.com/subgraphs/name/shantanu-bico/hyphenv2-liquidity-pool-arbitrum",
+            "explorerUrl": "https://arbiscan.io/",
+            "rpc": "https://arb1.arbitrum.io/rpc",
+            "contracts": {
+                "uniswapRouter": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+                "hyphen": {
+                    "tokenManager": "0x4c5ccff7fa764ce150f07dd9ec9805a7c9260be1",
+                    "liquidityPool": "0x856cb5c3cbbe9e2e21293a644aa1f9363cee11e8",
+                    "executorManager": "0x9bcf58cd6d22c532e77dcaa196fc45589042bc5b",
+                    "lpToken": "0x126be6a9ec71a1fea19d2288ba2ce4cdc0facb68",
+                    "liquidityProviders": "0xb4778f5aefeb4605ed96e893417271d4a55e32ee",
+                    "liquidityFarming": "0xf46c7d442bc9e279d1e7bc4bfa57813d5f32c239",
+                    "liquidityFarmingV1": "0x781f4efc37a08c0ea6631204e46b206330c8c161",
+                    "liquidityFarmingV2": "0xf46c7d442bc9e279d1e7bc4bfa57813d5f32c239",
+                    "whitelistPeriodManager": "0xfac79f6b18ade2e9973b590472ea9f079af9668e"
+                },
+                "biconomyForwarders": [
+                    "0x64cd353384109423a966dcd3aa30d884c9b2e057"
+                ],
+                "gnosisMasterAccount": "",
+                "whiteListedExternalContracts": [
+                    "0xc30141b657f4216252dc59af2e7cdb9d8792e1b0",
+                    "0x4108ef56f00eb75670180c9b0db7a229466fead5",
+                    "0x362fa9d0bca5d19f743db50738345ce2b40ec99f",
+                    "0x1111115f592e50c3a08f68cc2ea0fb9daccde798"
+                ]
+            }
+        }
+    ]
+}
