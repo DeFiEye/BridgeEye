@@ -44,7 +44,7 @@ app.get("/v1/crosschain/estimateFee/:adapter", async (req, res) => {
                 total_fee: feeInfo.feeDisplay,
               },
             ]);
-          } catch(e) {
+          } catch (e) {
             reject(e)
           }
         })();
@@ -68,6 +68,7 @@ async function generate() {
     adapters.hyphen.generateCSV(),
     adapters.multichain.generateCSV(),
     adapters.relay.generateCSV(),
+    adapters.meson.generateCSV(),
   ]);
 }
 
