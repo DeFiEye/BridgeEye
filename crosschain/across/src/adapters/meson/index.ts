@@ -152,7 +152,7 @@ export async function estimateFee(
     ],
     totalFee: feePct,
     input: amount,
-    output: totalFee === 0 ? 0 : amount - totalFee,
+    output: totalFee === 0 ? amount : amount - totalFee,
     feeDisplay: `${totalFee === 0 ? 0 : totalFee} ${selectedToken.symbol}`,
   };
 }
