@@ -24,10 +24,12 @@ const across = __importStar(require("./across"));
 const hyphen = __importStar(require("./hyphen"));
 const multichain = __importStar(require("./multichain"));
 const relay = __importStar(require("./relay"));
+const meson = __importStar(require("./meson"));
 exports.adapters = {
     across: across,
     hyphen: hyphen,
     multichain: multichain,
     relay: relay,
+    meson: meson
 };
 //# sourceMappingURL=index.js.map

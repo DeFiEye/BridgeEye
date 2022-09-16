@@ -65,6 +65,7 @@ async function generate() {
         adapters_1.adapters.hyphen.generateCSV(),
         adapters_1.adapters.multichain.generateCSV(),
         adapters_1.adapters.relay.generateCSV(),
+        adapters_1.adapters.meson.generateCSV(),
     ]);
 }
 async function runTask() {
