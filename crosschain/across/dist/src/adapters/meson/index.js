@@ -86,8 +86,11 @@ async function estimateFee(fromChainName, toChainName, token, amount) {
     const feePct = (feeData.totalFee / amount).toFixed(exports.DEFAULT_FIXED_DECIMAL_POINT);
     ;
     const { totalFee, lpFee, originalFee } = feeData;
-    const serviceFee = (parseFloat(originalFee) - parseFloat(totalFee))
+    let serviceFee = (parseFloat(originalFee) - parseFloat(totalFee))
         .toFixed(exports.DEFAULT_FIXED_DECIMAL_POINT);
+    if (totalFee === 0) {
+        serviceFee = '0';
+    }
     return {
         fromChainId: fromChain.chainId,
         toChainId: toChain.chainId,
@@ -103,7 +106,7 @@ async function estimateFee(fromChainName, toChainName, token, amount) {
         },
         fee: totalFee,
         // percent
-        breakdown: totalFee === 0 ? [] : [
+        breakdown: [
             {
                 name: "Service Fee",
                 total: serviceFee,
