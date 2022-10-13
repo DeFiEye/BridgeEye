@@ -72,8 +72,9 @@ exports.getAvailableTokens = getAvailableTokens;
 async function estimateFee(fromChainName, toChainName, token, amount) {
     const allChains = await getSupportedChains();
     const { toChain, fromChain } = translateNameToChain(fromChainName, toChainName, allChains);
-    const selectedToken = fromChain.tokens.find((item) => item.symbol.startsWith(token));
-    const destToken = toChain.tokens.find((item) => item.symbol.startsWith(token));
+    const tokenSymbol = token.split('.')[0];
+    const selectedToken = fromChain.tokens.find((item) => item.symbol.startsWith(tokenSymbol));
+    const destToken = toChain.tokens.find((item) => item.symbol.startsWith(tokenSymbol));
     const req = await (0, isomorphic_fetch_1.default)(`https://explorer.meson.fi/api/v1/swap/calculateFee?token=${token}&inChain=${fromChain.name}&outChain=${toChain.name}&amount=${amount}`);
     const res = await req.json();
     const feeData = res.data;
@@ -170,7 +171,7 @@ async function generateCSV() {
                     allPathFeeRows.push(feesInCsv);
                 }
                 catch (e) {
-                    console.log("failed", e);
+                    console.log(`failed: swap ${availableToken.symbol} from ${fromChain.name} -> ${toChain.name}`, e.message);
                 }
             }
         }

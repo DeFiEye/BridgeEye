@@ -79,9 +79,9 @@ export async function getAvailableTokens(
   const allChains: any = await getSupportedChains();
   const fromChain = allChains.find((network: any) => network.name === fromChainName)
   const toChain = allChains.find((network: any) => network.name === toChainName)
- 
+
   return fromChain.tokens.filter((_: any) => {
-    return toChain.tokens.find((c:any) =>  _.name == _.name)
+    return toChain.tokens.find((c: any) => _.name == _.name)
   })
 }
 
@@ -98,17 +98,17 @@ export async function estimateFee(
     toChainName,
     allChains
   );
-
-  const selectedToken = fromChain.tokens.find((item: any) => item.symbol.startsWith(token))
-  const destToken = toChain.tokens.find((item: any) => item.symbol.startsWith(token))
+  const tokenSymbol = token.split('.')[0]
+  const selectedToken = fromChain.tokens.find((item: any) => item.symbol.startsWith(tokenSymbol))
+  const destToken = toChain.tokens.find((item: any) => item.symbol.startsWith(tokenSymbol))
 
   const req = await fetch(
     `https://explorer.meson.fi/api/v1/swap/calculateFee?token=${token}&inChain=${fromChain.name}&outChain=${toChain.name}&amount=${amount}`
   );
-  
+
   const res = await req.json()
   const feeData = res.data
-    
+
   if (!feeData) {
     throw new Error(res.message)
   }
@@ -225,8 +225,8 @@ export async function generateCSV() {
             Date.now() - startTime
           );
           allPathFeeRows.push(feesInCsv);
-        } catch (e) {
-          console.log("failed", e);
+        } catch (e: any) {
+          console.log(`failed: swap ${availableToken.symbol} from ${fromChain.name} -> ${toChain.name}`, e.message);
         }
       }
     }
