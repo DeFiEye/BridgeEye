@@ -111,8 +111,8 @@ export declare const tokenTable: {
 };
 export declare const getToken: (symbol: string) => TokenInfo;
 declare const RouteSS: superstruct.Struct<{
-    toChain: number;
     fromChain: number;
+    toChain: number;
     fromTokenAddress: string;
     fromSpokeAddress: string;
     fromTokenSymbol: string;
@@ -128,16 +128,16 @@ declare const RouteSS: superstruct.Struct<{
     l1TokenAddress: superstruct.Struct<string, null>;
 }>;
 declare const RoutesSS: superstruct.Struct<{
-    toChain: number;
     fromChain: number;
+    toChain: number;
     fromTokenAddress: string;
     fromSpokeAddress: string;
     fromTokenSymbol: string;
     isNative: boolean;
     l1TokenAddress: string;
 }[], superstruct.Struct<{
-    toChain: number;
     fromChain: number;
+    toChain: number;
     fromTokenAddress: string;
     fromSpokeAddress: string;
     fromTokenSymbol: string;
@@ -154,8 +154,8 @@ declare const RoutesSS: superstruct.Struct<{
 }>>;
 declare const RouteConfigSS: superstruct.Struct<{
     routes: {
-        toChain: number;
         fromChain: number;
+        toChain: number;
         fromTokenAddress: string;
         fromSpokeAddress: string;
         fromTokenSymbol: string;
@@ -167,16 +167,16 @@ declare const RouteConfigSS: superstruct.Struct<{
     hubPoolAddress: string;
 }, {
     routes: superstruct.Struct<{
-        toChain: number;
         fromChain: number;
+        toChain: number;
         fromTokenAddress: string;
         fromSpokeAddress: string;
         fromTokenSymbol: string;
         isNative: boolean;
         l1TokenAddress: string;
     }[], superstruct.Struct<{
-        toChain: number;
         fromChain: number;
+        toChain: number;
         fromTokenAddress: string;
         fromSpokeAddress: string;
         fromTokenSymbol: string;
@@ -201,8 +201,8 @@ export declare type Routes = superstruct.Infer<typeof RoutesSS>;
 export declare function getRoutes(chainId: ChainId): RouteConfig;
 export declare const routeConfig: {
     routes: {
-        toChain: number;
         fromChain: number;
+        toChain: number;
         fromTokenAddress: string;
         fromSpokeAddress: string;
         fromTokenSymbol: string;
