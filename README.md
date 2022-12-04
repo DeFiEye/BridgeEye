@@ -1,6 +1,6 @@
 # BridgeEye - DeFiEye Cross-Chain Bridge Tool
 
-### [https://tools.defieye.io/bridge/](https://tools.defieye.io/bridge/)
+### [https://chaineye.tools/](https://chaineye.tools/)
 
 Finding lowest fee bridge to cross your asset!
 
