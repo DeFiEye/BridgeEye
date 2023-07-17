@@ -1,7 +1,6 @@
-import { createArrayCsvWriter as createCsvWriter } from "csv-writer";
+import {createArrayCsvWriter as createCsvWriter} from "csv-writer";
 import fetch from "isomorphic-fetch";
-import { DataCache, chainIdToName, nameToChainId } from "../../utils";
-
+import {DataCache, nameToChainId, normalizeChainName} from "../../utils";
 export const DEFAULT_FIXED_DECIMAL_POINT = 5;
 const BRIDGE_ID = "meson";
 const CSV_HEADER = [
@@ -23,22 +22,18 @@ const CSV_HEADER = [
   "liquidity",
   "extra",
 ];
-
+const sampleAddress = "0x243f22fbd4c375581aaacfcfff5a43793eb8a74d"
 async function fetchList() {
-  const url = `https://explorer.meson.fi/api/v1/presets/chainList`;
+  const url = `https://relayer.meson.fi/api/v1/list`;
   const req = await fetch(url);
   const networks = await req.json();
-  return networks;
+  return networks.result;
 }
 
 const fetchListWithCache = new DataCache(fetchList, 10);
 
 export async function getSupportedChains() {
-  const chains = await fetchListWithCache.getData();
-  return chains.map((_: any) => {
-    _.chainId = parseInt(_.chainId);
-    return _;
-  })
+  return await fetchListWithCache.getData();
 }
 
 function translateNameToChain(
@@ -46,19 +41,15 @@ function translateNameToChain(
   toChainName: string,
   allChains: any[]
 ) {
-  const formChainIdTranslated = nameToChainId(fromChainName);
-  const toChainIdTranslated = nameToChainId(toChainName);
 
   const fromChain = allChains.find(
     (_: any) =>
-      _.name === fromChainName ||
-      (formChainIdTranslated && _.chainId == formChainIdTranslated)
+      _.name === fromChainName
   );
 
   const toChain = allChains.find(
     (_: any) =>
-      _.name === toChainName ||
-      (toChainIdTranslated && _.chainId == toChainIdTranslated)
+      _.name === toChainName
   );
 
   return {
@@ -73,15 +64,11 @@ export async function getAvailableToChains(fromChainName: string) {
 }
 
 export async function getAvailableTokens(
-  fromChainName: string,
-  toChainName: string
+  fromChain: any,
+  toChain: any
 ) {
-  const allChains: any = await getSupportedChains();
-  const fromChain = allChains.find((network: any) => network.name === fromChainName)
-  const toChain = allChains.find((network: any) => network.name === toChainName)
-
   return fromChain.tokens.filter((_: any) => {
-    return toChain.tokens.find((c: any) => _.name == _.name)
+    return toChain.tokens.find((c: any) => _.id == c.id)
   })
 }
 
@@ -98,17 +85,27 @@ export async function estimateFee(
     toChainName,
     allChains
   );
-  const tokenSymbol = token.split('.')[0]
-  const selectedToken = fromChain.tokens.find((item: any) => item.symbol.startsWith(tokenSymbol))
-  const destToken = toChain.tokens.find((item: any) => item.symbol.startsWith(tokenSymbol))
+  token = token.toUpperCase();
+  const selectedToken = fromChain.tokens.find((item: any) => item.id.toUpperCase() == token)
+  const destToken = toChain.tokens.find((item: any) => item.id.toUpperCase() == token)
+  const payload = JSON.stringify({
+    "from": `${fromChain.id}:${token}`,
+    "to": `${toChain.id}:${token}`,
+    "amount": amount.toString(),
+    "fromAddress": sampleAddress
+  })
 
-  const req = await fetch(
-    `https://explorer.meson.fi/api/v1/swap/calculateFee?token=${token}&inChain=${fromChain.name}&outChain=${toChain.name}&amount=${amount}`
-  );
+  const req = await fetch(`https://relayer.meson.fi/api/v1/price`, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: payload
+  });
 
-  const res = await req.json()
-  const feeData = res.data
-
+  const res = await req.json();
+  const feeData = res.result
   if (!feeData) {
     throw new Error(res.message)
   }
@@ -118,26 +115,17 @@ export async function estimateFee(
   }
 
   const feePct = (feeData.totalFee / amount).toFixed(DEFAULT_FIXED_DECIMAL_POINT);;
-  const { totalFee, lpFee, originalFee } = feeData
-
-  let serviceFee = (parseFloat(originalFee) - parseFloat(totalFee))
-    .toFixed(DEFAULT_FIXED_DECIMAL_POINT);
-
-  if (totalFee === 0) {
-    serviceFee = '0'
-  }
+  const { totalFee, lpFee, serviceFee } = feeData
 
   return {
     fromChainId: fromChain.chainId,
     toChainId: toChain.chainId,
     token: {
-      symbol: selectedToken.symbol,
-      decimals: selectedToken.decimals,
+      symbol: selectedToken.id.toUpperCase(),
       mainnetAddress: selectedToken.addr,
     },
     outputToken: {
-      symbol: destToken.symbol,
-      decimals: destToken.decimals,
+      symbol: destToken.id.toUpperCase(),
       mainnetAddress: destToken.addr,
     },
     fee: totalFee,
@@ -146,18 +134,18 @@ export async function estimateFee(
       {
         name: "Service Fee",
         total: serviceFee,
-        display: `${serviceFee} ${destToken.symbol}`,
+        display: `${serviceFee} ${destToken.id.toUpperCase()}`,
       },
       {
         name: "LP Fee",
         total: lpFee,
-        display: `${lpFee} ${destToken.symbol}`,
+        display: `${lpFee} ${destToken.id.toUpperCase()}`,
       }
     ],
-    totalFee: feePct,
+    totalFeePct: feePct,
     input: amount,
     output: totalFee === 0 ? amount : amount - totalFee,
-    feeDisplay: `${totalFee === 0 ? 0 : totalFee} ${selectedToken.symbol}`,
+    feeDisplay: `${totalFee === 0 ? 0 : totalFee} ${selectedToken.id.toUpperCase()}`,
   };
 }
 
@@ -168,13 +156,13 @@ export async function estimateFeeAsCsv(
   amount: number
 ) {
   const fees = await estimateFee(fromChainName, toChainName, token, amount);
-  const fromName = chainIdToName(fees.fromChainId, fromChainName);
-  const toName = chainIdToName(fees.toChainId, fromChainName);
+  const fromName = normalizeChainName(fromChainName);
+  const toName = normalizeChainName(toChainName);
   const tokenDetail = fees.token;
   return [
     BRIDGE_ID,
     fromName,
-    token,
+    fees.token.symbol,
     toName,
     fees.outputToken.symbol,
     tokenDetail.mainnetAddress,
@@ -183,7 +171,7 @@ export async function estimateFeeAsCsv(
     "",
     true,
     0,
-    parseFloat(fees.totalFee) * 100,
+    parseFloat(fees.totalFeePct) * 100,
     0,
     0,
     0,
@@ -201,10 +189,7 @@ export async function generateCSV() {
     const availableToChains = await getAvailableToChains(fromChain.name);
     for (let index = 0; index < availableToChains.length; index++) {
       const toChain = availableToChains[index];
-      const availableTokens = await getAvailableTokens(
-        fromChain.name,
-        toChain.name
-      );
+      const availableTokens = await getAvailableTokens(fromChain, toChain);
       for (let index = 0; index < availableTokens.length; index++) {
         const availableToken = availableTokens[index];
         try {
@@ -212,7 +197,7 @@ export async function generateCSV() {
           const feesInCsv = await estimateFeeAsCsv(
             fromChain.name,
             toChain.name,
-            availableToken.symbol,
+            availableToken.id,
             100
           );
           console.log(
@@ -220,7 +205,7 @@ export async function generateCSV() {
             BRIDGE_ID,
             fromChain.name,
             toChain.name,
-            availableToken.symbol,
+            availableToken.id,
             "spend",
             Date.now() - startTime
           );
