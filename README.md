@@ -25,7 +25,6 @@ Sorted by alphabetical order. Detailed supporting status can be found at [wiki p
 - [Relay](https://app.relaychain.com/#/cross-chain-bridge-transfer)
 - [RenBridge](https://bridge.renproject.io/mint)
 - [Terra Bridge](https://bridge.terra.money/)
-- [viaprotocol](https://router.via.exchange/)
 - [Connext Bridge](https://bridge.connext.network/)
 - [Orbiter](https://www.orbiter.finance/)
 - [Hop Exchange](https://app.hop.exchange/send?token=USDC)
